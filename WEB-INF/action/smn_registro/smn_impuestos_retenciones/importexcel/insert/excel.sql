@@ -1,0 +1,29 @@
+INSERT INTO smn_pagos.smn_impuestos_retenciones
+(
+	smn_clave_imp_ret_id,
+	smn_orden_pago_id,
+	smn_codigo_impuesto_rf,
+	iop_base_imponible,
+	iop_base_excenta,
+	iop_porcentaje_retencion,
+	iop_monto_impuesto,
+	iop_idioma,
+	iop_usuario,
+	iop_fecha_registro,
+	iop_hora
+)
+VALUES
+(
+	${seq:nextval@smn_pagos.seq_smn_impuestos_retenciones},
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	'${def:locale}',
+	'${def:user
+}',
+	{d '${def:date}'},
+	'${def:time}'
+)

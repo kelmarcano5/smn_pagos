@@ -1,0 +1,46 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='25%'/>
+	<col width='25%'/>
+	<col width='25%'/>
+	<col width='25%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="7" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th class='sortable' onclick='sortBy("cdp_codigo","query-smncanalpago.sql")'>${lbl:b_code_cdp}</th>
+		<th class='sortable' onclick='sortBy("cdp_descripcion","query-smncanalpago.sql")'>${lbl:b_description_cdp}</th>
+		<th class='sortable' onclick='sortBy("cdp_estatus_combo","query-smncanalpago.sql")'>${lbl:b_estatus}</th>
+		<th class='sortable' onclick='sortBy("cdp_fecha_registro","query-smncanalpago.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_canal_pago_id}')" title="${lbl:b_view_detail}"></td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_canal_pago_id}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_canal_pago_id}')" title="${lbl:b_edit_button}"></td>
+		<td align='left'>${fld:cdp_codigo}</td>
+		<td align='left'>${fld:cdp_descripcion}</td>
+		<td align='left'>${fld:cdp_estatus_combo}</td>
+		<td>${fld:cdp_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

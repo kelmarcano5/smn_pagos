@@ -1,0 +1,11 @@
+<rows>
+	${lbl:b_document}="${fld:smn_documento_rf_combo}"
+	${lbl:b_document_number}="${fld:smn_numero_documento_rf}"
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"
+	${lbl:b_responsible}="${fld:smn_usuario_rf_combo}"
+	${lbl:b_amoun_ne_ml}="${fld:nep_monto_ml}"
+	${lbl:b_amount_used_ml_ne}="${fld:nep_monto_usado_ml}"
+	${lbl:b_amount_balance_ml_ne}="${fld:nep_monto_saldo_ml}"
+	${lbl:b_financial_status}="${fld:ocp_estatus_combo}"
+	${lbl:b_store_date}="${fld:nep_fecha_registro}"
+</rows>

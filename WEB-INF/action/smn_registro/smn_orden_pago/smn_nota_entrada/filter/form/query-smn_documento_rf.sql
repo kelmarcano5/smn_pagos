@@ -1,0 +1,2 @@
+select smn_cont_financiera.smn_documentos_contables_det.smn_documentos_contables_id as id, smn_cont_financiera.smn_documentos_contables_det.mdd_desc_registro as item from smn_cont_financiera.smn_documentos_contables_det
+	

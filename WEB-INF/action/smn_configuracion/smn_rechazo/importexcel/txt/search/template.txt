@@ -1,0 +1,3 @@
+<rows>
+rec_fecha_registro="${fld:rec_fecha_registro}"    rec_vigencia="${fld:rec_vigencia}"    rec_estatus="${fld:rec_estatus}"    rec_descripcion="${fld:rec_descripcion}"    rec_codigo="${fld:rec_codigo}"    
+</rows>

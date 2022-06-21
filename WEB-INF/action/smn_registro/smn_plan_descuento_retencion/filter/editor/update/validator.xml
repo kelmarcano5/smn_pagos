@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_proveedor_id' type='integer' required='true' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='pdr_fecha_desde' type='date' required='true' label='${lbl:b_date_from}' maxlen='10'/>
+	<parameter id='pdr_fecha_hasta' type='date' required='true' label='${lbl:b_date_up}' maxlen='10'/>
+	<parameter id='smn_descuento_retencion_rf' type='integer' required='true' label='${lbl:b_retention_discount}' maxlen='10'/>
+	<parameter id='pdr_monto_total' type='double' required='false' label='${lbl:b_amount_total}' maxlen='10'/>
+	<parameter id='pdr_monto_parcial_descuento' type='double' required='false' label='${lbl:b_amount_partial_total}' maxlen='10'/>
+	<parameter id='id' type='integer' required='true' label='${lbl:b_discount_plan_id}' maxlen='10'/>
+</validator>
+

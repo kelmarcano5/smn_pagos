@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_usuario_rf' type='varchar' required='false' label='${lbl:b_user}' maxlen='10'/>
+	<parameter id='rol_tipo' type='varchar' required='false' label='${lbl:b_type_rol}' maxlen='2'/>
+	<parameter id='smn_corporaciones_rf' type='integer' required='false' label='${lbl:b_corporation}' maxlen='10'/>
+	<parameter id='smn_entidades_rf' type='integer' required='false' label='${lbl:b_company}' maxlen='10'/>
+	<parameter id='smn_sucursales_rf' type='integer' required='false' label='${lbl:b_branches}' maxlen='10'/>
+	<parameter id='smn_areas_servicios_rf' type='integer' required='false' label='${lbl:b_service_area}' maxlen='10'/>
+	<parameter id='rol_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

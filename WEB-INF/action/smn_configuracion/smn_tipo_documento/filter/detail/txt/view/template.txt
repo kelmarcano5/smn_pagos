@@ -1,0 +1,7 @@
+<rows>
+	${lbl:b_store_date}="${fld:tdo_fecha_registro}"      
+	${lbl:b_estatus}="${fld:tdo_estatus}"    
+	${lbl:b_movement_type}="${fld:tdo_tipo_movimiento}"    
+	${lbl:b_description_tdo}="${fld:tdo_descripcion}"    
+	${lbl:b_code_document_type}="${fld:tdo_codigo}"        
+</rows>

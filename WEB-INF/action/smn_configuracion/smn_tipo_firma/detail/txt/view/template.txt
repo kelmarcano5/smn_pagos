@@ -1,0 +1,6 @@
+<rows>
+	${lbl:b_code_tfi}="${fld:tfi_codigo}"
+	${lbl:b_description_tfi}="${fld:tfi_descripcion}"
+	${lbl:b_validity}="${fld:tfi_vigencia}"    
+	${lbl:b_estatus}="${fld:tfi_estatus_combo}"    
+</rows>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='fcb_codigo' type='varchar' required='false' label='${lbl:b_code_fcb}' maxlen='16'/>
+	<parameter id='fcb_descripcion' type='varchar' required='false' label='${lbl:b_description_fcb}' maxlen='64'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='fcb_descripcion' rule='contains' />
+	<parameter id='smn_cuentas_bancarias_rf' type='integer' required='false' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='fcb_cantidad' type='integer' required='false' label='${lbl:b_quantity_fcb}' maxlen='10'/>
+	<parameter id='smn_tipo_firma_id_name' type='varchar' required='false' label='${lbl:b_type_firm_fcb}'/>
+	<parameter id='smn_tipo_firma_id' type='integer' required='false' label='${lbl:b_type_firm_fcb}' maxlen='10'/>
+	<parameter id='fcb_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

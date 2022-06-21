@@ -1,0 +1,23 @@
+select
+		smn_pagos.smn_nota_recepcion_servicio.smn_orden_compra_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_centro_costo_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_tipo_documento_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_documento_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_numero_documento_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_documento_id,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_numero,
+	smn_pagos.smn_nota_recepcion_servicio.smn_clase_rf,
+	smn_pagos.smn_nota_recepcion_servicio.smn_proveedor_id,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_ml,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_ma,
+	smn_pagos.smn_nota_recepcion_servicio.smn_moneda_rf,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_usado_ml,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_usado_ma,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_saldo_ml,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_monto_saldo_ma,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_estatus,
+	smn_pagos.smn_nota_recepcion_servicio.nrs_fecha_registro
+from
+	smn_pagos.smn_nota_recepcion_servicio 
+where
+	smn_pagos.smn_nota_recepcion_servicio.smn_nota_recepcion_servicio_id = ${fld:id}

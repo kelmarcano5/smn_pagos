@@ -1,0 +1,2 @@
+ and
+ 	smn_pagos.smn_autorizador_firmas_cuentas.smn_entidades_financieras_rf=${fld:smn_entidades_financieras_rf}

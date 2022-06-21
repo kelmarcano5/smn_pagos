@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_orden_pago_id_name' type='varchar' required='false' label='${lbl:b_payment_order_id}'/>
+	<parameter id='smn_orden_pago_id' type='integer' required='false' label='${lbl:b_payment_order_id}' maxlen='10'/>
+	<parameter id='smn_codigo_impuesto_rf' type='integer' required='false' label='${lbl:b_code_taxes}' maxlen='2'/>
+	<parameter id='iop_base_imponible' type='double' required='false' label='${lbl:b_tax_base}' maxlen='10'/>
+	<parameter id='iop_monto_impuesto' type='double' required='false' label='${lbl:b_tax_amount}' maxlen='10'/>
+	<parameter id='iop_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

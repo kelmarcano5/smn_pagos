@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_autorizador_id_name' type='varchar' required='false' label='${lbl:b_authorizer_id}'/>
+	<parameter id='smn_autorizador_id' type='integer' required='false' label='${lbl:b_authorizer_id}' maxlen='10'/>
+	<parameter id='smn_entidades_financieras_rf' type='integer' required='false' label='${lbl:b_rel_bank_account}' maxlen='10'/>
+	<parameter id='smn_tipo_firma_id_name' type='varchar' required='false' label='${lbl:b_firm_type_id}'/>
+	<parameter id='smn_tipo_firma_id' type='integer' required='false' label='${lbl:b_firm_type_id}' maxlen='10'/>
+	<parameter id='fcb_estatus' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='fcb_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

@@ -1,0 +1,8 @@
+<rows>  
+	${lbl:b_tax_amount}="${fld:iop_monto_impuesto}"    
+	${lbl:b_percentage_retention}="${fld:iop_porcentaje_retencion}"    
+	${lbl:b_excenta_base}="${fld:iop_base_excenta}"    
+	${lbl:b_tax_base}="${fld:iop_base_imponible}"    
+	${lbl:b_code_taxes}="${fld:smn_codigo_impuesto_rf_combo}"    
+	${lbl:b_payment_order_id}="${fld:opa_descripcion_pl0}"       
+</rows>

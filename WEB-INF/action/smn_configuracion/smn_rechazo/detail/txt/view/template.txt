@@ -1,0 +1,6 @@
+<rows>
+	${lbl:b_code_rec}="${fld:rec_codigo}"
+	${lbl:b_description_rec}="${fld:rec_descripcion}"
+	${lbl:b_estatus}="${fld:rec_estatus_combo}"  
+	${lbl:b_validity}="${fld:rec_vigencia}"               
+</rows>

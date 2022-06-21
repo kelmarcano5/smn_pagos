@@ -1,0 +1,12 @@
+select
+		smn_pagos.smn_plan_descuento_retencion.smn_clase_auxiliar_rf,
+	smn_pagos.smn_plan_descuento_retencion.smn_proveedor_id,
+	smn_pagos.smn_plan_descuento_retencion.pdr_fecha_desde,
+	smn_pagos.smn_plan_descuento_retencion.pdr_fecha_hasta,
+	smn_pagos.smn_plan_descuento_retencion.smn_descuento_retencion_rf,
+	smn_pagos.smn_plan_descuento_retencion.pdr_estatus,
+	smn_pagos.smn_plan_descuento_retencion.pdr_fecha_registro
+from
+	smn_pagos.smn_plan_descuento_retencion 
+where
+	smn_pagos.smn_plan_descuento_retencion.smn_plan_descuento_retencion_id = ${fld:id}

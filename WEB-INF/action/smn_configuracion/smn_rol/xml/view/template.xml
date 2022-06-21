@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_rol>
+	<detail>
+		<rows>		
+		<record 
+		    rol_user="${fld:smn_usuario_rf_combo}"    
+			rol_tipo="${fld:rol_tipo_combo}"
+			rol_fecha_registro="${fld:rol_fecha_registro}"    />
+		</rows>
+	</detail>
+</smn_rol>

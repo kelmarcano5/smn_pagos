@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnordenpago.sql" source="session" scope="transaction" />
+		<recordset id="filter.params" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>Pagos Acumulados</pdf-title>
+	<pdf-logo url='/images/logo-dinamica.png' scale='100' />
+
+	<pdf-report pageSize="letter" rotate="false">
+		<record recordset='filter.params' title='Filtro de Búsqueda' noFilterMsg='-- Sin filtro de búsqueda --' width='55' spacingBefore='15'>
+	
+			<col name='smn_entidades_rf' title='Entidades'  format='######' align='center' />
+			<col name='smn_sucursales_rf' title='Sucursales'  format='######' align='center' />
+			<col name='smn_auxiliar_rf' title='Beneficiario'  format='######' align='center' />
+			<col name='opa_fecha_recepcion' title='Fecha Recepcion'  format='dd-MM-yyyy' align='center' />
+		</record>
+		<table recordset='query-smnordenpago.sql' width='100' spacingBefore='10'>
+			<col name='entidad' title='Entidad' width='7' align='center' />
+			<col name='sucursal' title='Sucursal' width='7' align='center'/>
+			<col name='beneficiario' title='Beneficiario' width='7' align='center' />
+			<col name='monto_ml' title='Monto ML' width='7' align='center' format='#,###,##0.00' />
+			<col name='monto_ma' title='Monto MA' width='7' align='center' format='#,###,##0.00' />
+			<!-- <col name='igs_fecha_ingreso' title='Fecha Ingreso' width='20' align='left' format='dd-MM-yyyy' /> -->
+		</table>
+
+	</pdf-report>
+</config>

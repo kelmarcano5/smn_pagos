@@ -1,0 +1,1 @@
+java -jar "C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\smn_pagos\WEB-INF\lib\aprobar.jar"

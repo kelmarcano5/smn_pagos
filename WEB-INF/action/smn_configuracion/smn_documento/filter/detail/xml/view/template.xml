@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_documento>
+	<detail>
+		<rows>
+		<record
+				smn_documentos_generales_rf="${fld:smn_documentos_generales_rf_combo}"
+				smn_tipo_documento_id="${fld:smn_tipo_documento_id_combo}"
+				smn_modulo_origen_rf="${fld:smn_modulo_origen_rf_combo}"
+				doc_codigo="${fld:doc_codigo}"
+				doc_descripcion="${fld:doc_descripcion}"
+				doc_ver_recepcion_item="${fld:doc_ver_recepcion_item_combo}"
+				doc_ver_recepcion_servicio="${fld:doc_ver_recepcion_servicio_combo}"
+				doc_ver_orden_compra="${fld:doc_ver_orden_compra_combo}"
+				doc_ver_control_documento="${fld:doc_ver_control_documento_combo}"
+				doc_porcentaje="${fld:doc_porcentaje}" 
+				doc_monto_fijo="${fld:doc_monto_fijo}" 
+				doc_estatus="${fld:doc_estatus_combo}"
+				doc_vigencia="${fld:doc_vigencia}"   			
+				 />
+		</rows>
+	</detail>
+</smn_documento>

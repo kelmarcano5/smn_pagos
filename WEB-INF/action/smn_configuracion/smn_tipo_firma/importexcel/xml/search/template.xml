@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_tipo_firma>
+	<detail>
+		<rows>		
+		<record tfi_fecha_registro="${fld:tfi_fecha_registro}"    tfi_vigencia="${fld:tfi_vigencia}"    tfi_estatus="${fld:tfi_estatus}"    tfi_descripcion="${fld:tfi_descripcion}"    tfi_codigo="${fld:tfi_codigo}"    />
+		</rows>
+	</detail>
+</smn_tipo_firma>

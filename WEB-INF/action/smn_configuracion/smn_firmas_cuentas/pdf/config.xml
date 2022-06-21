@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnfirmascuentas.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>${lbl:b_accounts_firms}</pdf-title>
+	<pdf-logo url='/images/logo-simone-pdf.png' scale='100' />
+	<pdf-file-name>${lbl:b_accounts_firms}.pdf</pdf-file-name>
+
+	<pdf-report 
+		pageSize="letter" 
+		rotate="false"
+		footer="false" 
+		header="true">
+		<record recordset='query-smnfirmascuentas.sql' width='100' spacingBefore='40'>
+			<col name='fcb_codigo' title='${lbl:b_code_fcb}' width='14' align='left' />
+			<col name='fcb_descripcion' title='${lbl:b_description_fcb}' width='14' align='left' />
+			<col name='smn_cuentas_bancarias_rf_combo' title='${lbl:b_bank_account}' width='14' align='left' format='######' />
+			<col name='fcb_cantidad' title='${lbl:b_quantity_fcb}' width='14' align='left' format='######' />
+			<col name='smn_tipo_firma_id_combo' title='${lbl:b_type_firm_fcb}' width='14' align='left' format='######' />
+			<col name='fcb_estatus_combo' title='${lbl:b_estatus}' width='14' align='left' />
+			<col name='fcb_fecha_registro' title='${lbl:b_store_date}' width='14' align='left' format='dd-MM-yyyy' />
+
+		</record>
+
+	</pdf-report>
+</config>

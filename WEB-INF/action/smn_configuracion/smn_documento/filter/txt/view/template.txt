@@ -1,0 +1,8 @@
+<rows>
+	${lbl:b_code_document}="${fld:doc_codigo}"
+	${lbl:b_description_document}="${fld:doc_descripcion}"
+	${lbl:b_source_module}="${fld:smn_modulo_origen_rf_combo}"        
+	${lbl:b_entities}="${fld:smn_sucursales_rf_combo}"
+	${lbl:b_branches}="${fld:smn_entidades_rf_combo}"
+	${lbl:b_store_date}="${fld:doc_fecha_registro}"
+</rows>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_solicitud_documento>
+	<detail>
+		<rows>		
+		<record   
+			sdp_estatus_solicitud="${fld:sdp_estatus_solicitud_combo}"    
+			sdp_cantidad_documentos="${fld:sdp_cantidad_documentos}"    
+			sdp_numero_final="${fld:sdp_numero_final}"    
+			sdp_numero_inicial="${fld:sdp_numero_inicial}"    
+			sdp_numero="${fld:sdp_numero}"    
+			sdp_fecha_activacion="${fld:sdp_fecha_activacion}"    
+			sdp_fecha_recepcion="${fld:sdp_fecha_recepcion}"    
+			sdp_fecha_solicitud="${fld:sdp_fecha_solicitud}"    
+			smn_clave_formato_impresion_id="${fld:smn_clave_formato_impresion_id_combo}"    
+			smn_cuenta_bancaria_rf="${fld:smn_cuenta_bancaria_rf_combo}"    
+			smn_entidad_bancaria_rf="${fld:smn_entidad_bancaria_rf_combo}"    
+			smn_rol_id="${fld:smn_rol_id_combo}"    
+			sdp_numero_solicitud_pago="${fld:sdp_numero_solicitud_pago}"    
+			smn_documento_id="${fld:smn_documento_id_combo}"    />
+		</rows>
+	</detail>
+</smn_solicitud_documento>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="${def:context}/dinamica.css" />
+	<title>${lbl:b_security_system}.</title>
+</head>
+
+<body>
+
+<div class="alert" style="color:black; font-weight:bold; margin-top:10px;">
+${lbl:b_welcome}@${fld:fname} ${fld:lname}, ${lbl:b_please_select}<br>
+${lbl:b_select_command_menu}.
+</div>
+
+<br>
+
+<div class="alert" align="center" style="color:red; font-weight:bold; font-size:10pt;">
+${inc:${def:actionroot}/mensaje}
+</div>
+
+<br>
+
+<!--include al menu iconografico-->
+${inc:${def:actionroot}/panel/view}
+
+<!--tabla de ultimos logins-->
+<!--
+<table class="datagrid" width="50%">
+
+	<tr>
+		<th colspan="4" style="font-weight:bold; font-size:10pt;">${lbl:b_last_access_to_server}</th>
+	</tr>
+
+	<tr>
+		<th width="25%">${lbl:s_loginhist_col1}</th>
+		<th width="25%">${lbl:s_loginhist_col2}</th>
+		<th width="25%">${lbl:s_loginhist_col3}</th>
+		<th width="25%">${lbl:s_loginhist_col4}</th>
+	</tr>
+
+	<rows>
+	<tr ${fld:_rowStyle}>
+		<td align="center">${fld:login_date}</td>
+		<td align="center">${fld:login_time}</td>
+		<td align="center">${fld:remote_addr}</td>
+		<td align="center">${fld:context}</td>
+	</tr>
+	</rows>
+
+</table>
+
+<br/>
+
+<table class="datagrid" width="50%">
+
+	<tr>
+		<th colspan="4" style="color:red; font-weight:bold; font-size:10pt;">${lbl:s_loginhist_failed}</th>
+	</tr>
+
+	<tr>
+		<th width="25%">${lbl:s_loginhist_col1}</th>
+		<th width="25%">${lbl:s_loginhist_col2}</th>
+		<th width="25%">${lbl:s_loginhist_col3}</th>
+		<th width="25%">${lbl:s_loginhist_col4}</th>
+	</tr>
+
+	<rows2>
+	<tr ${fld:_rowStyle}>
+		<td align="center">${fld:login_date}</td>
+		<td align="center">${fld:login_time}</td>
+		<td align="center">${fld:remote_addr}</td>
+		<td align="center">${fld:context}</td>
+	</tr>
+	</rows2>
+
+</table>
+-->
+</body>
+
+</html>

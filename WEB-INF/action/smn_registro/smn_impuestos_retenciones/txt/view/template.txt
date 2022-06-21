@@ -1,0 +1,7 @@
+<rows>
+	${lbl:b_store_date}="${fld:iop_fecha_registro}"    
+	${lbl:b_code_taxes}="${fld:iop_monto_impuesto}"      
+	${lbl:b_tax_base}="${fld:iop_base_imponible}"    
+	${lbl:b_code_taxes}="${fld:smn_codigo_impuesto_rf_combo}"    
+	${lbl:b_payment_order_id}="${fld:opa_descripcion_pl0}"       
+</rows>

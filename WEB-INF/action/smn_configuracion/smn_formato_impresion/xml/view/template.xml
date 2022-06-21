@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_formato_impresion>
+	<detail>
+		<rows>		
+			<record        
+			foi_codigo="${fld:foi_codigo}"
+			foi_descripcion="${fld:foi_descripcion}"
+			foi_texto="${fld:foi_texto}"
+			foi_fecha_registro="${fld:foi_fecha_registro}"       />
+		</rows>
+	</detail>
+</smn_formato_impresion>

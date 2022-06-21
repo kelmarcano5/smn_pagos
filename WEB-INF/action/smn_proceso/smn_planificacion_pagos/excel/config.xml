@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-base.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="6" cellStep="0" name="${lbl:b_payment_order}"/>
+	
+
+	<excel 
+		recordset='query-base.sql' 
+		sheetname='${lbl:b_payment_order}' 
+		filename='${lbl:b_payment_order}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='smn_entidades_rf' label='${lbl:b_opa_entities}'/>
+		<col id='smn_sucursales_rf' label='${lbl:b_opa_branches}'/>
+		<col id='smn_clase_auxiliar_rf' label='${lbl:b_class_aux}'/>
+		<col id='clf_descripcion' label='${lbl:b_abc_classification}'/>
+		<col id='monto_por_vencer_mayor_7' label='${lbl:b_due_more_than_7days}' width='10' format='#,###,##0.00'/>
+		<col id='monto_por_vencer_menor_7' label='${lbl:b_due_between_0and7days}' width='10' format='#,###,##0.00'/>
+		<col id='monto_vencido_menor_7' label='${lbl:b_expired_between_1and7days}' width='10' format='#,###,##0.00'/>
+		<col id='monto_vencido_8_15' label='${lbl:b_expired_between_8and15days}' width='10' format='#,###,##0.00'/>
+		<col id='monto_vencido_mayor_15' label='${lbl:b_overdue_more_than15days}' width='10' format='#,###,##0.00'/>
+	</excel>
+
+</config>

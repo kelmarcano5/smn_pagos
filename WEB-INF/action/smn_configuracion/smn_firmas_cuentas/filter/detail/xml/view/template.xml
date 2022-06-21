@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_firmas_cuentas>
+	<detail>
+		<rows>		
+		<record fcb_fecha_registro="${fld:fcb_fecha_registro}"       
+				fcb_estatus="${fld:fcb_estatus}"    
+				smn_tipo_firma_id="${fld:smn_tipo_firma_id_combo}"    
+				fcb_cantidad="${fld:fcb_cantidad}"    
+				smn_cuentas_bancarias_rf="${fld:smn_cuentas_bancarias_rf_combo}"    
+				fcb_descripcion="${fld:fcb_descripcion}"    
+				fcb_codigo="${fld:fcb_codigo}"    />
+		</rows>
+	</detail>
+</smn_firmas_cuentas>

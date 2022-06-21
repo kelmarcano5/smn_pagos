@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnautorizadorfirmascuentas.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="2" cellStep="0" name="${lbl:b_authorizer_firm}"/>
+	
+	<excel 
+		recordset='query-smnautorizadorfirmascuentas.sql' 
+		sheetname='${lbl:b_authorizer_firm}' 
+		filename='${lbl:b_authorizer_firm}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='smn_autorizador_id_combo' label='${lbl:b_authorizer_id}' />
+		<col id='smn_entidades_financieras_rf_combo' label='${lbl:b_rel_bank_account}' />
+		<col id='smn_tipo_firma_id_combo' label='${lbl:b_firm_type_id}' />
+		<col id='fcb_estatus_combo' label='${lbl:b_estatus}' />
+		<col id='fcb_fecha_registro' label='${lbl:b_store_date}' />
+
+	</excel>
+
+</config>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_documento_rf' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+	<parameter id='smn_numero_documento_rf' type='integer' required='false' label='${lbl:b_document_number}' maxlen='10'/>
+	<parameter id='smn_proveedor_id' type='integer' required='false' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='smn_usuario_rf' type='integer' required='false' label='${lbl:b_responsible}' maxlen='10'/>
+	<parameter id='nep_monto_ml' type='double' required='false' label='${lbl:b_amoun_ne_ml}' maxlen='10'/>
+	<parameter id='nep_monto_usado_ml' type='integer' required='false' label='${lbl:b_amount_used_ml_ne}' maxlen='10'/>
+	<parameter id='nep_monto_saldo_ml' type='double' required='false' label='${lbl:b_amount_balance_ml_ne}' maxlen='10'/>
+	<parameter id='ocp_estatus' type='varchar' required='false' label='${lbl:b_financial_status}' maxlen='2'/>
+	<parameter id='nep_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+	<parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+ 
+</validator>

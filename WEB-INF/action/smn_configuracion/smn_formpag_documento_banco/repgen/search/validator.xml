@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='repgen.filter' onerror='/action/error/validation/ajax'>
+
+	<parameter id='fdesde' type='date' required='false' label='Fecha desde'/>
+	<parameter id='fhasta' type='date' required='false' label='Fecha hasta'/>
+	
+	<parameter id='smn_documento_id_name' type='varchar' required='false' label='${lbl:b_document}'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='smn_forma_pago_rf' type='integer' required='false' label='${lbl:b_way_to_pay_fdb}' maxlen='10'/>
+	<parameter id='smn_entidad_financiera_rf' type='integer' required='false' label='${lbl:b_bank_fdb}' maxlen='10'/>
+	<parameter id='fdb_genera_transaccion' type='varchar' required='false' label='${lbl:b_generate_transaction}' maxlen='2'/>
+	<parameter id='fdb_programa_impresion' type='varchar' required='false' label='${lbl:b_print_program}' maxlen='65'/>
+	<parameter id='fdb_estatus' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='fdb_vigencia' type='date' required='false' label='${lbl:b_validity}' maxlen='10'/>
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='smn_documento_id_name'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='fdb_genera_transaccion'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='fdb_programa_impresion'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='fdb_estatus'
+		rule='contains' />
+
+
+
+	<custom-validator
+			classname='dinamica.validators.ArrayNotEmptyValidator'
+			on-error-label='Seleccione al menos un campo para la generación del reporte.'
+			parameter-name='field_id' 
+			id='field_id' />
+
+	<custom-validator 
+			classname='dinamica.validators.ArrayToRecordset'
+			paramName='field_id' 
+			recordsetId='fields' 
+			colName='field_id' 
+			colType='integer' />
+				
+</validator>

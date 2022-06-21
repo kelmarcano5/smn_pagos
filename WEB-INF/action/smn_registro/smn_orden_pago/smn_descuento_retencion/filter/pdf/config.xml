@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smndescuentoretencion.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>${lbl:b_retention_discount}</pdf-title>
+	<pdf-logo url='/images/logo-simone-pdf.png' scale='100' />
+	<pdf-file-name>${lbl:b_retention_discount}.pdf</pdf-file-name>
+
+	<pdf-report 
+		pageSize="letter" 
+		rotate="false"
+		footer="false" 
+		header="true">
+		<record recordset='query-smndescuentoretencion.sql' width='100' spacingBefore='40'>
+			<col name='opa_descripcion_pl0' title='${lbl:b_payment_order_id}' width='12' align='left' />
+			<col name='smn_auxiliar_rf_combo' title='${lbl:b_auxiliary_supplier}' width='12' align='left' format='######' />
+			<col name='smn_descuento_retencion_rf_combo' title='${lbl:b_code_discount}' width='12' align='left' format='######' />
+			<col name='dro_monto_base' title='${lbl:b_amount_base}' width='12' align='left' format='#,###,##0.00' />
+			<col name='dro_porcentaje' title='${lbl:b_discount_percentage}' width='12' align='left' format='######' />
+			<col name='dro_monto_descuento' title='${lbl:b_percentage_amount}' width='12' align='left' format='#,###,##0.00' />
+			<col name='dro_fecha_registro' title='${lbl:b_store_date}' width='12' align='left' format='dd-MM-yyyy' />
+
+		</record>
+
+	</pdf-report>
+</config>

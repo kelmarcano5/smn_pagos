@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='foi_codigo' type='varchar' required='false' label='${lbl:b_foi_code}' maxlen='16'/>
+	<parameter id='foi_descripcion' type='varchar' required='false' label='${lbl:b_foi_description}' maxlen='64'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='foi_descripcion' rule='contains' />
+	<parameter id='foi_texto' type='varchar' required='false' label='${lbl:b_foi_text}' maxlen='10'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='foi_texto' rule='contains' />
+	<parameter id='foi_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

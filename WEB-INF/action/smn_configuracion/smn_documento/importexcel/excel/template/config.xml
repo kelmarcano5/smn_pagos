@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smndocumento.sql" source="session" scope="transaction" />
+
+	</transaction>
+
+	<output>
+		<classname>dinamica.GenericExcelOutput</classname>
+	</output>
+
+	<excel
+		filename='${lbl:b_document}.xls' >
+
+	<sheet recordset="query-table_stuck}.sql" sheetname="${lbl:b_document}">
+				<col id='smn_documentos_generales_rf_combo' label='${lbl:b_general_document}' />
+		<col id='smn_tipo_documento_id_combo' label='${lbl:b_document_type_id}' />
+		<col id='smn_modulo_origen_rf_combo' label='${lbl:b_source_module}' />
+		<col id='doc_codigo' label='${lbl:b_code_document}' />
+		<col id='doc_descripcion' label='${lbl:b_description_document}' />
+		<col id='smn_entidades_rf_combo' label='${lbl:b_entities}' />
+		<col id='smn_sucursales_rf_combo' label='${lbl:b_branches}' />
+		<col id='doc_ver_recepcion_item_combo' label='${lbl:b_item_reception}' />
+		<col id='doc_ver_recepcion_servicio_combo' label='${lbl:b_service_reception}' />
+		<col id='doc_ver_orden_compra_combo' label='${lbl:b_order_purchase}' />
+		<col id='doc_ver_control_documento_combo' label='${lbl:b_document_control}' />
+		<col id='doc_porcentaje' label='${lbl:b_percentage}' />
+		<col id='doc_monto_fijo' label='${lbl:b_fixed_amount}' />
+		<col id='doc_estatus_combo' label='${lbl:b_estatus}' />
+		<col id='doc_vigencia' label='${lbl:b_validity}' />
+		<col id='doc_codigo' label='${lbl:b_code_document}' />
+		<col id='doc_descripcion' label='${lbl:b_description_document}' />
+		<col id='smn_modulo_origen_rf_combo' label='${lbl:b_source_module}' />
+		<col id='smn_entidades_rf_combo' label='${lbl:b_entities}' />
+		<col id='smn_sucursales_rf_combo' label='${lbl:b_branches}' />
+		<col id='doc_fecha_registro' label='${lbl:b_store_date}' />
+
+	</sheet>
+
+	</excel>
+
+</config>

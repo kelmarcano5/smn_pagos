@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_orden_compra_rf' type='integer' required='false' label='${lbl:b_buy_order}' maxlen='10'/>
+	<parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+	<parameter id='smn_documento_id_name' type='varchar' required='false' label='${lbl:b_document}'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='nrs_numero' type='integer' required='false' label='${lbl:b_number_document}' maxlen='10'/>
+	<parameter id='smn_centro_costo_rf' type='integer' required='false' label='${lbl:b_cost_center}' maxlen='10'/>
+	<parameter id='smn_proveedor_id' type='integer' required='false' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='smn_usuario_rf' type='integer' required='false' label='${lbl:b_responsible}' maxlen='10'/>
+	<parameter id='nrs_monto_ml' type='double' required='false' label='${lbl:b_amount_nrs_ml}' maxlen='10'/>
+	<parameter id='nrs_estatus' type='varchar' required='false' label='${lbl:b_financial_status}' maxlen='2'/>
+	<parameter id='nrs_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+	<parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+</validator>

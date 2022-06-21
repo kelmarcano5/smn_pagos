@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_orden_pago_id_name' type='varchar' required='false' label='${lbl:b_payment_order_id}'/>
+	<parameter id='smn_orden_pago_id' type='integer' required='false' label='${lbl:b_payment_order_id}' maxlen='10'/>
+	<parameter id='smn_clase_auxiliar_rf' type='integer' required='false' label='${lbl:b_provider_class}' maxlen='10'/>
+	<parameter id='smn_auxiliar_rf' type='integer' required='false' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='smn_descuento_retencion_rf' type='integer' required='false' label='${lbl:b_code_discount}' maxlen='10'/>
+	<parameter id='dro_monto_base' type='double' required='false' label='${lbl:b_amount_base}' maxlen='10'/>
+	<parameter id='dro_porcentaje' type='integer' required='false' label='${lbl:b_discount_percentage}' maxlen='10'/>
+	<parameter id='dro_monto_descuento' type='double' required='false' label='${lbl:b_percentage_amount}' maxlen='10'/>
+	<parameter id='dro_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+	 <parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+	
+</validator>

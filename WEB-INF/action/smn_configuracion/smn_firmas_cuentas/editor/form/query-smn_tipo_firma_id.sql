@@ -1,0 +1,1 @@
+select smn_pagos.smn_tipo_firma.smn_tipo_firma_id as id, smn_pagos.smn_tipo_firma.tfi_codigo ||'-'||smn_pagos.smn_tipo_firma.tfi_descripcion as item from  smn_pagos.smn_tipo_firma

@@ -1,0 +1,3 @@
+<rows>
+iop_fecha_registro="${fld:iop_fecha_registro}"    iop_monto_impuesto="${fld:iop_monto_impuesto}"    iop_porcentaje_retencion="${fld:iop_porcentaje_retencion}"    iop_base_excenta="${fld:iop_base_excenta}"    iop_base_imponible="${fld:iop_base_imponible}"    smn_codigo_impuesto_rf="${fld:smn_codigo_impuesto_rf}"    smn_orden_pago_id="${fld:smn_orden_pago_id}"    smn_clave_imp_ret_id="${fld:smn_clave_imp_ret_id}"    
+</rows>

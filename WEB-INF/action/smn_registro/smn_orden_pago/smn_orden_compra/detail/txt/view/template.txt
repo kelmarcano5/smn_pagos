@@ -1,0 +1,21 @@
+<rows>
+	${lbl:b_opa_document}="${fld:smn_documento_rf_combo}"       
+	${lbl:b_document_number}="${fld:smn_numero_documento_rf}" 
+	${lbl:b_provider_class}="${fld:smn_clase_rf_combo}" 
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"   
+	${lbl:b_responsible}="${fld:smn_usuario_rf_combo}" 
+	${lbl:b_amount_ml}="${fld:ocp_monto_ml}"  
+	${lbl:b_amount_taxes_ml}="${fld:ocp_impuesto_ml}"
+	${lbl:b_currency}="${fld:smn_moneda_rf_combo}"
+	${lbl:b_amount_ma}="${fld:ocp_monto_ma}"
+	${lbl:b_amount_taxes_ma}="${fld:ocp_monto_impuestos_ma}"
+	${lbl:b_amount_used_ml}="${fld:ocp_monto_usado_ml}"
+	${lbl:b_taxes_used_ml}="${fld:ocp_impuesto_usado_ml}"
+	${lbl:b_amount_used_ma}="${fld:ocp_monto_usado_ma}"
+	${lbl:b_taxes_used_ma}="${fld:ocp_monto_impuestos_usado_ma}"
+	${lbl:b_amount_balance_ml}="${fld:ocp_monto_saldo_ml}"
+	${lbl:b_amount_balance_ma}="${fld:ocp_monto_saldo_ma}"
+	${lbl:b_taxes_balance_ma}="${fld:ocp_monto_impuestos_saldo_ma}"
+	${lbl:b_financial_status}="${fld:ocp_estatus_combo}"            
+   
+</rows>

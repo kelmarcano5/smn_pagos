@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnnotarecepcionservicio.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="4" cellStep="0" name="${lbl:b_reception_note}"/>
+	
+	<excel 
+		recordset='query-smnnotarecepcionservicio.sql' 
+		sheetname='${lbl:b_reception_note}' 
+		filename='${lbl:b_reception_note}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='smn_orden_compra_rf_combo' label='${lbl:b_buy_order}' />
+		<col id='smn_documento_id_combo' label='${lbl:b_document}' />
+		<col id='nrs_numero' label='${lbl:b_document_number}' />
+		<col id='smn_centro_costo_rf_combo' label='${lbl:b_cost_center}' />
+		<col id='smn_proveedor_id_combo' label='${lbl:b_auxiliary_supplier}' />
+		<col id='smn_usuario_rf_combo' label='${lbl:b_responsible}' />
+		<!-- <col id='nrs_monto_ml' label='${lbl:b_amount_nrs_ml}' />-->
+		<col id='nrs_estatus_combo' label='${lbl:b_financial_status}' />
+		<col id='nrs_fecha_registro' label='${lbl:b_store_date}' />
+
+	</excel>
+
+</config>

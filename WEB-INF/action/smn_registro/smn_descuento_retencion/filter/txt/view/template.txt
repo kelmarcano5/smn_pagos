@@ -1,0 +1,10 @@
+<rows>
+	${lbl:b_store_date}="${fld:dro_fecha_registro}"    
+	${lbl:b_percentage_amount}="${fld:dro_monto_descuento}"    
+	${lbl:b_discount_percentage}="${fld:dro_porcentaje}"    
+	${lbl:b_amount_base}="${fld:dro_monto_base}"    
+	${lbl:b_code_discount}="${fld:smn_descuento_retencion_rf_combo}"    
+	${lbl:b_auxiliary_supplier}="${fld:smn_auxiliar_rf_combo}"    
+	${lbl:b_provider_class}="${fld:smn_clase_auxiliar_rf_combo}"    
+	${lbl:b_payment_order_id}="${fld:opa_descripcion_pl0}"       
+</rows>

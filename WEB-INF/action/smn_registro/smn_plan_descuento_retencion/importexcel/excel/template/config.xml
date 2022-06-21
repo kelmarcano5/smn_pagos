@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnplandescuentoretencion.sql" source="session" scope="transaction" />
+		
+	</transaction>
+
+	<output>
+		<classname>dinamica.GenericExcelOutput</classname>
+	</output>
+		
+	<excel 
+		filename='${lbl:b_discount_plan}.xls' >
+		
+	<sheet recordset="query-table_stuck}.sql" sheetname="${lbl:b_discount_plan}">
+				<col id='smn_clase_auxiliar_rf_combo' label='${lbl:b_provider_class}' />
+		<col id='smn_proveedor_id_combo' label='${lbl:b_auxiliary_supplier}' />
+		<col id='pdr_fecha_desde' label='${lbl:b_date_from}' />
+		<col id='pdr_fecha_hasta' label='${lbl:b_date_up}' />
+		<col id='smn_descuento_retencion_rf_combo' label='${lbl:b_retention_discount}' />
+		<col id='pdr_estatus_combo' label='${lbl:b_estatus}' />
+		<col id='smn_proveedor_id_combo' label='${lbl:b_auxiliary_supplier}' />
+		<col id='pdr_fecha_desde' label='${lbl:b_date_from}' />
+		<col id='pdr_fecha_hasta' label='${lbl:b_date_up}' />
+		<col id='smn_descuento_retencion_rf_combo' label='${lbl:b_retention_discount}' />
+		<col id='pdr_estatus_combo' label='${lbl:b_estatus}' />
+		<col id='pdr_fecha_registro' label='${lbl:b_store_date}' />
+
+	</sheet>
+	
+	</excel>
+
+</config>

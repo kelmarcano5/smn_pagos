@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smndescuentoretencion.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="4" cellStep="0" name="${lbl:b_retention_discount}"/>
+	
+	<excel 
+		recordset='query-smndescuentoretencion.sql' 
+		sheetname='${lbl:b_retention_discount}' 
+		filename='${lbl:b_retention_discount}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='opa_descripcion_pl0' label='${lbl:b_payment_order_id}' />
+		<col id='smn_clase_auxiliar_rf_combo' label='${lbl:b_provider_class}' />
+		<col id='smn_auxiliar_rf_combo' label='${lbl:b_auxiliary_supplier}' />
+		<col id='smn_descuento_retencion_rf_combo' label='${lbl:b_code_discount}' />
+		<col id='dro_monto_base' label='${lbl:b_amount_base}' />
+		<col id='dro_porcentaje' label='${lbl:b_discount_percentage}' />
+		<col id='dro_monto_descuento' label='${lbl:b_percentage_amount}' />
+		<col id='dro_fecha_registro' label='${lbl:b_store_date}' />
+
+	</excel>
+
+</config>

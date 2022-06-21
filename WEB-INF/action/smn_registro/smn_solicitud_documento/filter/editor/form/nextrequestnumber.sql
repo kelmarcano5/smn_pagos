@@ -1,0 +1,4 @@
+SELECT smn_pagos.smn_solicitud_documento.sdp_numero_solicitud_pago as numero
+FROM smn_pagos.smn_solicitud_documento
+ORDER BY sdp_numero_solicitud_pago DESC
+LIMIT 1;

@@ -1,0 +1,61 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="12" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th class='sortable' onclick='sortBy("smn_orden_compra_rf_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_buy_order}</th>
+		<th class='sortable' onclick='sortBy("smn_documento_id_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_document}</th>
+		<th class='sortable' onclick='sortBy("nrs_numero","query-smnnotarecepcionservicio.sql")'>${lbl:b_document_number}</th>
+		<th class='sortable' onclick='sortBy("smn_centro_costo_rf_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_cost_center}</th>
+		<th class='sortable' onclick='sortBy("smn_proveedor_id_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_auxiliary_supplier}</th>
+		<th class='sortable' onclick='sortBy("smn_usuario_rf_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_responsible}</th>
+		<th class='sortable' onclick='sortBy("nrs_monto_ml","query-smnnotarecepcionservicio.sql")'>${lbl:b_amount_nrs_ml}</th>
+		<th class='sortable' onclick='sortBy("nrs_estatus_combo","query-smnnotarecepcionservicio.sql")'>${lbl:b_financial_status}</th>
+		<th class='sortable' onclick='sortBy("nrs_fecha_registro","query-smnnotarecepcionservicio.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_nota_recepcion_servicio_id}')" title="${lbl:b_view_detail}"></td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_nota_recepcion_servicio_id}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_nota_recepcion_servicio_id}')" title="${lbl:b_edit_button}"></td>
+		<td>${fld:smn_orden_compra_rf_combo}</td>
+		<td>${fld:smn_documento_id_combo}</td>
+		<td>${fld:nrs_numero}</td>
+		<td>${fld:smn_centro_costo_rf_combo}</td>
+		<td>${fld:smn_proveedor_id_combo}</td>
+		<td>${fld:smn_usuario_rf_combo}</td>
+		<td align='right'>${fld:nrs_monto_ml@#,###,##0.00}</td>
+		<td align='left'>${fld:nrs_estatus_combo}</td>
+		<td>${fld:nrs_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

@@ -1,0 +1,9 @@
+<rows>
+	${lbl:b_code_fcb}="${fld:fcb_codigo}"    
+	${lbl:b_description_fcb}="${fld:fcb_descripcion}"    	 
+	${lbl:b_bank_account}="${fld:smn_cuentas_bancarias_rf}" 
+	${lbl:b_quantity_fcb}="${fld:fcb_cantidad}"
+	${lbl:b_type_firm_fcb}="${fld:smn_tipo_firma_id}"
+	${lbl:b_estatus}="${fld:fcb_estatus}"
+	${lbl:b_store_date}="${fld:fcb_fecha_registro}"
+</rows>

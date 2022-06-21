@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='dpd_numero_documento' type='integer' required='false' label='${lbl:b_document_number}' maxlen='10'/>
+	<parameter id='dpd_fecha_uso' type='date' required='false' label='${lbl:b_date_use}' maxlen='10'/>
+	<parameter id='dpd_fecha_anulacion' type='date' required='false' label='${lbl:b_cancellation_date}' maxlen='10'/>
+	<parameter id='dpd_estatus' type='varchar' required='false' label='${lbl:b_process_status}' maxlen='2'/>
+	<parameter id='dpd_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

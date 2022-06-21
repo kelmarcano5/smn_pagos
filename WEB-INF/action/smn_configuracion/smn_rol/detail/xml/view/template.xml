@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_rol>
+	<detail>
+		<rows>		
+		<record rol_user="${fld:smn_usuario_rf_combo}"
+				rol_tipo="${fld:rol_tipo_combo}"  
+				smn_corporaciones_rf="${fld:smn_corporaciones_rf_combo}"   
+				smn_entidades_rf="${fld:smn_entidades_rf_combo}"
+				smn_sucursales_rf="${fld:smn_sucursales_rf_combo}" 
+				smn_areas_servicios_rf="${fld:smn_areas_servicios_rf_combo}" 
+				smn_unidades_servicios_rf="${fld:smn_unidades_servicios_rf_combo}" 
+				smn_estructura_organizacional_rf="${fld:smn_estructura_organizacional_rf_combo}"    				
+				rol_vigencia="${fld:rol_vigencia}"    
+				rol_estatus="${fld:rol_estatus}"    
+				    />
+		</rows>
+	</detail>
+</smn_rol>

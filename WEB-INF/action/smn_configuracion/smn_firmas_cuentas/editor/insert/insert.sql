@@ -1,0 +1,30 @@
+INSERT INTO smn_pagos.smn_firmas_cuentas
+(
+	smn_firmas_cuentas_id,
+	fcb_codigo,
+	fcb_descripcion,
+	smn_cuentas_bancarias_rf,
+	fcb_cantidad,
+	smn_tipo_firma_id,
+	fcb_estatus,
+	fcb_vigencia,
+	fcb_idioma,
+	fcb_usuario,
+	fcb_fecha_registro,
+	fcb_hora
+)
+VALUES
+(
+	${seq:currval@smn_pagos.seq_smn_firmas_cuentas},
+	${fld:fcb_codigo},
+	${fld:fcb_descripcion},
+	${fld:smn_cuentas_bancarias_rf},
+	${fld:fcb_cantidad},
+	${fld:smn_tipo_firma_id},
+	${fld:fcb_estatus},
+	${fld:fcb_vigencia},
+	'${def:locale}',
+	'${def:user}',
+	{d '${def:date}'},
+	'${def:time}'
+)

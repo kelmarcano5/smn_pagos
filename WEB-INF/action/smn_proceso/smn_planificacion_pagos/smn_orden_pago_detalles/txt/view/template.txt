@@ -1,0 +1,11 @@
+<rows>
+	${lbl:b_store_date}="${fld:opa_fecha_registro}"       
+	${lbl:b_financial_status}="${fld:opa_estatus_financiero_combo}"    
+	${lbl:b_number_document_payment}="${fld:opa_numero_documento}"    
+	${lbl:b_source_document}="${fld:opa_documento_descripcion_origen}"       
+	${lbl:b_number_order_payment}="${fld:opa_numero}"   
+	${lbl:b_opa_document}="${fld:smn_documento_id_combo}"      
+	${lbl:b_auxiliary_beneficiary}="${fld:smn_auxiliar_rf_combo}"     
+ 	${lbl:b_opa_entities}="${fld:smn_entidades_rf_combo}"   
+   
+</rows>

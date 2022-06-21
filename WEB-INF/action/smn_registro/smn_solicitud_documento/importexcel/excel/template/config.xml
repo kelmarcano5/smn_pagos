@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnsolicituddocumento.sql" source="session" scope="transaction" />
+		
+	</transaction>
+
+	<output>
+		<classname>dinamica.GenericExcelOutput</classname>
+	</output>
+		
+	<excel 
+		filename='${lbl:b_document_request}.xls' >
+		
+	<sheet recordset="query-table_stuck}.sql" sheetname="${lbl:b_document_request}">
+				<col id='smn_documento_id_combo' label='${lbl:b_document}' />
+		<col id='sdp_numero_solicitud_pago' label='${lbl:b_request_number}' />
+		<col id='smn_rol_id_combo' label='${lbl:b_rol_id}' />
+		<col id='smn_entidad_bancaria_rf_combo' label='${lbl:b_bank}' />
+		<col id='smn_cuenta_bancaria_rf_combo' label='${lbl:b_bank_account}' />
+		<col id='smn_usuario_id_combo' label='${lbl:b_user}' />
+		<col id='smn_clave_formato_impresion_id_combo' label='${lbl:b_printing_format_id}' />
+		<col id='sdp_fecha_solicitud' label='${lbl:b_request_date}' />
+		<col id='sdp_fecha_recepcion' label='${lbl:b_reception_date}' />
+		<col id='sdp_fecha_activacion' label='${lbl:b_activation_date}' />
+		<col id='sdp_numero' label='${lbl:b_document_number_pay}' />
+		<col id='sdp_numero_inicial' label='${lbl:b_initial_number}' />
+		<col id='sdp_numero_final' label='${lbl:b_end_number}' />
+		<col id='sdp_cantidad_documentos' label='${lbl:b_document_quantity}' />
+		<col id='sdp_estatus_solicitud_combo' label='${lbl:b_estatus}' />
+		<col id='smn_documento_id_combo' label='${lbl:b_document}' />
+		<col id='sdp_numero_solicitud_pago' label='${lbl:b_request_number}' />
+		<col id='smn_entidad_bancaria_rf_combo' label='${lbl:b_bank}' />
+		<col id='smn_cuenta_bancaria_rf_combo' label='${lbl:b_bank_account}' />
+		<col id='sdp_fecha_solicitud' label='${lbl:b_request_date}' />
+		<col id='sdp_cantidad_documentos' label='${lbl:b_document_quantity}' />
+		<col id='sdp_fecha_registro' label='${lbl:b_store_date}' />
+
+	</sheet>
+	
+	</excel>
+
+</config>

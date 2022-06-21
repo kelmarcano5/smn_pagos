@@ -1,0 +1,50 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+	<col width='12%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="10" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+
+		<th></th>
+		<th class='sortable' onclick='sortBy("opa_descripcion_pl0","query-smndescuentoretencion.sql")'>${lbl:b_payment_order_id}</th>
+		<th class='sortable' onclick='sortBy("smn_auxiliar_rf_combo","query-smndescuentoretencion.sql")'>${lbl:b_auxiliary_supplier}</th>
+		<th class='sortable' onclick='sortBy("smn_descuento_retencion_rf_combo","query-smndescuentoretencion.sql")'>${lbl:b_code_discount}</th>
+		<th class='sortable' onclick='sortBy("dro_monto_base","query-smndescuentoretencion.sql")'>${lbl:b_amount_base}</th>
+		<th class='sortable' onclick='sortBy("dro_porcentaje","query-smndescuentoretencion.sql")'>${lbl:b_discount_percentage}</th>
+		<th class='sortable' onclick='sortBy("dro_monto_descuento","query-smndescuentoretencion.sql")'>${lbl:b_percentage_amount}</th>
+		<th class='sortable' onclick='sortBy("dro_fecha_registro","query-smndescuentoretencion.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_descuento_retencion_op_id}')" title="${lbl:b_view_detail}"></td>
+		<td>${fld:opa_descripcion_pl0}</td>
+		<td>${fld:smn_auxiliar_rf_combo}</td>
+		<td>${fld:smn_descuento_retencion_rf_combo}</td>
+		<td align='right'>${fld:dro_monto_base@#,###,##0.00}</td>
+		<td>${fld:dro_porcentaje}</td>
+		<td align='right'>${fld:dro_monto_descuento@#,###,##0.00}</td>
+		<td>${fld:dro_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

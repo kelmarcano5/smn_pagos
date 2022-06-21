@@ -1,0 +1,9 @@
+<rows>
+  
+	${lbl:b_foi_code}="${fld:foi_codigo}"
+	${lbl:b_foi_description}="${fld:foi_descripcion}"
+	${lbl:b_foi_text}="${fld:foi_texto}"
+	${lbl:b_estatus}="${fld:foi_estatus}"  
+	${lbl:b_validity}="${fld:foi_vigencia}"
+
+</rows>

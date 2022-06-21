@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='id_solicitud_documento' type='integer' required='true' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='numero_inicial' type='integer' required='true' label='${lbl:b_rol_id}' maxlen='10'/>
+	<parameter id='cuenta_bancaria' type='integer' required='true' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='cantidad' type='integer' required='true' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='cont' type='integer' required='true' label='${lbl:b_bank_account}' maxlen='10'/>
+	
+</validator>

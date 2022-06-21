@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_plan_descuento_retencion>
+	<detail>
+		<rows>		
+		<record 
+			pdr_fecha_registro="${fld:pdr_fecha_registro}"    
+			pdr_estatus="${fld:pdr_estatus_combo}"    
+			smn_descuento_retencion_rf="${fld:smn_descuento_retencion_rf_combo}"    
+			pdr_fecha_hasta="${fld:pdr_fecha_hasta}"    
+			pdr_fecha_desde="${fld:pdr_fecha_desde}"    
+			smn_proveedor_id="${fld:smn_proveedor_id_combo}"       />
+		</rows>
+	</detail>
+</smn_plan_descuento_retencion>

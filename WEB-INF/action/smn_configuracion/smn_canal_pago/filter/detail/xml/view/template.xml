@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_canal_pago>
+	<detail>
+		<rows>		
+		<record rec_fecha_registro="${fld:cdp_fecha_registro}"    
+				rec_estatus="${fld:cdp_estatus_combo}"    
+				rec_descripcion="${fld:cdp_descripcion}"    
+				rec_codigo="${fld:cdp_codigo}"    />
+		</rows>
+	</detail>
+</smn_canal_pago>

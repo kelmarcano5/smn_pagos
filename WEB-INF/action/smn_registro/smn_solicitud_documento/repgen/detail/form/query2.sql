@@ -1,0 +1,20 @@
+select
+		smn_pagos.smn_solicitud_documento.smn_documento_id,
+	smn_pagos.smn_solicitud_documento.sdp_numero_solicitud_pago,
+	smn_pagos.smn_solicitud_documento.smn_rol_id,
+	smn_pagos.smn_solicitud_documento.smn_entidad_bancaria_rf,
+	smn_pagos.smn_solicitud_documento.smn_cuenta_bancaria_rf,
+	smn_pagos.smn_solicitud_documento.smn_clave_formato_impresion_id,
+	smn_pagos.smn_solicitud_documento.sdp_fecha_solicitud,
+	smn_pagos.smn_solicitud_documento.sdp_fecha_recepcion,
+	smn_pagos.smn_solicitud_documento.sdp_fecha_activacion,
+	smn_pagos.smn_solicitud_documento.sdp_numero,
+	smn_pagos.smn_solicitud_documento.sdp_numero_inicial,
+	smn_pagos.smn_solicitud_documento.sdp_numero_final,
+	smn_pagos.smn_solicitud_documento.sdp_cantidad_documentos,
+	smn_pagos.smn_solicitud_documento.sdp_estatus_solicitud,
+	smn_pagos.smn_solicitud_documento.sdp_fecha_registro
+from
+	smn_pagos.smn_solicitud_documento 
+where
+	smn_pagos.smn_solicitud_documento.smn_solicitud_documento_id = ${fld:id}

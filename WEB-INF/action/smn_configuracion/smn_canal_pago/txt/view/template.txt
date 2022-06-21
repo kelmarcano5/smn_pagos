@@ -1,0 +1,6 @@
+<rows>
+	${lbl:b_code_cdp}="${fld:cdp_codigo}"
+	${lbl:b_description_cdp}="${fld:cdp_descripcion}"
+	${lbl:b_estatus}="${fld:cdp_estatus_combo}"
+	${lbl:b_store_date}="${fld:cdp_fecha_registro}"    
+</rows>

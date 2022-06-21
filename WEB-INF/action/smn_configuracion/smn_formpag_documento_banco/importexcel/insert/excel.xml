@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator maxErrors='20'>
+	<parameter id='smn_documento_id' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_forma_pago_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_entidad_financiera_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='fdb_genera_transaccion' type='varchar' required='true' maxlen='2'/>
+	<parameter id='fdb_programa_impresion' type='varchar' required='false' maxlen='65'/>
+	<parameter id='fdb_estatus' type='varchar' required='true' maxlen='2'/>
+	<parameter id='fdb_vigencia' type='date' required='true' maxlen='10'/>
+
+
+
+</validator>

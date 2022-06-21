@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="6" cellStep="0" name="${lbl:b_payment_order}"/>
+	
+	<excel 
+		recordset='query.sql' 
+		sheetname='${lbl:b_payment_order}' 
+		filename='${lbl:b_payment_order}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='smn_entidades_rf_combo' label='${lbl:b_opa_entities}' />
+		<col id='smn_sucursales_rf_combo' label='${lbl:b_opa_branches}' />
+		<col id='smn_clase_auxiliar_rf_combo' label='${lbl:b_key_beneficiary}' />
+		<col id='smn_auxiliar_rf_combo' label='${lbl:b_auxiliary_beneficiary}' />
+		<col id='smn_usuario_rf_combo' label='${lbl:b_opa_user}' />
+		<col id='smn_tipo_documento_id_combo' label='${lbl:b_opa_document_type}' />
+		<col id='smn_documento_id_combo' label='${lbl:b_opa_document}' />
+		<col id='opa_numero' label='${lbl:b_number_order_payment}' />
+		<col id='smn_modulo_rf_combo' label='${lbl:b_source_module}' />
+		<col id='opa_documento_descripcion_origen' label='${lbl:b_source_document}' />
+		<col id='opa_numero_documento' label='${lbl:b_number_document_payment}' />
+		<col id='opa_descripcion' label='${lbl:b_opa_description}'/>
+		<col id='smn_centro_costo_rf_combo' label='${lbl:b_cost_centers}' />
+		<col id='smn_proyecto_rf_combo' label='${lbl:b_proyect}' />
+		<col id='smn_orden_compra_rf_combo' label='${lbl:b_purchase_order}' />
+		<col id='opa_fecha_recepcion' label='${lbl:b_reception_date}' />
+		<col id='opa_fecha_vencimiento' label='${lbl:b_expiration_date}' />
+		<col id='opa_monto_factura_ml' label='${lbl:b_local_currency}' />
+		<col id='opa_monto_factura_ma' label='${lbl:b_alternate_currency}' />
+		<col id='opa_monto_pagado_ml' label='${lbl:b_local_currency_paid}' />
+		<col id='opa_monto_pagado_ma' label='${lbl:b_alternate_currency_paid}' />
+		<col id='opa_monto_dif_camb' label='${lbl:b_differential_amount}' />
+		<col id='opa_monto_dif_camb_pag' label='${lbl:b_differential_amount_paid}' />
+		<col id='opa_saldo_factura_ml' label='${lbl:order_payment_ml}' />
+		<col id='opa_saldo_factura_ma' label='${lbl:order_payment_ma}' />
+		<col id='opa_saldo_opa_dif_cambiario' label='${lbl:b_differential_amount_balance}' />
+		<col id='smn_moneda_rf_combo' label='${lbl:b_currency}' />
+		<col id='smn_tasa_cambio_rf_combo' label='${lbl:b_rate_change}' />
+		<col id='opa_estatus_financiero_combo' label='${lbl:b_financial_status}' />
+		<col id='opa_estatus_combo' label='${lbl:b_estatus}' />
+		<col id='opa_fecha_registro' label='${lbl:b_store_date}' />
+
+	</excel>
+
+</config>

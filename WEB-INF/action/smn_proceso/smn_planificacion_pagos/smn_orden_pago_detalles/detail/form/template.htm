@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="${def:context}/dinamica_bkp.css" />
+	<link rel="stylesheet" type="text/css" href="${def:context}/main.css" />
+	
+	<script type="text/javascript" src="${def:context}/action/script">
+	</script>
+
+	<script type="text/javascript">
+		//invoca la generacion de un PDF en un popup
+		function openPDF()
+		{
+			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+			var url = "${def:context}${def:actionroot}/pdf?random=" + Math.random();
+			var w = window.open(url, null, features);
+		}
+		
+		//exportar a excel
+		function openExcel() {
+			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+			var url = "${def:context}${def:actionroot}/excel?random=" + Math.random();
+			var w = window.open(url, null, features);
+		}
+		
+		//exportar a xml
+		function openXml(id) {
+			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+			var url = "${def:context}${def:actionroot}/xml/search?id=" + id;
+			var w = window.open(url, null, features);
+		}
+		
+		//exportar a texto
+		function openTxt(id) {
+			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+			var url = "${def:context}${def:actionroot}/txt/search?id=" + id;
+			var w = window.open(url, null, features);
+		}
+		
+		//envio de emails
+		function openEmails() {
+			var uri = "${def:context}${def:actionroot}/email/form";					
+			openDialog("editor0", uri, 980, 600);	
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<!--banner-->
+	<div class="bannerDialog" id="encabezado_tabla">
+		${lbl:b_payment_order}
+		<img src="${def:context}/images/pdf.png" onclick="openPDF()" title="${lbl:b_export_pdf}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/excel.png" onclick="openExcel()" title="${lbl:b_export_excel}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/file-xml4.png" onclick="openXml('${fld:smn_orden_pago_id}')" title="${lbl:b_export_xml}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/file-text.png" onclick="openTxt('${fld:smn_orden_pago_id}')" title="${lbl:b_export_txt}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/emails.png" onclick="openEmails()" title="${lbl:s_profile_email}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/close.png" class="button" onclick="parent.closeDialog()" title="${lbl:b_close_button}" style="float:right; cursor:pointer;"/>
+	</div>
+
+	<table class="record" style="width:500px;">
+		<tr>
+			<td width="40%">${lbl:b_opa_entities}</td>
+			<td style="background-color: white">${fld:smn_entidades_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_opa_branches}</td>
+			<td style="background-color: white">${fld:smn_sucursales_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_key_beneficiary}</td>
+			<td style="background-color: white">${fld:smn_clase_auxiliar_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_auxiliary_beneficiary}</td>
+			<td style="background-color: white">${fld:smn_auxiliar_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_opa_user}</td>
+			<td style="background-color: white">${fld:smn_usuario_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_opa_document_type}</td>
+			<td style="background-color: white">${fld:smn_tipo_documento_id_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_opa_document}</td>
+			<td style="background-color: white">${fld:smn_documento_id_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_number_order_payment}</td>
+			<td style="background-color: white">${fld:opa_numero@#,##0}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_source_module}</td>
+			<td style="background-color: white">${fld:smn_modulo_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_source_document}</td>
+			<td style="background-color: white">${fld:opa_documento_descripcion_origen}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_number_document_payment}</td>
+			<td style="background-color: white">${fld:opa_numero_documento@#,##0}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_opa_description}</td>
+			<td style="background-color: white">${fld:opa_descripcion}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_cost_center}</td>
+			<td style="background-color: white">${fld:smn_centro_costo_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_proyect}</td>
+			<td style="background-color: white">${fld:smn_proyecto_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_purchase_order}</td>
+			<td style="background-color: white">${fld:smn_orden_compra_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_reception_date}</td>
+			<td style="background-color: white">${fld:opa_fecha_recepcion@dd-MM-yyyy}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_expiration_date}</td>
+			<td style="background-color: white">${fld:opa_fecha_vencimiento@dd-MM-yyyy}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_local_currency}</td>
+			<td style="background-color: white">${fld:opa_monto_factura_ml@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_alternate_currency}</td>
+			<td style="background-color: white">${fld:opa_monto_factura_ma@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_local_currency_paid}</td>
+			<td style="background-color: white">${fld:opa_monto_pagado_ml@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_alternate_currency_paid}</td>
+			<td style="background-color: white">${fld:opa_monto_pagado_ma}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_differential_amount}</td>
+			<td style="background-color: white">${fld:opa_monto_dif_camb@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_differential_amount_paid}</td>
+			<td style="background-color: white">${fld:opa_monto_dif_camb_pag@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:order_payment_ml}</td>
+			<td style="background-color: white">${fld:opa_saldo_factura_ml@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:order_payment_ma}</td>
+			<td style="background-color: white">${fld:opa_saldo_factura_ma@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_differential_amount_balance}</td>
+			<td style="background-color: white">${fld:opa_saldo_opa_dif_cambiario@#,###,##0.00}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_currency}</td>
+			<td style="background-color: white">${fld:smn_moneda_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_rate_change}</td>
+			<td style="background-color: white">${fld:smn_tasa_cambio_rf_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_financial_status}</td>
+			<td style="background-color: white">${fld:opa_estatus_financiero_combo}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_date_reverso}</td>
+			<td style="background-color: white">${fld:opa_fecha_reverso@dd-MM-yyyy}</td>
+		</tr>		
+		<tr>
+			<td width="40%">${lbl:b_buy_order}</td>
+			<td>
+				<smn_buy_order_rows>
+				<label style="width:10px"> ${fld:id}<br></label>
+				</smn_buy_order_rows>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="40%">${lbl:b_entry_note}</td>
+			<td>
+				<smn_entry_note_rows>
+				<label style="width:10px"> ${fld:id}<br></label>
+				</smn_entry_note_rows>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="40%">${lbl:b_reception_note}</td>
+			<td>
+				<smn_reception_note_rows>		
+				<label style="width:10px"> ${fld:id}<br></label>				
+				</smn_reception_note_rows>
+			</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_estatus}</td>
+			<td style="background-color: white">${fld:opa_estatus_combo}</td>
+		</tr>
+	</table>
+
+	<br>
+	<div  align="center">
+		<input id="salir" type="button" value="${lbl:s_exit}" onclick="parent.closeDialog()" class="button">
+	</div>
+
+</body>
+
+</html>

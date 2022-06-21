@@ -1,0 +1,9 @@
+<rows>
+	${lbl:b_store_date}="${fld:sdp_fecha_registro}"      
+	${lbl:b_document_quantity}="${fld:sdp_cantidad_documentos}"       
+	${lbl:b_request_date}="${fld:sdp_fecha_solicitud}"      
+	${lbl:b_bank_account}="${fld:smn_cuenta_bancaria_rf_combo}"    
+	${lbl:b_bank}="${fld:smn_entidad_bancaria_rf_combo}"     
+	${lbl:b_request_number}="${fld:sdp_numero_solicitud_pago}"    
+	${lbl:b_document}="${fld:smn_documento_id_combo}"    
+</rows>

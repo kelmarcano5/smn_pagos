@@ -1,0 +1,1 @@
+select smn_base.smn_sucursales.smn_sucursales_id as id, smn_base.smn_sucursales.suc_codigo as item from smn_base.smn_sucursales

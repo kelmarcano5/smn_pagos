@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_rechazo>
+	<detail>
+		<rows>		
+		<record rec_fecha_registro="${fld:rec_fecha_registro}"    
+				rec_estatus="${fld:rec_estatus_combo}"    
+				rec_descripcion="${fld:rec_descripcion}"    
+				rec_codigo="${fld:rec_codigo}"    />
+		</rows>
+	</detail>
+</smn_rechazo>

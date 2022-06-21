@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='repgen.filter' onerror='/action/error/validation/ajax'>
+
+	<parameter id='fdesde' type='date' required='false' label='Fecha desde'/>
+	<parameter id='fhasta' type='date' required='false' label='Fecha hasta'/>
+	
+	<parameter id='smn_documento_id_name' type='varchar' required='false' label='${lbl:b_document}'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='sdp_numero_solicitud_pago' type='integer' required='false' label='${lbl:b_request_number}' maxlen='10'/>
+	<parameter id='smn_rol_id_name' type='varchar' required='false' label='${lbl:b_rol_id}'/>
+	<parameter id='smn_rol_id' type='integer' required='false' label='${lbl:b_rol_id}' maxlen='10'/>
+	<parameter id='smn_entidad_bancaria_rf' type='integer' required='false' label='${lbl:b_bank}' maxlen='10'/>
+	<parameter id='smn_cuenta_bancaria_rf' type='integer' required='false' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='smn_usuario_id' type='integer' required='false' label='${lbl:b_user}' maxlen='10'/>
+	<parameter id='smn_clave_formato_impresion_id_name' type='varchar' required='false' label='${lbl:b_printing_format_id}'/>
+	<parameter id='smn_clave_formato_impresion_id' type='integer' required='false' label='${lbl:b_printing_format_id}' maxlen='10'/>
+	<parameter id='sdp_fecha_solicitud' type='date' required='false' label='${lbl:b_request_date}' maxlen='10'/>
+	<parameter id='sdp_fecha_recepcion' type='date' required='false' label='${lbl:b_reception_date}' maxlen='10'/>
+	<parameter id='sdp_fecha_activacion' type='date' required='false' label='${lbl:b_activation_date}' maxlen='10'/>
+	<parameter id='sdp_numero' type='integer' required='false' label='${lbl:b_document_number_pay}' maxlen='10'/>
+	<parameter id='sdp_numero_inicial' type='integer' required='false' label='${lbl:b_initial_number}' maxlen='10'/>
+	<parameter id='sdp_numero_final' type='integer' required='false' label='${lbl:b_end_number}' maxlen='10'/>
+	<parameter id='sdp_cantidad_documentos' type='integer' required='false' label='${lbl:b_document_quantity}' maxlen='10'/>
+	<parameter id='sdp_estatus_solicitud' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='smn_documento_id_name'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='smn_rol_id_name'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='smn_clave_formato_impresion_id_name'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='sdp_estatus_solicitud'
+		rule='contains' />
+
+
+
+	<custom-validator
+			classname='dinamica.validators.ArrayNotEmptyValidator'
+			on-error-label='Seleccione al menos un campo para la generación del reporte.'
+			parameter-name='field_id' 
+			id='field_id' />
+
+	<custom-validator 
+			classname='dinamica.validators.ArrayToRecordset'
+			paramName='field_id' 
+			recordsetId='fields' 
+			colName='field_id' 
+			colType='integer' />
+				
+</validator>

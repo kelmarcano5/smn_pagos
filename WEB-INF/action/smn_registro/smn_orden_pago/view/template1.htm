@@ -1,0 +1,73 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='%3'/>
+	<col width='%3'/>
+	<col width='%3'/>
+	<col width='%3'/>
+	<col width='%3'/>
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="17" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th class='sortable' onclick='sortBy("smn_entidades_rf_combo","query-smnordenpago.sql")'>${lbl:b_opa_entities}</th>
+		<th class='sortable' onclick='sortBy("smn_auxiliar_rf_combo","query-smnordenpago.sql")'>${lbl:b_auxiliary_beneficiary}</th>
+		<th class='sortable' onclick='sortBy("smn_usuario_rf_combo","query-smnordenpago.sql")'>${lbl:b_opa_user}</th>
+		<th class='sortable' onclick='sortBy("smn_documento_id_combo","query-smnordenpago.sql")'>${lbl:b_opa_document}</th>
+		<th class='sortable' onclick='sortBy("opa_numero","query-smnordenpago.sql")'>${lbl:b_number_order_payment}</th>
+		<th class='sortable' onclick='sortBy("opa_documento_descripcion_origen","query-smnordenpago.sql")'>${lbl:b_source_document}</th>
+		<th class='sortable' onclick='sortBy("opa_numero_documento","query-smnordenpago.sql")'>${lbl:b_number_document_payment}</th>
+		<th class='sortable' onclick='sortBy("opa_monto_factura_ml","query-smnordenpago.sql")'>${lbl:b_local_currency}</th>
+		<th class='sortable' onclick='sortBy("opa_estatus_financiero_combo","query-smnordenpago.sql")'>${lbl:b_financial_status}</th>
+		<th class='sortable' onclick='sortBy("opa_fecha_registro","query-smnordenpago.sql")'>${lbl:b_store_date}</th>
+		<th>IM</th>
+		<th>DR</th>
+		<th>OC</th>
+		<th>NE</th>
+		<th>NR</th>
+		
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_orden_pago_id}')" title="${lbl:b_view_detail}"></td>
+		
+		<td>${fld:smn_entidades_rf_combo}</td>
+		<td>${fld:smn_auxiliar_rf_combo}</td>
+		<td>${fld:smn_usuario_rf_combo}</td>
+		<td>${fld:smn_documento_id_combo}</td>
+		<td align='right'>${fld:opa_numero@#,##0}</td>
+		<td>${fld:opa_documento_descripcion_origen}</td>
+		<td align='right'>${fld:opa_numero_documento@#,##0}</td>
+		<td align='right'>${fld:opa_monto_factura_ml@#,###,##0.00}</td>
+		<td align='left'>${fld:opa_estatus_financiero_combo}</td>
+		<td>${fld:opa_fecha_registro@dd-MM-yyyy}</td>
+		<td><img src="${def:context}/images/view-list-details.png"  onclick="detalleimpuestos('${fld:smn_orden_pago_id}')" title="${lbl:b_detail_taxes}"></td>
+		<td><img src="${def:context}/images/view-list-details.png"  onclick="detalledescuentos('${fld:smn_orden_pago_id}')" title="${lbl:b_detail_discounts}"></td>
+		<td><img src="${def:context}/images/view-list-details.png"  onclick="detalleordencompra('${fld:smn_orden_pago_id}')" title="${lbl:b_detail_order_buy}"></td>
+		<td><img src="${def:context}/images/view-list-details.png"  onclick="detallenotaentrada('${fld:smn_orden_pago_id}')" title="${lbl:b_detail_input_note}"></td>
+		<td><img src="${def:context}/images/view-list-details.png"  onclick="detallenotarecepcion('${fld:smn_orden_pago_id}')" title="${lbl:b_detail_reception_note}"></td>
+		
+		</tr>
+	</rows>
+
+</table>

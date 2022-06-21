@@ -1,0 +1,27 @@
+INSERT INTO smn_pagos.smn_autorizador
+(
+	smn_autorizador_id,
+	smn_usuario_rf,
+	smn_entidades_rf,
+	smn_sucursales_rf,
+	aut_estatus,
+	aut_vigencia,
+	aut_idioma,
+	aut_usuario,
+	aut_fecha_registro,
+	aut_hora
+)
+VALUES
+(
+	${seq:nextval@smn_pagos.seq_smn_autorizador},
+	?,
+	?,
+	?,
+	?,
+	?,
+	'${def:locale}',
+	'${def:user}',
+	'${def:date
+}',
+	'${def:time}'
+)

@@ -1,0 +1,10 @@
+<rows>
+	${lbl:b_store_date}="${fld:nrs_fecha_registro}"    
+	${lbl:b_financial_status}="${fld:nrs_estatus_combo}"    
+	${lbl:b_responsible}="${fld:smn_usuario_rf_combo}"       
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"      
+	${lbl:b_document_number}="${fld:nrs_numero}"    
+	${lbl:b_document}="${fld:smn_documento_id_combo}"       
+	${lbl:b_cost_center}="${fld:smn_centro_costo_rf_combo}"    
+	${lbl:b_buy_order}="${fld:smn_orden_compra_rf_combo}"    
+</rows>

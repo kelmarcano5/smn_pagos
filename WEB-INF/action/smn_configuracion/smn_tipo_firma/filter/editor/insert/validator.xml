@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='tfi_codigo' type='varchar' required='true' label='${lbl:b_code_tfi}' maxlen='16'/>
+	<parameter id='tfi_descripcion' type='varchar' required='true' label='${lbl:b_description_tfi}' maxlen='64'/>
+	<parameter id='tfi_estatus' type='varchar' required='true' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='tfi_vigencia' type='date' required='true' label='${lbl:b_validity}' maxlen='10'/>
+
+	<custom-validator
+		classname='dinamica.validators.DuplicatedKeyValidator'
+			on-error-label='${lbl:b_record_not_duplicated}.'
+			sql='buscarCodigo.sql'
+			id='tfi_codigo'/>
+
+	<custom-validator
+		classname='dinamica.validators.DuplicatedKeyValidator'
+			on-error-label='${lbl:b_record_not_duplicated}.'
+			sql='buscarDescripcion.sql'
+			id='tfi_descripcion'/>
+
+
+
+</validator>

@@ -1,0 +1,30 @@
+INSERT INTO smn_pagos.smn_formpag_documento_banco
+(
+	smn_formpag_documento_banco_id,
+	smn_documento_id,
+	smn_forma_pago_rf,
+	smn_entidad_financiera_rf,
+	fdb_genera_transaccion,
+	fdb_programa_impresion,
+	fdb_estatus,
+	fdb_vigencia,
+	fdb_idioma,
+	fdb_usuario,
+	fdb_fecha_registro,
+	fdb_hora
+)
+VALUES
+(
+	${seq:nextval@smn_pagos.seq_smn_formpag_documento_banco},
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	'${def:locale}',
+	'${def:user}',
+	{d '${def:date}'},
+	'${def:time}'
+)

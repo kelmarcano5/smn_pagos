@@ -1,0 +1,3 @@
+<rows>
+tfi_fecha_registro="${fld:tfi_fecha_registro}"    tfi_vigencia="${fld:tfi_vigencia}"    tfi_estatus="${fld:tfi_estatus}"    tfi_descripcion="${fld:tfi_descripcion}"    tfi_codigo="${fld:tfi_codigo}"    
+</rows>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_nota_recepcion_servicio>
+	<detail>
+		<rows>		
+		<record nrs_fecha_registro="${fld:nrs_fecha_registro}"    nrs_estatus="${fld:nrs_estatus}"    nrs_monto_saldo_ma="${fld:nrs_monto_saldo_ma}"    nrs_monto_saldo_ml="${fld:nrs_monto_saldo_ml}"    nrs_monto_usado_ma="${fld:nrs_monto_usado_ma}"    nrs_monto_usado_ml="${fld:nrs_monto_usado_ml}"    smn_moneda_rf="${fld:smn_moneda_rf}"    nrs_monto_ma="${fld:nrs_monto_ma}"    nrs_monto_ml="${fld:nrs_monto_ml}"    smn_proveedor_id="${fld:smn_proveedor_id}"    smn_clase_rf="${fld:smn_clase_rf}"    nrs_numero="${fld:nrs_numero}"    smn_documento_id="${fld:smn_documento_id}"    smn_numero_documento_rf="${fld:smn_numero_documento_rf}"    smn_documento_rf="${fld:smn_documento_rf}"    smn_tipo_documento_rf="${fld:smn_tipo_documento_rf}"    smn_centro_costo_rf="${fld:smn_centro_costo_rf}"    smn_orden_compra_rf="${fld:smn_orden_compra_rf}"    />
+		</rows>
+	</detail>
+</smn_nota_recepcion_servicio>

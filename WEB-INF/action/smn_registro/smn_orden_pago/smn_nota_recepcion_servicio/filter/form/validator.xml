@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror="/action/error/validation/alert" id="notarecepcion">
+     <parameter id="id_orden_pago" type="integer" required="true" label="ID" maxlen="10" />
+ </validator>

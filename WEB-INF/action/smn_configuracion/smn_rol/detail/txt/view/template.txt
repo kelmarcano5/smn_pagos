@@ -1,0 +1,13 @@
+<rows>
+	${lbl:b_user}="${fld:smn_usuario_rf_combo}" 
+	${lbl:b_type_rol}="${fld:rol_tipo_combo}"  
+	${lbl:b_corporation}="${fld:smn_corporaciones_rf_combo}"
+	${lbl:b_company}="${fld:smn_entidades_rf_combo}"
+	${lbl:b_branches}="${fld:smn_sucursales_rf_combo}"  
+	${lbl:b_service_area}="${fld:smn_areas_servicios_rf_combo}"
+	${lbl:b_service_unit}="${fld:smn_unidades_servicios_rf_combo}" 
+	${lbl:b_structure_position}="${fld:smn_estructura_organizacional_rf_combo}"    	   
+	${lbl:b_validity}="${fld:rol_vigencia}"    
+	${lbl:b_estatus}="${fld:rol_estatus_combo}"      
+	    
+</rows>

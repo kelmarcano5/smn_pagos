@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_autorizador_firmas_cuenta>
+	<detail>
+		<rows>		
+		<record smn_autorizador_id="${fld:smn_autorizador_id_combo}"
+				smn_entidades_financieras_rf="${fld:smn_entidades_financieras_rf_combo}"
+				smn_tipo_firma_id="${fld:smn_tipo_firma_id_combo}"
+				fcb_estatus="${fld:fcb_estatus_combo}"
+				fcb_vigencia="${fld:fcb_vigencia}" /> />
+		</rows>
+	</detail>
+</smn_autorizador_firmas_cuenta>

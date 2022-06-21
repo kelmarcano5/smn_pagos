@@ -1,0 +1,10 @@
+<rows>
+	${lbl:b_opa_document}="${fld:smn_documento_rf_combo}"       
+	${lbl:b_document_number}="${fld:smn_numero_documento_rf}"    
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"    
+	${lbl:b_amount_ml}="${fld:ocp_monto_ml}"       
+	${lbl:b_amount_balance_ml}="${fld:ocp_monto_saldo_ml}"   
+	${lbl:b_financial_status}="${fld:ocp_estatus_combo}"      
+	${lbl:b_store_date}="${fld:ocp_fecha_registro}"       
+   
+</rows>

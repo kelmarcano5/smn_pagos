@@ -1,0 +1,44 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='20%'/>
+	<col width='20%'/>
+	<col width='20%'/>
+	<col width='20%'/>
+	<col width='20%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="8" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+
+		<th></th>
+		<th class='sortable' onclick='sortBy("opa_descripcion_pl0","query-smnimpuestosretenciones.sql")'>${lbl:b_payment_order_id}</th>
+		<th class='sortable' onclick='sortBy("smn_codigo_impuesto_rf_combo","query-smnimpuestosretenciones.sql")'>${lbl:b_code_taxes}</th>
+		<th class='sortable' onclick='sortBy("iop_base_imponible","query-smnimpuestosretenciones.sql")'>${lbl:b_tax_base}</th>
+		<th class='sortable' onclick='sortBy("iop_monto_impuesto","query-smnimpuestosretenciones.sql")'>${lbl:b_tax_amount}</th>
+		<th class='sortable' onclick='sortBy("iop_fecha_registro","query-smnimpuestosretenciones.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_clave_imp_ret_id}')" title="${lbl:b_view_detail}"></td>
+		<td>${fld:opa_descripcion}</td>
+		<td>${fld:smn_codigo_impuesto_rf_combo}</td>
+		<td align='right'>${fld:iop_base_imponible@#,###,##0.00}</td>
+		<td align='right'>${fld:iop_monto_impuesto@#,###,##0.00}</td>
+		<td>${fld:iop_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

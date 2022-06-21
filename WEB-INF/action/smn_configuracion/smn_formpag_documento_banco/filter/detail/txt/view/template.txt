@@ -1,0 +1,9 @@
+<rows>
+	${lbl:b_document}="${fld:smn_documento_id_combo}" 
+	${lbl:b_way_to_pay_fdb}="${fld:smn_forma_pago_rf_combo}"
+	${lbl:b_bank_fdb}="${fld:smn_entidad_financiera_rf_combo}"  
+	${lbl:b_generate_transaction}="${fld:fdb_genera_transaccion_combo}" 
+	${lbl:b_print_program}="${fld:fdb_programa_impresion}"
+	${lbl:b_estatus}="${fld:fdb_estatus_combo}"
+	${lbl:b_validity}="${fld:fdb_vigencia}"   
+</rows>

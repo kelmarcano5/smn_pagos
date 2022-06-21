@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_formpag_documento_banco>
+	<detail>
+		<rows>		
+		<record    
+				fdb_vigencia="${fld:fdb_vigencia}"    
+				fdb_estatus="${fld:fdb_estatus_combo}"    
+				fdb_programa_impresion="${fld:fdb_programa_impresion}"    
+				fdb_genera_transaccion="${fld:fdb_genera_transaccion_combo}"    
+				smn_entidad_financiera_rf="${fld:smn_entidad_financiera_rf_combo}"    
+				smn_forma_pago_rf="${fld:smn_forma_pago_rf_combo}"    
+				smn_documento_id="${fld:smn_documento_id_combo}"    />
+		</rows>
+	</detail>
+</smn_formpag_documento_banco>

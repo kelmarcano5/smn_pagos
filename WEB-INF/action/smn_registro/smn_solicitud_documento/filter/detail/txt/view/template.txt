@@ -1,0 +1,17 @@
+<rows>  
+	${lbl:b_estatus}="${fld:sdp_estatus_solicitud_combo}"    
+	${lbl:b_document_quantity}="${fld:sdp_cantidad_documentos}"    
+	${lbl:b_end_number}="${fld:sdp_numero_final}"    
+	${lbl:b_initial_number}="${fld:sdp_numero_inicial}"    
+	${lbl:b_document_number_pay}="${fld:sdp_numero}"    
+	${lbl:b_activation_date}="${fld:sdp_fecha_activacion}"    
+	${lbl:b_reception_date}="${fld:sdp_fecha_recepcion}"    
+	${lbl:b_request_date}="${fld:sdp_fecha_solicitud}"    
+	${lbl:b_printing_format_id}="${fld:smn_clave_formato_impresion_id_combo}"  
+	${lbl:b_search}= "${fld:smn_usuario_id_combo}" 
+	${lbl:b_bank_account}="${fld:smn_cuenta_bancaria_rf_combo}"    
+	${lbl:b_bank}="${fld:smn_entidad_bancaria_rf_combo}"    
+	${lbl:b_rol_id}="${fld:smn_rol_id_combo}"    
+	${lbl:b_request_number}="${fld:sdp_numero_solicitud_pago}"    
+	${lbl:b_document}="${fld:smn_documento_id_combo}"    
+</rows>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_descuento_retencion>
+	<detail>
+		<rows>		
+		<record 
+			dro_fecha_registro="${fld:dro_fecha_registro}"    
+			dro_monto_descuento="${fld:dro_monto_descuento}"    
+			dro_porcentaje="${fld:dro_porcentaje}"    
+			dro_monto_base="${fld:dro_monto_base}"    
+			smn_descuento_retencion_rf="${fld:smn_descuento_retencion_rf_combo}"    
+			smn_auxiliar_rf="${fld:smn_auxiliar_rf_combo}"    
+			smn_clase_auxiliar_rf="${fld:smn_clase_auxiliar_rf_combo}"    
+			smn_orden_pago_id="${fld:opa_descripcion_pl0}"       />
+		</rows>
+	</detail>
+</smn_descuento_retencion>

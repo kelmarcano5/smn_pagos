@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnimpuestosretenciones.sql" source="session" scope="transaction" />
+		
+	</transaction>
+
+	<output>
+		<classname>dinamica.GenericExcelOutput</classname>
+	</output>
+		
+	<excel 
+		filename='${lbl:b_taxes_retentions}.xls' >
+		
+	<sheet recordset="query-table_stuck}.sql" sheetname="${lbl:b_taxes_retentions}">
+				<col id='opa_descripcion_pl0' label='${lbl:b_payment_order_id}' />
+		<col id='smn_codigo_impuesto_rf_combo' label='${lbl:b_code_taxes}' />
+		<col id='iop_base_imponible' label='${lbl:b_tax_base}' />
+		<col id='iop_base_excenta' label='${lbl:b_excenta_base}' />
+		<col id='iop_porcentaje_retencion' label='${lbl:b_percentage_retention}' />
+		<col id='iop_monto_impuesto' label='${lbl:b_tax_amount}' />
+		<col id='opa_descripcion_pl0' label='${lbl:b_payment_order_id}' />
+		<col id='smn_codigo_impuesto_rf_combo' label='${lbl:b_code_taxes}' />
+		<col id='iop_base_imponible' label='${lbl:b_tax_base}' />
+		<col id='iop_monto_impuesto' label='${lbl:b_tax_amount}' />
+		<col id='iop_fecha_registro' label='${lbl:b_store_date}' />
+
+	</sheet>
+	
+	</excel>
+
+</config>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_documentos_generales_rf' type='integer' required='true' label='${lbl:b_general_document}' maxlen='10'/>
+	<parameter id='smn_tipo_documento_id' type='integer' required='true' label='${lbl:b_document_type_id}' maxlen='10'/>
+	<parameter id='smn_modulo_origen_rf' type='integer' required='true' label='${lbl:b_source_module}' maxlen='10'/>
+	<parameter id='doc_codigo' type='varchar' required='true' label='${lbl:b_code_document}' maxlen='16'/>
+	<parameter id='doc_descripcion' type='varchar' required='true' label='${lbl:b_description_document}' maxlen='64'/>
+	<parameter id='doc_ver_recepcion_item' type='varchar' required='true' label='${lbl:b_item_reception}' maxlen='2'/>
+	<parameter id='doc_ver_recepcion_servicio' type='varchar' required='true' label='${lbl:b_service_reception}' maxlen='2'/>
+	<parameter id='doc_ver_orden_compra' type='varchar' required='true' label='${lbl:b_order_purchase}' maxlen='2'/>
+	<parameter id='doc_ver_control_documento' type='varchar' required='true' label='${lbl:b_document_control}' maxlen='2'/>
+	<parameter id='doc_porcentaje' type='double' required='false' label='${lbl:b_percentage}' maxlen='10'/>
+	<parameter id='doc_monto_fijo' type='double' required='false' label='${lbl:b_fixed_amount}' maxlen='10'/>
+	<parameter id='doc_estatus' type='varchar' required='true' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='doc_vigencia' type='date' required='true' label='${lbl:b_validity}' maxlen='10'/>
+	<parameter id='id' type='integer' required='true' label='${lbl:b_document}' maxlen='10'/>
+	<custom-validator classname='dinamica.validators.ArrayNotEmptyValidator' on-error-label='Seleccione al menos un ítem.' parameter-name='smn_entidades_id' id='smn_entidades_id'/>
+	<custom-validator classname='dinamica.validators.ArrayToRecordset' paramName='smn_entidades_id' recordsetId='query-smn_entidades.sql' colName='smn_entidades_id' colType='integer'/>
+</validator>
+

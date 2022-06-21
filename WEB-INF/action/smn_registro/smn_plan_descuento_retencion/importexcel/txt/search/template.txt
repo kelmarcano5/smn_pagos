@@ -1,0 +1,3 @@
+<rows>
+pdr_fecha_registro="${fld:pdr_fecha_registro}"    pdr_estatus="${fld:pdr_estatus}"    smn_descuento_retencion_rf="${fld:smn_descuento_retencion_rf}"    pdr_fecha_hasta="${fld:pdr_fecha_hasta}"    pdr_fecha_desde="${fld:pdr_fecha_desde}"    smn_proveedor_id="${fld:smn_proveedor_id}"    smn_clase_auxiliar_rf="${fld:smn_clase_auxiliar_rf}"    
+</rows>

@@ -1,0 +1,56 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+	<col width='11%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="10" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+
+		<th></th>
+		<th class='sortable' onclick='sortBy("smn_documento_rf_combo","query-smnnotaentrada.sql")'>${lbl:b_document}</th>
+		<th class='sortable' onclick='sortBy("smn_numero_documento_rf","query-smnnotaentrada.sql")'>${lbl:b_document_number}</th>
+		<th class='sortable' onclick='sortBy("smn_proveedor_id_combo","query-smnnotaentrada.sql")'>${lbl:b_auxiliary_supplier}</th>
+		<th class='sortable' onclick='sortBy("smn_usuario_rf_combo","query-smnnotaentrada.sql")'>${lbl:b_responsible}</th>
+		<th class='sortable' onclick='sortBy("nep_monto_ml","query-smnnotaentrada.sql")'>${lbl:b_amoun_ne_ml}</th>
+		<th class='sortable' onclick='sortBy("nep_monto_usado_ml","query-smnnotaentrada.sql")'>${lbl:b_amount_used_ml_ne}</th>
+		<th class='sortable' onclick='sortBy("nep_monto_saldo_ml","query-smnnotaentrada.sql")'>${lbl:b_amount_balance_ml_ne}</th>
+		<th class='sortable' onclick='sortBy("ocp_estatus_combo","query-smnnotaentrada.sql")'>${lbl:b_financial_status}</th>
+		<th class='sortable' onclick='sortBy("nep_fecha_registro","query-smnnotaentrada.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_nota_entrada_op_id}')" title="${lbl:b_view_detail}"></td>
+		<td>${fld:smn_documento_rf_combo}</td>
+		<td>${fld:smn_numero_documento_rf}</td>
+		<td>${fld:smn_proveedor_id_combo}</td>
+		<td>${fld:smn_usuario_rf_combo}</td>
+		<td align='right'>${fld:nep_monto_ml@#,###,##0.00}</td>
+		<td>${fld:nep_monto_usado_ml}</td>
+		<td align='right'>${fld:nep_monto_saldo_ml@#,###,##0.00}</td>
+		<td align='left'>${fld:ocp_estatus_combo}</td>
+		<td>${fld:nep_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

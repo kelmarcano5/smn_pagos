@@ -1,0 +1,67 @@
+<!--data grid-->
+<table class="datagrid" style="width:90%;">
+	<!-- <col width='3%'/> -->
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+	<col width='10%'/>
+    <col width='3%'/>
+   <!--  <tr>
+		<td style="border-style: none;"></td>
+		<td style="border-style: none;"></td>
+		<td style="border-style: none;"></td>
+		<td style="border-style: none;"></td>
+		<td>Total ML: ${fld:monto_ingreso_t@##,###,##0.00}</td>
+		<td>Total MA: ${fld:monto_ingreso_ma_t@##,###,##0.00}</td>
+	</tr> -->
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="8" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<!-- <th></th> -->
+		<th class='sortable' onclick="sortBy('entidad','query-smnordenpago.sql')" >Entidad</th>
+		<th class='sortable' onclick="sortBy('sucursal','query-smnordenpago.sql')" >Sucursal</th>
+		<th class='sortable' onclick="sortBy('beneficiario','query-smnordenpago.sql')" >Beneficiario</th>
+		<th class='sortable' onclick="sortBy('opa_estatus_financiero','query-smnordenpago.sql')" >Estatus Financiero</th>
+		<th class='sortable' onclick="sortBy('monto_ml','query-smnordenpago.sql')" >Saldo ML</th>
+		<th class='sortable' onclick="sortBy('monto_ma','query-smnordenpago.sql')" >Saldo MA</th>
+		<th class='sortable' onclick="sortBy('opa_fecha_recepcion','query-smnordenpago.sql')" >Fecha Recepcion</th>
+		<th></th>
+		
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<!-- <td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_orden_pago_id}')" title="Ver detalle"></td> -->
+		<td align="center">${fld:entidad}</td>
+		<td align="center">${fld:sucursal}</td>
+		<td align="center">${fld:beneficiario}</td>
+		<td align="center">${fld:opa_estatus_financiero}</td>
+		<td align="right">${fld:monto_ml@##,###,##0.00}</td>
+		<td align="right">${fld:monto_ma@##,###,##0.00}</td>
+		<td align="right">${fld:opa_fecha_recepcion@dd-MM-yyyy}</td>
+		<td><img src="${def:context}/images/icongrid/Detalle-impuesto.png" onclick="relacion('${fld:smn_proveedor_id}')" title="Ordenes Detalladas"></td>
+	</tr>
+	</rows>
+	<rows2>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>Totales</td>
+		<td align="right">${fld:monto_ml_t@##,###,##0.00}</td>
+		<td align="right">${fld:monto_ma_t@##,###,##0.00}</td>
+		<td></td>
+	</tr>
+	</rows2>
+</table>

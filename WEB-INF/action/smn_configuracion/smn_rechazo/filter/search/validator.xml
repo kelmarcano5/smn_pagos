@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='rec_codigo' type='varchar' required='false' label='${lbl:b_code_rec}' maxlen='16'/>
+	<parameter id='rec_descripcion' type='varchar' required='false' label='${lbl:b_code_rec}' maxlen='64'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='rec_descripcion' rule='contains' />
+	<parameter id='rec_estatus' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='rec_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

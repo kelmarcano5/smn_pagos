@@ -1,0 +1,48 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='14%'/>
+	<col width='14%'/>
+	<col width='14%'/>
+	<col width='14%'/>
+	<col width='14%'/>
+	<col width='14%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="9" id="encabezado_tabla">
+			${req:controls}
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th class='sortable' onclick='sortBy("doc_codigo","query-smndocumento.sql")'>${lbl:b_code_document}</th>
+		<th class='sortable' onclick='sortBy("doc_descripcion","query-smndocumento.sql")'>${lbl:b_description_document}</th>
+		<th class='sortable' onclick='sortBy("smn_modulo_origen_rf_combo","query-smndocumento.sql")'>${lbl:b_source_module}</th>
+		<th class='sortable' onclick='sortBy("doc_fecha_registro","query-smndocumento.sql")'>${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_documento_id}')" title="${lbl:b_view_detail}"></td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_documento_id}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_documento_id}')" title="${lbl:b_edit_button}"></td>
+		<td align='left'>${fld:doc_codigo}</td>
+		<td align='left'>${fld:doc_descripcion}</td>
+		<td>${fld:smn_modulo_origen_rf_combo}</td>
+		<td>${fld:doc_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

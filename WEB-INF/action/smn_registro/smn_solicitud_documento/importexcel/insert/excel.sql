@@ -1,0 +1,46 @@
+INSERT INTO smn_pagos.smn_solicitud_documento
+(
+	smn_solicitud_documento_id,
+	smn_documento_id,
+	sdp_numero_solicitud_pago,
+	smn_rol_id,
+	smn_entidad_bancaria_rf,
+	smn_cuenta_bancaria_rf,
+	smn_usuario_id,
+	smn_clave_formato_impresion_id,
+	sdp_fecha_solicitud,
+	sdp_fecha_recepcion,
+	sdp_fecha_activacion,
+	sdp_numero,
+	sdp_numero_inicial,
+	sdp_numero_final,
+	sdp_cantidad_documentos,
+	sdp_estatus_solicitud,
+	sdp_idioma,
+	sdp_usuario,
+	sdp_fecha_registro,
+	sdp_hora
+)
+VALUES
+(
+	${seq:nextval@smn_pagos.seq_smn_solicitud_documento},
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	'${def:locale}',
+	'${def:user}',
+	{d '${def:date}'},
+	'${def:time}'
+)

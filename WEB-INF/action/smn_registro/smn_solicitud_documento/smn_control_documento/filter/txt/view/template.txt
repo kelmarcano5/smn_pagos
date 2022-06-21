@@ -1,0 +1,6 @@
+<rows>
+	${lbl:b_document_number}="${fld:dpd_numero_documento}"    
+	${lbl:b_process_status}="${fld:dpd_estatus_combo}"    
+	${lbl:b_store_date}="${fld:dpd_fecha_registro}"    
+	
+</rows>

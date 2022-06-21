@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_autorizador>
+	<detail>
+		<rows>		
+		<record smn_usuario_rf_combo="${fld:smn_usuario_rf_combo}" 
+				smn_entidades_rf_combo="${fld:smn_entidades_rf_combo}" 
+				aut_estatus_combo="${fld:aut_estatus_combo}" 
+				aut_fecha_registro="${fld:aut_fecha_registro}"    
+		  />
+		</rows>
+	</detail>
+</smn_autorizador>

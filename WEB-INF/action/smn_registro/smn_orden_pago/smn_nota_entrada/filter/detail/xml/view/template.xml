@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_nota_entrada>
+	<detail>
+		<rows>		
+			<record 
+				smn_nota_entrada_rf_combo="${fld:smn_nota_entrada_rf_combo}"
+				smn_orden_compra_rf_combo="${fld:smn_orden_compra_rf_combo}"
+				smn_documento_rf_combo="${fld:smn_documento_rf_combo}"
+				smn_numero_documento_rf="${fld:smn_numero_documento_rf}"
+				smn_clase_rf_combo="${fld:smn_clase_rf_combo}"
+				smn_proveedor_id_combo="${fld:smn_proveedor_id_combo}"
+				smn_usuario_rf_combo="${fld:smn_usuario_rf_combo}"
+				nep_monto_ml="${fld:nep_monto_ml}"
+				nep_monto_ma="${fld:nep_monto_ma}"
+				smn_moneda_rf_combo="${fld:smn_moneda_rf_combo}"
+				nep_monto_usado_ml="${fld:nep_monto_usado_ml}"
+				nep_monto_usado_ma="${fld:nep_monto_usado_ma}"
+				nep_monto_saldo_ml="${fld:nep_monto_saldo_ml}"
+				nep_monto_saldo_ma="${fld:nep_monto_saldo_ma}"
+				ocp_estatus_combo="${fld:ocp_estatus_combo}"
+	
+			/>
+		</rows>
+	</detail>
+</smn_nota_entrada>

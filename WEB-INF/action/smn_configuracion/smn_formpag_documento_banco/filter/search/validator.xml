@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_documento_id_name' type='varchar' required='false' label='${lbl:b_document}'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='smn_forma_pago_rf' type='integer' required='false' label='${lbl:b_way_to_pay_fdb}' maxlen='10'/>
+	<parameter id='smn_entidad_financiera_rf' type='integer' required='false' label='${lbl:b_bank_fdb}' maxlen='10'/>
+	<parameter id='fdb_genera_transaccion' type='varchar' required='false' label='${lbl:b_generate_transaction}' maxlen='2'/>
+	<parameter id='fdb_estatus' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='fdb_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

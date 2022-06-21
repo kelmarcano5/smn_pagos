@@ -1,0 +1,3 @@
+<rows>
+cdc_fecha_registro="${fld:cdc_fecha_registro}"    cdc_status_doc="${fld:cdc_status_doc}"    smn_rol_id="${fld:smn_rol_id}"    smn_nivel_aprobacion_id="${fld:smn_nivel_aprobacion_id}"    smn_paso_id="${fld:smn_paso_id}"    cdc_documento_id="${fld:cdc_documento_id}"    smn_documentos_generales_rf="${fld:smn_documentos_generales_rf}"    smn_transaccion_general_rf="${fld:smn_transaccion_general_rf}"    smn_modulos_id="${fld:smn_modulos_id}"    
+</rows>

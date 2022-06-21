@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-base.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>${lbl:b_payment_order}</pdf-title>
+	<pdf-logo url='/images/logo-simone-pdf.png' scale='100' />
+	<pdf-file-name>${lbl:b_payment_order}.pdf</pdf-file-name>
+
+	<pdf-report 
+		pageSize="letter" 
+		rotate="false"
+		footer="false" 
+		header="true">
+		<record recordset='query-base.sql' width='100' spacingBefore='40'>
+			<col name='smn_entidades_rf' title='${lbl:b_opa_entities}' width='10' align='left' format='######' />
+			<col name='smn_sucursales_rf' title='${lbl:b_opa_branches}' width='10' align='left' format='######' />
+			<col name='smn_clase_auxiliar_rf' title='${lbl:b_class_aux}' width='10' align='left' format='######' />
+			<col name='clf_descripcion' title='${lbl:b_abc_classification}' width='10' align='left' format='######' />
+			<col name='monto_por_vencer_mayor_7' title='${lbl:b_due_more_than_7days}' width='10' align='left' format='#,###,##0.00' />
+			<col name='monto_por_vencer_menor_7' title='${lbl:b_due_between_0and7days}' width='10' align='left' format='#,###,##0.00' />
+			<col name='monto_vencido_menor_7' title='${lbl:b_expired_between_1and7days}' width='10' align='left' format='#,###,##0.00' />
+			<col name='monto_vencido_8_15' title='${lbl:b_expired_between_8and15days}' width='10' align='left' format='#,###,##0.00' />
+			<col name='monto_vencido_mayor_15' title='${lbl:b_overdue_more_than15days}' width='10' align='left' />
+
+		</record>
+
+	</pdf-report>
+</config>

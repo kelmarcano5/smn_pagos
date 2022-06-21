@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnnotaentrada.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>${lbl:b_entry_note}</pdf-title>
+	<pdf-logo url='/images/logo-simone-pdf.png' scale='100' />
+	<pdf-file-name>${lbl:b_entry_note}.pdf</pdf-file-name>
+
+	<pdf-report 
+		pageSize="letter" 
+		rotate="false"
+		footer="false" 
+		header="true">
+		<record recordset='query-smnnotaentrada.sql' width='100' spacingBefore='40'>
+			<col name='smn_documento_rf_combo' title='${lbl:b_document}' width='11' align='left' format='######' />
+			<col name='smn_numero_documento_rf' title='${lbl:b_document_number}' width='11' align='left' format='######' />
+			<col name='smn_proveedor_id_combo' title='${lbl:b_auxiliary_supplier}' width='11' align='left' format='######' />
+			<col name='smn_usuario_rf_combo' title='${lbl:b_responsible}' width='11' align='left' format='######' />
+			<col name='nep_monto_ml' title='${lbl:b_amoun_ne_ml}' width='11' align='left' format='#,###,##0.00' />
+			<col name='nep_monto_usado_ml' title='${lbl:b_amount_used_ml_ne}' width='11' align='left' format='######' />
+			<col name='nep_monto_saldo_ml' title='${lbl:b_amount_balance_ml_ne}' width='11' align='left' format='#,###,##0.00' />
+			<col name='ocp_estatus_combo' title='${lbl:b_financial_status}' width='11' align='left' />
+			<col name='nep_fecha_registro' title='${lbl:b_store_date}' width='11' align='left' format='dd-MM-yyyy' />
+
+		</record>
+
+	</pdf-report>
+</config>

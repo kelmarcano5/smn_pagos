@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_orden_pago>
+	<detail>
+		<rows>		
+		<record 
+      
+			opa_fecha_reverso="${fld:opa_fecha_reverso}"    
+			opa_estatus_financiero="${fld:opa_estatus_financiero_combo}"  
+			opa_estatus="${fld:opa_estatus_combo}"  
+			smn_tasa_cambio_rf="${fld:smn_tasa_cambio_rf_combo}"    
+			smn_moneda_rf="${fld:smn_moneda_rf_combo}"    
+			opa_saldo_opa_dif_cambiario="${fld:opa_saldo_opa_dif_cambiario}"    
+			opa_saldo_factura_ma="${fld:opa_saldo_factura_ma}"    
+			opa_saldo_factura_ml="${fld:opa_saldo_factura_ml}"    
+			opa_monto_dif_camb_pag="${fld:opa_monto_dif_camb_pag}"    
+			opa_monto_dif_camb="${fld:opa_monto_dif_camb}"    
+			opa_monto_pagado_ma="${fld:opa_monto_pagado_ma}"    
+			opa_monto_pagado_ml="${fld:opa_monto_pagado_ml}"    
+			opa_monto_factura_ma="${fld:opa_monto_factura_ma}"    
+			opa_monto_factura_ml="${fld:opa_monto_factura_ml}"    
+			smn_orden_compra_rf="${fld:smn_orden_compra_rf_combo}"    
+			smn_proyecto_rf="${fld:smn_proyecto_rf_combo}"   
+			smn_centro_costo_rf="${fld:smn_centro_costo_rf_combo}"    
+			opa_descripcion="${fld:opa_descripcion}"    
+			opa_numero_documento="${fld:opa_numero_documento}"    
+			smn_documento_rf="${fld:opa_documento_descripcion_origen}"    
+			smn_modulo_rf="${fld:smn_modulo_rf_combo}"    
+			opa_numero="${fld:opa_numero}"    
+			smn_documento_id="${fld:smn_documento_id_combo}"    
+			smn_tipo_documento_id="${fld:smn_tipo_documento_id_combo}"    
+			smn_auxiliar_rf="${fld:smn_auxiliar_rf_combo}"    
+			smn_clase_auxiliar_rf="${fld:smn_clase_auxiliar_rf_combo}"    
+			smn_sucursales_rf="${fld:smn_sucursales_rf_combo}"   
+			smn_entidades_rf="${fld:smn_entidades_rf_combo}"
+			opa_fecha_recepcion="${fld:opa_fecha_recepcion}"
+			opa_fecha_vencimiento="${fld:opa_fecha_vencimiento}"  
+			  
+			  />
+		</rows>
+	</detail>
+</smn_orden_pago>

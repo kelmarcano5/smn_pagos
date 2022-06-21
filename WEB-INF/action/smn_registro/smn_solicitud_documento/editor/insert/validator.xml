@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='smn_rol_id' type='integer' required='false' label='${lbl:b_rol_id}' maxlen='10'/>
+	<parameter id='smn_entidad_bancaria_rf' type='integer' required='true' label='${lbl:b_bank}' maxlen='10'/>
+	<parameter id='smn_cuenta_bancaria_rf' type='integer' required='true' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='smn_usuario_id' type='integer' required='true' label='${lbl:b_user}' maxlen='10'/>
+	<parameter id='smn_clave_formato_impresion_id' type='integer' required='false' label='${lbl:b_printing_format_id}' maxlen='10'/>
+	<parameter id='sdp_fecha_solicitud' type='date' required='true' label='${lbl:b_request_date}' maxlen='10'/>
+	<parameter id='sdp_numero' type='integer' required='true' label='${lbl:b_document_number_pay}' maxlen='10'/>
+	
+</validator>

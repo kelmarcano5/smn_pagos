@@ -1,0 +1,1 @@
+select smn_pagos.smn_formato_impresion.smn_clave_formato_impresion_id as id,  smn_pagos.smn_formato_impresion.foi_codigo as item from smn_pagos.smn_formato_impresion

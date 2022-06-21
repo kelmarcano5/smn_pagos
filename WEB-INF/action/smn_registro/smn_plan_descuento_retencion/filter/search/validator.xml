@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_proveedor_id' type='integer' required='false' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='pdr_fecha_desde' type='date' required='false' label='${lbl:b_date_from}' maxlen='10'/>
+	<parameter id='pdr_fecha_hasta' type='date' required='false' label='${lbl:b_date_up}' maxlen='10'/>
+	<parameter id='smn_descuento_retencion_rf' type='integer' required='false' label='${lbl:b_retention_discount}' maxlen='10'/>
+	<parameter id='pdr_estatus' type='varchar' required='false' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='pdr_fecha_registro' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

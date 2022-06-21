@@ -1,0 +1,1 @@
+select ${seq:nextval@smn_pagos.seq_smn_nota_recepcion_number_doc} as id

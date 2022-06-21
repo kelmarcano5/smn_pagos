@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_orden_compra>
+	<detail>
+		<rows>		
+			<record    
+				smn_documento_rf_combo="${fld:smn_documento_rf_combo}"   
+			    smn_numero_documento_rf="${fld:smn_numero_documento_rf}"   
+			    smn_proveedor_id_combo="${fld:smn_proveedor_id_combo}"      
+			    ocp_monto_ml="${fld:ocp_monto_ml}"   
+			    ocp_monto_saldo_ml="${fld:ocp_monto_saldo_ml}"   
+			    ocp_estatus_combo="${fld:ocp_estatus_combo}"
+			    ocp_fecha_registro="${fld:ocp_fecha_registro}"       
+			/>
+		</rows>
+	</detail>
+</smn_orden_compra>

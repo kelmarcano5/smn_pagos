@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="4" cellStep="0" name="${lbl:b_entry_note}"/>
+	
+	<excel 
+		recordset='query.sql' 
+		sheetname='${lbl:b_entry_note}' 
+		filename='${lbl:b_entry_note}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+			<col id='smn_nota_entrada_rf_combo' label='${lbl:b_entry_note}'/>
+			<col id='smn_orden_compra_rf_combo' label='${lbl:b_buy_order}'/>
+			<col id='smn_documento_rf_combo' label='${lbl:b_document}'/>
+			<col id='smn_numero_documento_rf' label='${lbl:b_document_number}'/>
+			<col id='smn_clase_rf_combo' label='${lbl:b_provider_class}'/>
+			<col id='smn_proveedor_id_combo' label='${lbl:b_auxiliary_supplier}'/>
+			<col id='smn_usuario_rf_combo' label='${lbl:b_responsible}'/>
+			<col id='nep_monto_ml' label='${lbl:b_amoun_ne_ml}'/>
+			<col id='nep_monto_ma' label='${lbl:b_amoun_ne_ma}'/>
+			<col id='smn_moneda_rf_combo' label='${lbl:b_currency}'/>
+			<col id='nep_monto_usado_ml' label='${lbl:b_amount_used_ml_ne}'/>
+			<col id='nep_monto_usado_ma' label='${lbl:b_amount_used_ma_ne}'/>
+			<col id='nep_monto_saldo_ml' label='${lbl:b_amount_balance_ml_ne}'/>
+			<col id='nep_monto_saldo_ma' label='${lbl:b_amount_balance_ma_ne}'/>
+			<col id='ocp_estatus_combo' label='${lbl:b_financial_status}'/>
+			
+	</excel>
+
+</config>

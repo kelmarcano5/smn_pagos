@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator maxErrors='20'>
+	<parameter id='smn_orden_pago_id' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_documento_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_numero_documento_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_clase_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_proveedor_id' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_usuario_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='ocp_monto_ml' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_impuesto_ml' type='double' required='false' maxlen='10'/>
+	<parameter id='smn_moneda_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='ocp_monto_ma' type='double' required='false' maxlen='10'/>
+	<parameter id='ocp_monto_impuestos_ma' type='double' required='false' maxlen='10'/>
+	<parameter id='ocp_monto_usado_ml' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_impuesto_usado_ml' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_monto_usado_ma' type='double' required='false' maxlen='10'/>
+	<parameter id='ocp_monto_impuestos_usado_ma' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_monto_saldo_ml' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_impuestos_saldo_ml' type='double' required='true' maxlen='10'/>
+	<parameter id='ocp_monto_saldo_ma' type='double' required='false' maxlen='10'/>
+	<parameter id='ocp_monto_impuestos_saldo_ma' type='double' required='false' maxlen='10'/>
+	<parameter id='ocp_estatus' type='varchar' required='true' maxlen='2'/>
+
+
+
+</validator>

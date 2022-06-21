@@ -1,0 +1,1 @@
+select smn_cont_financiera.smn_tipo_documento.smn_tipo_documento_id as id, smn_cont_financiera.smn_tipo_documento.tid_nombre as item from smn_cont_financiera.smn_tipo_documento

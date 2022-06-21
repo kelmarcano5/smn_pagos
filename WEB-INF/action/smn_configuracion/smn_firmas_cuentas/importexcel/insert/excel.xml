@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator maxErrors='20'>
+	<parameter id='fcb_codigo' type='varchar' required='true' maxlen='16'/>
+	<parameter id='fcb_descripcion' type='varchar' required='true' maxlen='64'/>
+	<parameter id='smn_cuentas_bancarias_rf' type='integer' required='true' maxlen='10'/>
+	<parameter id='fcb_cantidad' type='integer' required='true' maxlen='10'/>
+	<parameter id='smn_tipo_firma_id' type='integer' required='false' maxlen='10'/>
+	<parameter id='fcb_estatus' type='varchar' required='true' maxlen='2'/>
+	<parameter id='fcb_vigencia' type='date' required='true' maxlen='10'/>
+
+
+	<custom-validator
+		classname='dinamica.validators.DuplicatedKeyValidator'
+			on-error-label='${lbl:b_record_not_duplicated}.'
+			sql='buscarCodigo.sql'
+			id='fcb_codigo'/>
+
+	<custom-validator
+		classname='dinamica.validators.DuplicatedKeyValidator'
+			on-error-label='${lbl:b_record_not_duplicated}.'
+			sql='buscarDescripcion.sql'
+			id='fcb_descripcion'/>
+
+
+</validator>

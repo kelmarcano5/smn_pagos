@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_impuestos_retenciones>
+	<detail>
+		<rows>		
+		<record 
+			iop_fecha_registro="${fld:iop_fecha_registro}"    
+			iop_monto_impuesto="${fld:iop_monto_impuesto}"       
+			iop_base_imponible="${fld:iop_base_imponible}"    
+			smn_codigo_impuesto_rf="${fld:smn_codigo_impuesto_rf_combo}"    
+			smn_orden_pago_id="${fld:opa_descripcion_pl0}"    
+			   />
+		</rows>
+	</detail>
+</smn_impuestos_retenciones>

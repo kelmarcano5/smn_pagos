@@ -1,0 +1,10 @@
+select
+		smn_pagos.smn_rechazo.smn_rechazo_id,
+	${field}
+from
+	smn_pagos.smn_rechazo
+where
+		smn_pagos.smn_rechazo.smn_rechazo_id is not null
+	${filter}
+	
+	

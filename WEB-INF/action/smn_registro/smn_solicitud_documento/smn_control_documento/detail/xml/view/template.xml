@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_control_documento>
+	<detail>
+		<rows>		
+		<record 
+			smn_cuenta_bancaria_rf_combo="${fld:smn_cuenta_bancaria_rf_combo}"
+			dpd_numero_documento="${fld:dpd_numero_documento}"
+			dpd_fecha_uso="${fld:dpd_fecha_uso}"
+			dpd_fecha_anulacion="${fld:dpd_fecha_anulacion}"
+			dpd_estatus_combo="${fld:dpd_estatus_combo}"
+		/>
+		</rows>
+	</detail>
+</smn_control_documento>

@@ -1,0 +1,30 @@
+INSERT INTO smn_pagos.smn_descuento_retencion
+(
+	smn_descuento_retencion_op_id,
+	smn_orden_pago_id,
+	smn_clase_auxiliar_rf,
+	smn_auxiliar_rf,
+	smn_descuento_retencion_rf,
+	dro_monto_base,
+	dro_porcentaje,
+	dro_monto_descuento,
+	dro_idioma,
+	dro_usuario,
+	dro_fecha_registro,
+	dro_hora
+)
+VALUES
+(
+	${seq:nextval@smn_pagos.seq_smn_descuento_retencion},
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	'${def:locale}',
+	'${def:user}',
+	{d '${def:date}'},
+	'${def:time}'
+)

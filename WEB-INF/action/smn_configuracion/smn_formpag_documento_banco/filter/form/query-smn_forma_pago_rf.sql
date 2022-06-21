@@ -1,0 +1,1 @@
+select smn_base.smn_formas_pago.smn_formas_pago_id as id,  smn_base.smn_formas_pago.fop_codigo as item from smn_base.smn_formas_pago

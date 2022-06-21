@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_orden_compra_rf' type='integer' required='false' label='${lbl:b_buy_order}' maxlen='10'/>
+	<parameter id='smn_centro_costo_rf' type='integer' required='false' label='${lbl:b_cost_center}' maxlen='10'/>
+	<parameter id='smn_tipo_documento_rf' type='integer' required='false' label='${lbl:b_document_type}' maxlen='10'/>
+	<parameter id='smn_documento_rf' type='integer' required='false' label='${lbl:b_source_document}' maxlen='10'/>
+	<parameter id='smn_numero_documento_rf' type='integer' required='false' label='${lbl:b_document_number}' maxlen='10'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='smn_clase_rf' type='integer' required='true' label='${lbl:b_provider_class}' maxlen='10'/>
+	<parameter id='smn_proveedor_id' type='integer' required='true' label='${lbl:b_auxiliary_supplier}' maxlen='10'/>
+	<parameter id='smn_usuario_rf' type='integer' required='true' label='${lbl:b_responsible}' maxlen='10'/>
+	<parameter id='nrs_monto_ml' type='double' required='true' label='${lbl:b_amount_nrs_ml}'/>
+	<parameter id='nrs_monto_ma' type='double' required='false' label='${lbl:b_amount_nrs_ma}'/>
+	<parameter id='smn_moneda_rf' type='integer' required='false' label='${lbl:b_currency}' maxlen='10'/>
+	<parameter id='nrs_monto_usado_ml' type='double' required='true' label='${lbl:b_amount_used_ml_nrs}' />
+	<parameter id='nrs_monto_usado_ma' type='double' required='false' label='${lbl:b_amount_used_ma_nrs}' />
+	<parameter id='nrs_monto_saldo_ml' type='double' required='true' label='${lbl:b_amount_balance_ml_nrs}' />
+	<parameter id='nrs_monto_saldo_ma' type='double' required='false' label='${lbl:b_amount_balance_ma_nrs}'/>
+	<parameter id='nrs_estatus' type='varchar' required='true' label='${lbl:b_financial_status}' maxlen='2'/>
+	<parameter id='id' type='integer' required='true' label='${lbl:b_reception_note_id}' maxlen='10'/>
+
+
+</validator>

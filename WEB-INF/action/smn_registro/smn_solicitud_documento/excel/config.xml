@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnsolicituddocumento.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="3" cellStep="0" name="${lbl:b_document_request}"/>
+	
+	<excel 
+		recordset='query-smnsolicituddocumento.sql' 
+		sheetname='${lbl:b_document_request}' 
+		filename='${lbl:b_document_request}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+		<col id='smn_documento_id_combo' label='${lbl:b_document}' />
+		<col id='sdp_numero_solicitud_pago' label='${lbl:b_request_number}' />
+		<col id='smn_entidad_bancaria_rf_combo' label='${lbl:b_bank}' />
+		<col id='smn_cuenta_bancaria_rf_combo' label='${lbl:b_bank_account}' />
+		<col id='sdp_fecha_solicitud' label='${lbl:b_request_date}' />
+		<col id='sdp_cantidad_documentos' label='${lbl:b_document_quantity}' />
+		<col id='sdp_fecha_registro' label='${lbl:b_store_date}' />
+
+	</excel>
+
+</config>

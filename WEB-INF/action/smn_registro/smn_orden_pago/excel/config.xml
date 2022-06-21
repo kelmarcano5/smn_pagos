@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnordenpago.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>domain.ExcelReportOutput</classname>
+	</output>
+	
+	<excel-logo scale="60" url="/images/logo-simone-pdf.png"/>
+	<title cellPosY="1" cellPosX="6" cellStep="0" name="${lbl:b_payment_order}"/>
+	
+	<excel 
+		recordset='query-smnordenpago.sql' 
+		sheetname='${lbl:b_payment_order}' 
+		filename='${lbl:b_payment_order}.xls' 
+		date-format='dd-MM-yyyy'
+		header-background='true'>
+
+		
+		<col id='smn_entidades_rf_combo' label='${lbl:b_opa_entities}'/>
+		<col id='smn_auxiliar_rf_combo' label='${lbl:b_auxiliary_beneficiary}'/>
+		<col id='smn_usuario_rf_combo' label='${lbl:b_opa_user}'/>
+		<col id='smn_documento_id_combo' label='${lbl:b_opa_document}'/>
+		<col id='opa_numero' label='${lbl:b_number_order_payment}'/>
+		<col id='opa_documento_descripcion_origen' label='${lbl:b_source_document}'/>
+		<col id='opa_numero_documento' label='${lbl:b_number_document_payment}'/>
+		<col id='opa_monto_factura_ml' label='${lbl:b_local_currency}' width='10'/>
+		<col id='opa_estatus_financiero_combo' label='${lbl:b_financial_status}'/>
+		<col id='opa_fecha_registro' label='${lbl:b_store_date}' />
+		
+
+	</excel>
+
+</config>

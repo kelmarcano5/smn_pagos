@@ -1,0 +1,1 @@
+alertBox('${lbl:b_validate_cancel_ok}', '${lbl:b_accept}');

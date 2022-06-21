@@ -1,0 +1,8 @@
+<rows>
+	${lbl:b_store_date}="${fld:pdr_fecha_registro}"    
+	${lbl:b_estatus}="${fld:pdr_estatus_combo}"    
+	${lbl:b_retention_discount}="${fld:smn_descuento_retencion_rf_combo}"    
+	${lbl:b_date_up}="${fld:pdr_fecha_hasta}"    
+	${lbl:b_date_from}="${fld:pdr_fecha_desde}"    
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"       
+</rows>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='tfi_codigo' type='varchar' required='true' label='${lbl:b_code_tfi}' maxlen='16'/>
+	<parameter id='tfi_descripcion' type='varchar' required='true' label='${lbl:b_description_tfi}' maxlen='64'/>
+	<parameter id='tfi_estatus' type='varchar' required='true' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='tfi_vigencia' type='date' required='true' label='${lbl:b_validity}' maxlen='10'/>
+	<parameter id='id' type='integer' required='true' label='${lbl:b_firm_type_id}' maxlen='10'/>
+
+
+
+</validator>

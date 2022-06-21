@@ -1,0 +1,7 @@
+<rows>
+	${lbl:b_bank_account}="${fld:smn_cuenta_bancaria_rf_combo}"    
+	${lbl:b_document_number}="${fld:dpd_numero_documento}"    
+	${lbl:b_date_use}="${fld:dpd_fecha_uso}" 
+	${lbl:b_cancellation_date}="${fld:dpd_fecha_anulacion}" 
+	${lbl:b_process_status}="${fld:dpd_estatus_combo}" 
+</rows>

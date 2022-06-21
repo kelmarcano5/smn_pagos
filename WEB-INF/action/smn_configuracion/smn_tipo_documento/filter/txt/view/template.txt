@@ -1,0 +1,8 @@
+<rows>
+	tdo_fecha_registro="${fld:tdo_fecha_registro}"    
+	tdo_vigencia="${fld:tdo_vigencia}"    
+	tdo_estatus="${fld:tdo_estatus}"    
+	tdo_tipo_movimiento="${fld:tdo_tipo_movimiento}"    
+	tdo_descripcion="${fld:tdo_descripcion}"    
+	tdo_codigo="${fld:tdo_codigo}"        
+</rows>

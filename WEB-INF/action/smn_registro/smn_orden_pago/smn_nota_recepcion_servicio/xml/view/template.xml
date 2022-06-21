@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_nota_recepcion_servicio>
+	<detail>
+		<rows>		
+			<record nrs_fecha_registro="${fld:nrs_fecha_registro}"    
+					nrs_estatus="${fld:nrs_estatus_combo}"      
+					smn_proveedor_id="${fld:smn_proveedor_id_combo}"    
+					smn_usuario_rf="${fld:smn_usuario_rf_combo}"    
+					nrs_numero="${fld:nrs_numero}"    
+					smn_documento_id="${fld:smn_documento_id_combo}"      
+					smn_centro_costo_rf="${fld:smn_centro_costo_rf_combo}"    
+					smn_orden_compra_rf="${fld:smn_orden_compra_rf_combo}"    />
+		</rows>
+	</detail>
+</smn_nota_recepcion_servicio>

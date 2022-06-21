@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_orden_compra>
+	<detail>
+		<rows>		
+			<record 
+				smn_documento_rf_combo="${fld:smn_documento_rf_combo}"   
+			    smn_numero_documento_rf="${fld:smn_numero_documento_rf}"
+			    smn_clase_rf_combo="${fld:smn_clase_rf_combo}"
+			    smn_proveedor_id_combo="${fld:smn_proveedor_id_combo}"  
+			    smn_usuario_rf_combo="${fld:smn_usuario_rf_combo}"   
+			    ocp_monto_ml="${fld:ocp_monto_ml}"
+			    ocp_impuesto_ml="${fld:ocp_impuesto_ml}"
+			    smn_moneda_rf_combo="${fld:smn_moneda_rf_combo}"
+			    ocp_monto_ma="${fld:ocp_monto_ma}"
+			    ocp_monto_impuestos_ma="${fld:ocp_monto_impuestos_ma}"
+			    ocp_monto_usado_ml="${fld:ocp_monto_usado_ml}"
+			    ocp_impuesto_usado_ml="${fld:ocp_impuesto_usado_ml}"
+			    ocp_monto_usado_ma="${fld:ocp_monto_usado_ma}"
+			    ocp_monto_impuestos_usado_ma="${fld:ocp_monto_impuestos_usado_ma}"			    
+			    ocp_monto_saldo_ml="${fld:ocp_monto_saldo_ml}"
+			    ocp_impuestos_saldo_ml="${fld:ocp_impuestos_saldo_ml}"
+			    ocp_monto_saldo_ma="${fld:ocp_monto_saldo_ma}"
+			    ocp_monto_impuestos_saldo_ma="${fld: ocp_monto_impuestos_saldo_ma}"
+			    ocp_estatus_combo="${fld:ocp_estatus_combo}"
+			    ocp_fecha_registro="${fld:ocp_fecha_registro}"   
+			/>
+		</rows>
+	</detail>
+</smn_orden_compra>

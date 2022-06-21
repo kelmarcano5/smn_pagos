@@ -1,0 +1,1 @@
+select smn_pagos.smn_rol.smn_rol_id as id,  smn_pagos.smn_rol.rol_tipo as item from smn_pagos.smn_rol

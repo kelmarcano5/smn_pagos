@@ -1,0 +1,1 @@
+delete from smn_pagos.smn_rel_rol_documento WHERE smn_rol_id= ${fld:id}

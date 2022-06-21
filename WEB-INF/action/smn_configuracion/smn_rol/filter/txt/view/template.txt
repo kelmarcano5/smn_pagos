@@ -1,0 +1,6 @@
+<rows>
+	${lbl:b_user}="${fld:smn_usuario_rf_combo}"
+	${lbl:b_type_rol}="${fld:rol_tipo_combo}"
+	${lbl:b_store_date}="${fld:rol_fecha_registro}"    
+	       
+</rows>

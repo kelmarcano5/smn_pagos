@@ -1,0 +1,15 @@
+<rows>
+	${lbl:b_general_document}="${fld:smn_documentos_generales_rf_combo}" 
+	${lbl:b_document_type_id}="${fld:smn_tipo_documento_id_combo}" 
+	${lbl:b_source_module}="${fld:smn_modulo_origen_rf_combo}" 
+	${lbl:b_code_document}="${fld:doc_codigo}" 
+	${lbl:b_description_document}="${fld:doc_descripcion}" 
+	${lbl:b_item_reception}="${fld:doc_ver_recepcion_item_combo}" 
+	${lbl:b_service_reception}="${fld:doc_ver_recepcion_servicio_combo}" 
+	${lbl:b_order_purchase}="${fld:doc_ver_orden_compra_combo}" 
+	${lbl:b_document_control}="${fld:doc_ver_control_documento_combo}" 
+	${lbl:b_percentage}="${fld:doc_porcentaje}" 
+	${lbl:b_fixed_amount}="${fld:doc_monto_fijo}" 
+	${lbl:b_estatus}="${fld:doc_estatus_combo}" 
+	${lbl:b_validity}="${fld:doc_vigencia}" 
+</rows>

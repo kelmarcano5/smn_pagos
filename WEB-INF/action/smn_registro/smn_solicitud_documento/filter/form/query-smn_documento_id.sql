@@ -1,0 +1,1 @@
+select smn_pagos.smn_documento.smn_documento_id as id,  smn_pagos.smn_documento.doc_codigo as item from smn_pagos.smn_documento

@@ -1,0 +1,3 @@
+<rows>
+dro_fecha_registro="${fld:dro_fecha_registro}"    dro_monto_descuento="${fld:dro_monto_descuento}"    dro_porcentaje="${fld:dro_porcentaje}"    dro_monto_base="${fld:dro_monto_base}"    smn_descuento_retencion_rf="${fld:smn_descuento_retencion_rf}"    smn_auxiliar_rf="${fld:smn_auxiliar_rf}"    smn_clase_auxiliar_rf="${fld:smn_clase_auxiliar_rf}"    smn_orden_pago_id="${fld:smn_orden_pago_id}"    smn_descuento_retencion_op_id="${fld:smn_descuento_retencion_op_id}"    
+</rows>

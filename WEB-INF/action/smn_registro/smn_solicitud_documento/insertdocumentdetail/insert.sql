@@ -1,0 +1,24 @@
+INSERT INTO smn_pagos.smn_control_documento
+(
+	smn_control_documento_id,
+	smn_solicitud_documento_id,
+	dpd_numero_documento,
+	smn_cuenta_bancaria_rf,
+	dpd_estatus,
+	dpd_idioma,
+	dpd_usuario,
+	dpd_fecha_registro,
+	dpd_hora
+)
+VALUES
+(
+	${seq:currval@smn_pagos.seq_smn_control_documento},
+	${fld:id_solicitud_documento},
+	${fld:numero_inicial},
+	${fld:cuenta_bancaria},
+	'AC',
+	'${def:locale}',
+	'${def:user}',
+	'${def:date}',
+	'${def:time}'
+)

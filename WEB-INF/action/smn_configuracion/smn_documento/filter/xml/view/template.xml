@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_documento>
+	<detail>
+		<rows>
+		<record
+				doc_codigo="${fld:doc_codigo}"
+				doc_descripcion="${fld:doc_descripcion}"
+				smn_modulo_origen_rf="${fld:smn_modulo_origen_rf_combo}"
+				smn_sucursales_rf="${fld:smn_sucursales_rf_combo}"
+				smn_entidades_rf="${fld:smn_entidades_rf_combo}"
+				doc_fecha_registro="${fld:doc_fecha_registro}"      			
+				 />
+		</rows>
+	</detail>
+</smn_documento>

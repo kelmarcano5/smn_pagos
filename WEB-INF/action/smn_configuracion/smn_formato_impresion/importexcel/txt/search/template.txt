@@ -1,0 +1,3 @@
+<rows>
+foi_fecha_registro="${fld:foi_fecha_registro}"    foi_vigencia="${fld:foi_vigencia}"    foi_estatus="${fld:foi_estatus}"    foi_texto="${fld:foi_texto}"    foi_descripcion="${fld:foi_descripcion}"    foi_codigo="${fld:foi_codigo}"    smn_clave_formato_impresion_id="${fld:smn_clave_formato_impresion_id}"    
+</rows>

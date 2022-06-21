@@ -1,0 +1,9 @@
+<rows>   
+	${lbl:b_estatus}="${fld:pdr_estatus_combo}"    
+	${lbl:b_retention_discount}="${fld:smn_descuento_retencion_rf_combo}"    
+	${lbl:b_date_up}="${fld:pdr_fecha_hasta}"    
+	${lbl:b_date_from}="${fld:pdr_fecha_desde}"    
+	${lbl:b_auxiliary_supplier}="${fld:smn_proveedor_id_combo}"  
+	${lbl:b_amount_total}="${fld:pdr_monto_total}" 
+	${lbl:b_amount_partial_total}="${fld:pdr_monto_parcial_descuento}"      
+</rows>

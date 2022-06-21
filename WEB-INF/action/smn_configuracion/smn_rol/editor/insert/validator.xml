@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_usuario_rf' type='integer' required='true' label='${lbl:b_user}' maxlen='10'/>
+	<parameter id='rol_tipo' type='varchar' required='true' label='${lbl:b_type_rol}' maxlen='2'/>
+	<parameter id='smn_corporaciones_rf' type='integer' required='false' label='${lbl:b_corporation}' maxlen='10'/>
+	<parameter id='smn_entidades_rf' type='integer' required='false' label='${lbl:b_company}' maxlen='10'/>
+	<parameter id='smn_sucursales_rf' type='integer' required='false' label='${lbl:b_branches}' maxlen='10'/>
+	<parameter id='smn_areas_servicios_rf' type='integer' required='false' label='${lbl:b_service_area}' maxlen='10'/>
+	<parameter id='smn_unidades_servicios_rf' type='integer' required='false' label='${lbl:b_service_unit}' maxlen='10'/>
+	<parameter id='smn_estructura_organizacional_rf' type='integer' required='false' label='${lbl:b_structure_position}' maxlen='10'/>
+	<parameter id='rol_estatus' type='varchar' required='true' label='${lbl:b_estatus}' maxlen='2'/>
+	<parameter id='rol_vigencia' type='date' required='true' label='${lbl:b_validity}' maxlen='10'/>
+	<custom-validator classname='dinamica.validators.ArrayNotEmptyValidator' on-error-label='Seleccione al menos un ítem.' parameter-name='smn_documento_id' id='smn_documento_id'/>
+	<custom-validator classname='dinamica.validators.ArrayToRecordset' paramName='smn_documento_id' recordsetId='query-smn_documento.sql' colName='smn_documento_id' colType='integer'/>
+</validator>

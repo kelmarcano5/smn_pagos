@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator maxErrors='20'>
+	<parameter id='smn_usuario_rf' type='varchar' required='true' maxlen='10'/>
+	<parameter id='rol_tipo' type='varchar' required='true' maxlen='2'/>
+	<parameter id='smn_corporaciones_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_entidades_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_sucursales_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_areas_servicios_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_unidades_servicios_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='smn_estructura_organizacional_rf' type='integer' required='false' maxlen='10'/>
+	<parameter id='rol_estatus' type='varchar' required='true' maxlen='2'/>
+	<parameter id='rol_vigencia' type='date' required='true' maxlen='10'/>
+
+
+
+</validator>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_documento_id_name' type='varchar' required='false' label='${lbl:b_document}'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_document}' maxlen='10'/>
+	<parameter id='sdp_numero_solicitud_pago' type='integer' required='false' label='${lbl:b_request_number}' maxlen='10'/>
+	<parameter id='smn_rol_id_name' type='varchar' required='false' label='${lbl:b_rol_id}'/>
+	<parameter id='smn_rol_id' type='integer' required='false' label='${lbl:b_rol_id}' maxlen='10'/>
+	<parameter id='smn_entidad_bancaria_rf' type='integer' required='false' label='${lbl:b_bank}' maxlen='10'/>
+	<parameter id='smn_cuenta_bancaria_rf' type='integer' required='false' label='${lbl:b_bank_account}' maxlen='10'/>
+	<parameter id='smn_usuario_id' type='integer' required='false' label='${lbl:b_user}' maxlen='10'/>
+	<parameter id='sdp_fecha_solicitud' type='date' required='false' label='${lbl:b_request_date}' maxlen='10'/>
+	<parameter id='sdp_fecha_recepcion' type='date' required='false' label='${lbl:b_reception_date}' maxlen='10'/>
+</validator>
