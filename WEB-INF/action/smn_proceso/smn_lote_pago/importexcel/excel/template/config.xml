@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Exportar documento excel directo al browser
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnlotepago.sql" source="session" scope="transaction" />
+		
+	</transaction>
+
+	<output>
+		<classname>dinamica.GenericExcelOutput</classname>
+	</output>
+		
+	<excel 
+		filename='${lbl:b_smn_lote_pago_id}.xls' >
+		
+	<sheet recordset="query-table_stuck}.sql" sheetname="${lbl:b_smn_lote_pago_id}">
+				<col id='smn_entidad_financiera_rf' label='${lbl:b_smn_entidad_financiera_rf}' />
+		<col id='smn_cuenta_bancaria_rf' label='${lbl:b_smn_cuenta_bancaria_rf}' />
+		<col id='smn_forma_pago_rf' label='${lbl:b_smn_forma_pago_rf}' />
+		<col id='smn_documento_id' label='${lbl:b_smn_documento_id}' />
+		<col id='lpa_numero_lote' label='${lbl:b_lpa_numero_lote}' />
+		<col id='lpa_descripcion_lote' label='${lbl:b_lpa_descripcion_lote}' />
+		<col id='lpa_fecha_lote' label='${lbl:b_lpa_fecha_lote}' />
+		<col id='lpa_monto_lote_ml' label='${lbl:b_lpa_monto_lote_ml}' />
+		<col id='lpa_monto_lote_ma' label='${lbl:b_lpa_monto_lote_ma}' />
+		<col id='smn_estatus_documento' label='${lbl:b_smn_estatus_documento}' />
+		<col id='lpa_fecha_registro' label='${lbl:b_store_date}' />
+
+	</sheet>
+	
+	</excel>
+
+</config>

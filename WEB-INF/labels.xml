@@ -7286,6 +7286,149 @@
 		<value language="pt">Total Overdue</value>
 		<value language="it">Total Overdue</value>
 	</label>
-	
+	<label id="b_smn_lote_pago_id">
+		<value language="es">Lote Pago</value>
+		<value language="en">Lot Pay</value>
+		<value language="fr">Lot Pay</value>
+		<value language="de">Lot Pay</value>
+		<value language="pt">Lot Pay</value>
+		<value language="it">Lot Pay</value>
+	</label>
+	<label id="b_re">
+		<value language="es">Registrado</value>
+		<value language="en">Register</value>
+		<value language="fr">Register</value>
+		<value language="de">Register</value>
+		<value language="pt">Register</value>
+		<value language="it">Register</value>
+	</label>
+	<label id="b_ap">
+		<value language="es">Aprobado</value>
+		<value language="en">Approve</value>
+		<value language="fr">Approve</value>
+		<value language="de">Approve</value>
+		<value language="pt">Approve</value>
+		<value language="it">Approve</value>
+	</label>
+	<label id="b_em">
+		<value language="es">Emitido</value>
+		<value language="en">Emit</value>
+		<value language="fr">Emit</value>
+		<value language="de">Emit</value>
+		<value language="pt">Emit</value>
+		<value language="it">Emit</value>
+	</label>
+	<label id="b_ce">
+		<value language="es">Cerrado</value>
+		<value language="en">Close</value>
+		<value language="fr">Close</value>
+		<value language="de">Close</value>
+		<value language="pt">Close</value>
+		<value language="it">Close</value>
+	</label>
+	<label id="b_smn_entidad_financiera_rf">
+		<value language="es">Entidad Financiera</value>
+		<value language="en">Financial Entity</value>
+		<value language="fr">Financial Entity</value>
+		<value language="de">Financial Entity</value>
+		<value language="pt">Financial Entity</value>
+		<value language="it">Financial Entity</value>
+	</label>
+	<label id="b_smn_cuenta_bancaria_rf">
+		<value language="es">Cuenta Bancaria</value>
+		<value language="en">Bank Account</value>
+		<value language="fr">Bank Account</value>
+		<value language="de">Bank Account</value>
+		<value language="pt">Bank Account</value>
+		<value language="it">Bank Account</value>
+	</label>
+	<label id="b_smn_forma_pago_rf">
+		<value language="es">Forma de Pago</value>
+		<value language="en">Way to pay</value>
+		<value language="fr">Way to pay</value>
+		<value language="de">Way to pay</value>
+		<value language="pt">Way to pay</value>
+		<value language="it">Way to pay</value>
+	</label>
+	<label id="b_smn_documento_id">
+		<value language="es">Documento</value>
+		<value language="en">Document</value>
+		<value language="fr">Document</value>
+		<value language="de">Document</value>
+		<value language="pt">Document</value>
+		<value language="it">Document</value>
+	</label>
+	<label id="b_lpa_numero_lote">
+		<value language="es">Número de Lote</value>
+		<value language="en">Lot Number</value>
+		<value language="fr">Lot Number</value>
+		<value language="de">Lot Number</value>
+		<value language="pt">Lot Number</value>
+		<value language="it">Lot Number</value>
+	</label>
+	<label id="b_lpa_descripcion_lote">
+		<value language="es">Lote</value>
+		<value language="en">Lot</value>
+		<value language="fr">Lot</value>
+		<value language="de">Lot</value>
+		<value language="pt">Lot</value>
+		<value language="it">Lot</value>
+	</label>
+	<label id="b_lpa_fecha_lote">
+		<value language="es">Fecha</value>
+		<value language="en">Date</value>
+		<value language="fr">Date</value>
+		<value language="de">Date</value>
+		<value language="pt">Date</value>
+		<value language="it">Date</value>
+	</label>
+	<label id="b_lpa_monto_lote_ml">
+		<value language="es">Monto Ml</value>
+		<value language="en">Amount Ml</value>
+		<value language="fr">Amount Ml</value>
+		<value language="de">Amount Ml</value>
+		<value language="pt">Amount Ml</value>
+		<value language="it">Amount Ml</value>
+	</label>
+	<label id="b_lpa_monto_lote_ma">
+		<value language="es">Monto MA</value>
+		<value language="en">Amount MA</value>
+		<value language="fr">Amount MA</value>
+		<value language="de">Amount MA</value>
+		<value language="pt">Amount MA</value>
+		<value language="it">Amount MA</value>
+	</label>
+	<label id="b_smn_estatus_documento">
+		<value language="es">Estatus</value>
+        <value language="en">Status</value>
+        <value language="fr">Statut</value>
+        <value language="de">Status</value>
+        <value language="pt">Estatuto</value>
+        <value language="it">Stato</value>
+	</label>
+    <label id="b_smn_lote_pago_btn_reporte">
+		<value language="es">Reporte</value>
+        <value language="en">Report</value>
+        <value language="fr">Report</value>
+        <value language="de">Report</value>
+        <value language="pt">Report</value>
+        <value language="it">Report</value>
+	</label>
+    <label id="b_smn_lote_pago_btn_generar">
+		<value language="es">Generar</value>
+        <value language="en">Generate</value>
+        <value language="fr">Generate</value>
+        <value language="de">Generate</value>
+        <value language="pt">Generate</value>
+        <value language="it">Generate</value>
+	</label>
+    <label id="b_smn_lote_pago_btn_detalle">
+		<value language="es">Detalle</value>
+        <value language="en">Detail</value>
+        <value language="fr">Detail</value>
+        <value language="de">Detail</value>
+        <value language="pt">Detail</value>
+        <value language="it">Detail</value>
+	</label>
 </labels>
 
