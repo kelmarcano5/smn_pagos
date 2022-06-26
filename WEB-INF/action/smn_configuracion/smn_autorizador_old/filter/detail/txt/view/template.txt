@@ -1,7 +1,0 @@
-<rows>
-	${lbl:b_user}="${fld:smn_usuario_rf_combo}"
-	${lbl:b_entities}="${fld:smn_entidades_rf_combo}"
-	${lbl:b_branches}="${fld:smn_sucursales_rf_combo}" 
-	${lbl:b_validity}="${fld:aut_vigencia}"    
-	${lbl:b_estatus}="${fld:aut_estatus_combo}"    	   
-</rows>

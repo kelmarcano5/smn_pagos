@@ -1,1 +1,0 @@
-select smn_pagos.smn_tipo_documento.smn_tipo_documento_id as id,  smn_pagos.smn_tipo_documento.tdo_codigo ||'-'|| smn_pagos.smn_tipo_documento.tdo_descripcion as item from smn_pagos.smn_tipo_documento

@@ -1,3 +1,0 @@
-<rows>
-	${lbl:b_store_date}="${fld:aut_fecha_registro}"
-</rows>

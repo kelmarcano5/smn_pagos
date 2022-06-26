@@ -1,1 +1,0 @@
-select smn_base.smn_entidades_financieras.smn_entidades_financieras_id as id, smn_base.smn_entidades_financieras.efi_codigo ||'-'|| smn_base.smn_entidades_financieras.efi_nombre as item from smn_base.smn_entidades_financieras

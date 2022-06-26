@@ -1,1 +1,0 @@
-select smn_base.smn_agenda.smn_agenda_id as id,  smn_base.smn_agenda.age_descripcion ||'-'|| smn_base.smn_agenda.age_dia_semana ||': '|| smn_base.smn_agenda.age_hora_desde || smn_base.smn_agenda.age_jornada_desde ||' a '|| smn_base.smn_agenda.age_hora_hasta || smn_base.smn_agenda.age_jornada_hasta as item from smn_base.smn_agenda

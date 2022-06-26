@@ -1,1 +1,0 @@
-select smn_pagos.smn_lote_pago.smn_lote_pago_id as id, smn_pagos.smn_lote_pago.lpa_numero_lote ||'-'|| smn_pagos.smn_lote_pago.lpa_descripcion_lote as item from smn_pagos.smn_lote_pago

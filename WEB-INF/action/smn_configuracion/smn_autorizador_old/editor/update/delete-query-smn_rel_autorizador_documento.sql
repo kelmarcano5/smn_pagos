@@ -1,1 +1,0 @@
-delete from smn_pagos.smn_rel_autorizador_documento WHERE smn_autorizador_id= ${fld:id}
