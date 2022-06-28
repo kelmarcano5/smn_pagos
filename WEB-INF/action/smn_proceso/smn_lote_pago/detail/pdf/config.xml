@@ -26,16 +26,22 @@
 
 	<pdf-report pageSize="letter" rotate="false" footer="true" header="true">
 		<record recordset='query.sql' title='${lbl:b_smn_lote_pago_id}' width='60' spacingBefore='40'>
-			<col name='smn_entidad_financiera_rf' title='${lbl:b_smn_entidad_financiera_rf}' align='left' format='######' />
-			<col name='smn_cuenta_bancaria_rf' title='${lbl:b_smn_cuenta_bancaria_rf}' align='left' format='######' />
-			<col name='smn_forma_pago_rf' title='${lbl:b_smn_forma_pago_rf}' align='left' format='######' />
-			<col name='smn_documento_id' title='${lbl:b_smn_documento_id}' align='left' format='######' />
+			<col name='smn_entidad_financiera_rf' title='${lbl:b_smn_entidad_financiera_rf}' align='left'  />
+			<col name='smn_cuenta_bancaria_rf' title='${lbl:b_smn_cuenta_bancaria_rf}' align='left'  />
+			<col name='smn_forma_pago_rf' title='${lbl:b_smn_forma_pago_rf}' align='left'  />
+			<col name='smn_documento_id' title='${lbl:b_smn_documento_id}' align='left'  />
 			<col name='lpa_numero_lote' title='${lbl:b_lpa_numero_lote}' align='left' />
 			<col name='lpa_descripcion_lote' title='${lbl:b_lpa_descripcion_lote}' align='left' />
 			<col name='lpa_fecha_lote' title='${lbl:b_lpa_fecha_lote}' align='left' format='dd-MM-yyyy' />
 			<col name='lpa_monto_lote_ml' title='${lbl:b_lpa_monto_lote_ml}' align='left' format='#,###,##0.00' />
+			<col name='smn_moneda_rf' title='${lbl:b_smn_moneda_rf}' align='left'  />
+			<col name='smn_tasa_cambio_rf' title='${lbl:b_smn_tasa_cambio_rf}' align='left'  />
 			<col name='lpa_monto_lote_ma' title='${lbl:b_lpa_monto_lote_ma}' align='left' format='#,###,##0.00' />
-			<col name='smn_estatus_documento' title='${lbl:b_smn_estatus_documento}' align='left' />
+			<col name='smn_canal_pago_id' title='${lbl:b_lpa_monto_lote_ma}' align='left'  />
+			<col name='lpa_ano_comprobante_contable' title='${lbl:b_lpa_ano_comprobante_contable}' align='left'  />
+			<col name='lpa_periodo_comprobante_contable' title='${lbl:b_lpa_periodo_comprobante_contable}' align='left'  />
+			<col name='lpa_numero_comprobante_contable' title='${lbl:b_lpa_numero_comprobante_contable}' align='left'  />
+			<col name='lpa_estatus' title='${lbl:b_lpa_estatus}' align='left' />
 			<col name='lpa_fecha_registro' title='${lbl:b_store_date}' align='left' format='dd-MM-yyyy' />
 		</record>
 

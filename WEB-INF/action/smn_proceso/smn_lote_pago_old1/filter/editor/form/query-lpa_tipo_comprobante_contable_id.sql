@@ -1,0 +1,1 @@
+select smn_cont_financiera.smn_tipo_comprobante.smn_tipo_comprobante_id as id, smn_cont_financiera.smn_tipo_comprobante.tic_codigo ||'-'|| smn_cont_financiera.smn_tipo_comprobante.tic_nombre as item from smn_cont_financiera.smn_tipo_comprobante

@@ -12,8 +12,15 @@
 	<parameter id='lpa_descripcion_lote' type='varchar' required='false' label='${lbl:b_lpa_descripcion_lote}' maxlen='120'/>
 	<parameter id='lpa_fecha_lote' type='date' required='false' label='${lbl:b_lpa_fecha_lote}' maxlen='10'/>
 	<parameter id='lpa_monto_lote_ml' type='double' required='false' label='${lbl:b_lpa_monto_lote_ml}' maxlen='10'/>
+	<parameter id='smn_moneda_rf' type='integer' required='false' label='${lbl:b_smn_moneda_rf}' maxlen='10'/>
+	<parameter id='smn_tasa_cambio_rf' type='integer' required='false' label='${lbl:b_smn_tasa_cambio_rf}' maxlen='10'/>
 	<parameter id='lpa_monto_lote_ma' type='double' required='false' label='${lbl:b_lpa_monto_lote_ma}' maxlen='10'/>
-	<parameter id='smn_estatus_documento' type='varchar' required='false' label='${lbl:b_smn_estatus_documento}' maxlen='2'/>
+	<parameter id='smn_canal_pago_id' type='integer' required='false' label='${lbl:b_lpa_monto_lote_ma}' maxlen='10'/>
+	<parameter id='lpa_ano_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_ano_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_periodo_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_periodo_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_tipo_comprobante_contable_id' type='integer' required='false' label='${lbl:b_lpa_tipo_comprobante_contable_id}' maxlen='10'/>
+	<parameter id='lpa_numero_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_numero_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_estatus' type='varchar' required='false' label='${lbl:b_lpa_estatus}' maxlen='2'/>
 
 	<custom-validator
 		classname='dinamica.validators.SQLPatternTransformer'
@@ -27,7 +34,7 @@ parameter='lpa_descripcion_lote'
 
 	<custom-validator
 		classname='dinamica.validators.SQLPatternTransformer'
-		parameter='smn_estatus_documento'
+		parameter='lpa_estatus'
 		rule='contains' />
 
 

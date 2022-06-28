@@ -573,12 +573,19 @@ CREATE TABLE smn_pagos.smn_lote_pago(
   smn_cuenta_bancaria_rf INTEGER NOT NULL,
   smn_forma_pago_rf INTEGER NOT NULL,
   smn_documento_id INTEGER NOT NULL,
-  lpa_numero_lote VARCHAR(20),
-  lpa_descripcion_lote VARCHAR(120),
-  lpa_fecha_lote DATE,
-  lpa_monto_lote_ml DOUBLE PRECISION,
-  lpa_monto_lote_ma DOUBLE PRECISION,
-  smn_estatus_documento VARCHAR(2) NOT NULL,
+  lpa_numero_lote VARCHAR(20) NOT NULL,
+  lpa_descripcion_lote VARCHAR(120) NOT NULL,
+  lpa_fecha_lote DATE NOT NULL,
+  lpa_monto_lote_ml DOUBLE PRECISION DEFAULT 0,
+  smn_moneda_rf INTEGER,
+  smn_tasa_cambio_rf INTEGER,
+  lpa_monto_lote_ma DOUBLE PRECISION DEFAULT 0,
+  smn_canal_pago_id INTEGER,
+  lpa_ano_comprobante_contable INTEGER,
+  lpa_periodo_comprobante_contable INTEGER,
+  lpa_tipo_comprobante_contable_id INTEGER,
+  lpa_numero_comprobante_contable INTEGER,
+  lpa_estatus VARCHAR(2) NOT NULL,
   lpa_idioma CHARACTER(2) NOT NULL,
   lpa_usuario VARCHAR(10) NOT NULL,
   lpa_fecha_registro DATE NOT NULL,
@@ -586,6 +593,38 @@ CREATE TABLE smn_pagos.smn_lote_pago(
 );
 
 CREATE SEQUENCE smn_pagos.seq_smn_lote_pago;
+
+
+CREATE TABLE smn_pagos.smn_rel_orden_pago_lote(
+  smn_rel_orden_pago_lote_id INTEGER NOT NULL,
+  smn_orden_pago_id INTEGER NOT NULL,
+  smn_lote_pago_id INTEGER NOT NULL,
+  smn_proveedor_rf INTEGER NOT NULL,
+  smn_documento_id INTEGER NOT NULL,
+  eol_numero_pago INTEGER NOT NULL,
+  eol_fecha_pago DATE NOT NULL,
+  eol_referencia_bancaria CHARACTER(25),
+  eol_monto_pago_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_incremento_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_anticipo_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_retencion_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_neto_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_diferencial_cambiario_ml DOUBLE PRECISION NOT NULL DEFAULT 0,
+  smn_moneda_rf INTEGER,
+  smn_tasa_cambio_rf INTEGER,
+  eol_monto_pago_ma DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_incremento_ma DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_anticipo_ma DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_retencion_ma DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_monto_neto_ma DOUBLE PRECISION NOT NULL DEFAULT 0,
+  eol_estatus CHARACTER(2) NOT NULL,
+  eol_idioma CHARACTER(2) NOT NULL,
+  eol_usuario VARCHAR(10) NOT NULL,
+  eol_fecha_registro DATE NOT NULL,
+  eol_hora CHARACTER(8) NOT NULL
+);
+
+CREATE SEQUENCE smn_pagos.seq_smn_rel_orden_pago_lote;
 
 
 
@@ -673,4 +712,6 @@ ALTER TABLE smn_pagos.smn_rel_rol_documento ADD CONSTRAINT FK_smn_rel_rol_docume
 ALTER TABLE smn_pagos.smn_tipo_documento ADD PRIMARY KEY (smn_tipo_documento_id);
 
 ALTER TABLE smn_pagos.smn_lote_pago ADD PRIMARY KEY (smn_lote_pago_id);
+
+ALTER TABLE smn_pagos.smn_rel_orden_pago_lote ADD PRIMARY KEY (smn_rel_orden_pago_lote_id);
 

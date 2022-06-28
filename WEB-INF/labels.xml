@@ -7382,7 +7382,7 @@
 		<value language="pt">Date</value>
 		<value language="it">Date</value>
 	</label>
-	<label id="b_lpa_monto_lote_ml">
+    <label id="b_lpa_monto_lote_ml">
 		<value language="es">Monto Ml</value>
 		<value language="en">Amount Ml</value>
 		<value language="fr">Amount Ml</value>
@@ -7390,7 +7390,23 @@
 		<value language="pt">Amount Ml</value>
 		<value language="it">Amount Ml</value>
 	</label>
-	<label id="b_lpa_monto_lote_ma">
+    <label id="b_smn_moneda_rf">
+		<value language="es">Moneda</value>
+        <value language="en">Currency</value>
+        <value language="fr">Currency</value>
+        <value language="de">Currency</value>
+        <value language="pt">Currency</value>
+        <value language="it">Currency</value>
+    </label>
+    <label id="b_smn_tasa_cambio_rf">
+		<value language="es">Tasa de Cambio</value>
+        <value language="en">Exchange rate</value>
+        <value language="fr">Exchange rate</value>
+        <value language="de">Exchange rate</value>
+        <value language="pt">Exchange rate</value>
+        <value language="it">Exchange rate</value>
+    </label>
+    <label id="b_lpa_monto_lote_ma">
 		<value language="es">Monto MA</value>
 		<value language="en">Amount MA</value>
 		<value language="fr">Amount MA</value>
@@ -7398,7 +7414,47 @@
 		<value language="pt">Amount MA</value>
 		<value language="it">Amount MA</value>
 	</label>
-	<label id="b_smn_estatus_documento">
+    <label id="b_smn_canal_pago_id">
+		<value language="es">Canal de pago</value>
+		<value language="en">Payment channel</value>
+		<value language="fr">Voie de paiement</value>
+		<value language="de">Zahlungsweg</value>
+		<value language="pt">Canal de pagamento</value>
+		<value language="it">Canale di pagamento</value>
+	</label>
+    <label id="b_lpa_ano_comprobante_contable">
+		<value language="es">Año Comprobante Cont</value>
+		<value language="en">Acc voucher year</value>
+		<value language="fr">Acc voucher year</value>
+		<value language="de">Acc voucher year</value>
+		<value language="pt">Acc voucher year</value>
+		<value language="it">Acc voucher year</value>
+	</label>
+    <label id="b_lpa_periodo_comprobante_contable">
+		<value language="es">Period Comprobante Cont</value>
+		<value language="en">Acc voucher Period</value>
+		<value language="fr">Acc voucher Period</value>
+		<value language="de">Acc voucher Period</value>
+		<value language="pt">Acc voucher Period</value>
+		<value language="it">Acc voucher Period</value>
+	</label>
+    <label id="b_lpa_tipo_comprobante_contable_id">
+		<value language="es">Tipo Comprobante Cont</value>
+		<value language="en">Acc Receipt Type</value>
+		<value language="fr">Acc Receipt Type</value>
+		<value language="de">Acc Receipt Type</value>
+		<value language="pt">Acc Receipt Type</value>
+		<value language="it">Acc Receipt Type</value>
+	</label>
+    <label id="b_lpa_numero_comprobante_contable">
+		<value language="es">Num Comprobante Cont</value>
+		<value language="en">Acc Receipt Num</value>
+		<value language="fr">Acc Receipt Num</value>
+		<value language="de">Acc Receipt Num</value>
+		<value language="pt">Acc Receipt Num</value>
+		<value language="it">Acc Receipt Num</value>
+	</label>
+	<label id="b_lpa_estatus">
 		<value language="es">Estatus</value>
         <value language="en">Status</value>
         <value language="fr">Statut</value>
@@ -7430,5 +7486,166 @@
         <value language="pt">Detail</value>
         <value language="it">Detail</value>
 	</label>
+    <label id="b_smn_rel_orden_pago_lote_id">
+		<value language="es">Relación Orden de pago y Lote</value>
+        <value language="en">Relationship Order of payment and Lot</value>
+        <value language="fr">Relationship Order of payment and Lot</value>
+        <value language="de">Relationship Order of payment and Lot</value>
+        <value language="pt">Relationship Order of payment and Lot</value>
+        <value language="it">Relationship Order of payment and Lot</value>
+	</label>
+    <label id="b_smn_orden_pago_id">
+		<value language="es">Orden de Pago</value>
+        <value language="en">Order of payment</value>
+        <value language="fr">Order of payment</value>
+        <value language="de">Order of payment</value>
+        <value language="pt">Order of payment</value>
+        <value language="it">Order of payment</value>
+	</label>
+    <label id="b_smn_lote_pago_id">
+		<value language="es">Lote de Pago</value>
+        <value language="en">Lot of payment</value>
+        <value language="fr">Lot of payment</value>
+        <value language="de">Lot of payment</value>
+        <value language="pt">Lot of payment</value>
+        <value language="it">Lot of payment</value>
+	</label>
+    <label id="b_smn_proveedor_rf">
+		<value language="es">Proveedor</value>
+        <value language="en">Supplier</value>
+        <value language="fr">Supplier</value>
+        <value language="de">Supplier</value>
+        <value language="pt">Supplier</value>
+        <value language="it">Supplier</value>
+	</label>
+     <label id="b_smn_documento_id">
+		<value language="es">Documento</value>
+        <value language="en">Document</value>
+        <value language="fr">Document</value>
+        <value language="de">Document</value>
+        <value language="pt">Document</value>
+        <value language="it">Document</value>
+	</label>
+    <label id="b_eol_numero_pago">
+		<value language="es">Número de Pago</value>
+        <value language="en">Number of payment</value>
+        <value language="fr">Number of payment</value>
+        <value language="de">Number of payment</value>
+        <value language="pt">Number of payment</value>
+        <value language="it">Number of payment</value>
+	</label>
+    <label id="b_eol_fecha_pago">
+		<value language="es">Fecha de Pago</value>
+        <value language="en">Payment date</value>
+        <value language="fr">Payment date</value>
+        <value language="de">Payment date</value>
+        <value language="pt">Payment date</value>
+        <value language="it">Payment date</value>
+	</label>
+    <label id="b_eol_referencia_bancaria">
+		<value language="es">Referencia Bancaria</value>
+        <value language="en">Bank reference</value>
+        <value language="fr">Bank reference</value>
+        <value language="de">Bank reference</value>
+        <value language="pt">Bank reference</value>
+        <value language="it">Bank reference</value>
+	</label>
+    <label id="b_eol_monto_pago_ml">
+		<value language="es">Monto del Pago ML</value>
+        <value language="en">Payment amount ML</value>
+        <value language="fr">Payment amount ML</value>
+        <value language="de">Payment amount ML</value>
+        <value language="pt">Payment amount ML</value>
+        <value language="it">Payment amount ML</value>
+    </label>
+    <label id="b_eol_monto_incremento_ml">
+		<value language="es">Monto Incremento ML</value>
+        <value language="en">Amount Increase ML</value>
+        <value language="fr">Amount Increase ML</value>
+        <value language="de">Amount Increase ML</value>
+        <value language="pt">Amount Increase ML</value>
+        <value language="it">Amount Increase ML</value>
+    </label>
+    <label id="b_eol_monto_anticipo_ml">
+		<value language="es">Monto Anticipo ML</value>
+        <value language="en">Advance amount ML</value>
+        <value language="fr">Advance amount ML</value>
+        <value language="de">Advance amount ML</value>
+        <value language="pt">Advance amount ML</value>
+        <value language="it">Advance amount ML</value>
+    </label>
+    <label id="b_eol_monto_retencion_ml">
+		<value language="es">Monto Retencion ML</value>
+        <value language="en">Withholding amount ML</value>
+        <value language="fr">Withholding amount ML</value>
+        <value language="de">Withholding amount ML</value>
+        <value language="pt">Withholding amount ML</value>
+        <value language="it">Withholding amount ML</value>
+    </label>
+    <label id="b_eol_monto_neto_ml">
+		<value language="es">Monto Neto ML</value>
+        <value language="en">Net amount ML</value>
+        <value language="fr">Net amount ML</value>
+        <value language="de">Net amount ML</value>
+        <value language="pt">Net amount ML</value>
+        <value language="it">Net amount ML</value>
+    </label>
+    <label id="b_eol_diferencial_cambiario_ml">
+		<value language="es">Diferencial cambiario ML</value>
+        <value language="en">Exchange differential ML</value>
+        <value language="fr">Exchange differential ML</value>
+        <value language="de">Exchange differential ML</value>
+        <value language="pt">Exchange differential ML</value>
+        <value language="it">Exchange differential ML</value>
+    </label>
+    <label id="b_eol_monto_pago_ma">
+		<value language="es">Monto del Pago MA</value>
+        <value language="en">Payment amount MA</value>
+        <value language="fr">Payment amount MA</value>
+        <value language="de">Payment amount MA</value>
+        <value language="pt">Payment amount MA</value>
+        <value language="it">Payment amount MA</value>
+    </label>
+    <label id="b_eol_monto_incremento_ma">
+		<value language="es">Monto Incremento MA</value>
+        <value language="en">Amount Increase MA</value>
+        <value language="fr">Amount Increase MA</value>
+        <value language="de">Amount Increase MA</value>
+        <value language="pt">Amount Increase MA</value>
+        <value language="it">Amount Increase MA</value>
+    </label>
+    <label id="b_eol_monto_anticipo_ma">
+		<value language="es">Monto Anticipo MA</value>
+        <value language="en">Advance amount MA</value>
+        <value language="fr">Advance amount MA</value>
+        <value language="de">Advance amount MA</value>
+        <value language="pt">Advance amount MA</value>
+        <value language="it">Advance amount MA</value>
+    </label>
+    <label id="b_eol_monto_retencion_ma">
+		<value language="es">Monto Retencion MA</value>
+        <value language="en">Withholding amount MA</value>
+        <value language="fr">Withholding amount MA</value>
+        <value language="de">Withholding amount MA</value>
+        <value language="pt">Withholding amount MA</value>
+        <value language="it">Withholding amount MA</value>
+    </label>
+    <label id="b_eol_monto_neto_ma">
+		<value language="es">Monto Neto MA</value>
+        <value language="en">Net amount MA</value>
+        <value language="fr">Net amount MA</value>
+        <value language="de">Net amount MA</value>
+        <value language="pt">Net amount MA</value>
+        <value language="it">Net amount MA</value>
+    </label>
+    <label id="b_eol_estatus">
+		<value language="es">Estatus</value>
+        <value language="en">Status</value>
+        <value language="fr">Status</value>
+        <value language="de">Status</value>
+        <value language="pt">Status</value>
+        <value language="it">Status</value>
+    </label>
+
 </labels>
 

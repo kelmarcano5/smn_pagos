@@ -43,7 +43,7 @@
 		
 		//envio de emails
 		function openEmails() {
-			var uri = "${def:context}${def:actionroot}/email/form";					
+			var uri = "${def:context}${def:actionroot}/email/form";
 			openDialog("editor0", uri, 980, 600);	
 		}
 	</script>
@@ -53,14 +53,14 @@
 <body>
 
 	<!--banner-->
-	<div class="bannerDialog" id="encabezado_tabla">
+	<div class="bannerDialog" id="encabezado_tabla" style="padding-bottom: 20px;">
 		${lbl:b_smn_lote_pago_id}
-		<img src="${def:context}/images/pdf.png" onclick="openPDF()" title="${lbl:b_export_pdf}" style="cursor:pointer; margin-left:3px;"/>
+		<img src="${def:context}/images/pdf.png" onclick="openPDF()" title="${lbl:b_export_pdf}" style="cursor:pointer; margin-left:3px;  margin-top:3px;"/>
 		<img src="${def:context}/images/excel.png" onclick="openExcel()" title="${lbl:b_export_excel}" style="cursor:pointer; margin-left:3px;"/>
 		<img src="${def:context}/images/close.png" class="button" onclick="parent.closeDialog()" title="${lbl:b_close_button}" style="float:right; cursor:pointer;"/>
 	</div>
-
-	<table class="record" style="width:500px;">
+    <br>
+	<table class="record" style="width:540px;">
 		<tr>
 			<td width="40%">${lbl:b_smn_entidad_financiera_rf}</td>
 			<td style="background-color: white">${fld:smn_entidad_financiera_rf}</td>
@@ -94,12 +94,36 @@
 			<td style="background-color: white">${fld:lpa_monto_lote_ml@#,###,##0.00}</td>
 		</tr>
 		<tr>
+			<td width="40%">${lbl:b_smn_moneda_rf}</td>
+			<td style="background-color: white">${fld:smn_moneda_rf}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_smn_tasa_cambio_rf}</td>
+			<td style="background-color: white">${fld:smn_tasa_cambio_rf}</td>
+		</tr>
+		<tr>
 			<td width="40%">${lbl:b_lpa_monto_lote_ma}</td>
 			<td style="background-color: white">${fld:lpa_monto_lote_ma@#,###,##0.00}</td>
 		</tr>
 		<tr>
-			<td width="40%">${lbl:b_smn_estatus_documento}</td>
-			<td style="background-color: white">${fld:smn_estatus_documento}</td>
+			<td width="40%">${lbl:b_smn_canal_pago_id}</td>
+			<td style="background-color: white">${fld:smn_canal_pago_id}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_lpa_ano_comprobante_contable}</td>
+			<td style="background-color: white">${fld:lpa_ano_comprobante_contable}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_lpa_periodo_comprobante_contable}</td>
+			<td style="background-color: white">${fld:lpa_periodo_comprobante_contable}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_lpa_numero_comprobante_contable}</td>
+			<td style="background-color: white">${fld:lpa_numero_comprobante_contable}</td>
+		</tr>
+		<tr>
+			<td width="40%">${lbl:b_lpa_estatus}</td>
+			<td style="background-color: white">${fld:lpa_estatus}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_store_date}</td>

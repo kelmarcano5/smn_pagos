@@ -116,40 +116,28 @@
 		</td>
 	</tr>
 	<tr>
-		<td>${lbl:b_lpa_numero_lote}</td>
+		<td>${lbl:b_lpa_fecha_lote}</td>
 		<td>
-			<input id="lpa_numero_lote" name="lpa_numero_lote" type="text" maxlength="20"  disabled >
+			<input id="lpa_fecha_lote_init" name="lpa_fecha_lote_init" type="text" class="date" maxlength="10" disabled >
+			<img src="${def:context}/images/dropdown.png" title="${lbl:b_deploy_calendar}" onclick="calendarOpen('lpa_fecha_lote_init')">
 		</td>
 	</tr>
 	<tr>
 		<td>${lbl:b_lpa_fecha_lote}</td>
 		<td>
-			<input id="lpa_fecha_lote" name="lpa_fecha_lote" type="text" class="date" maxlength="10" disabled >
-			<img src="${def:context}/images/dropdown.png" title="${lbl:b_deploy_calendar}" onclick="calendarOpen('lpa_fecha_lote')">
+			<input id="lpa_fecha_lote_end" name="lpa_fecha_lote_end" type="text" class="date" maxlength="10" disabled >
+			<img src="${def:context}/images/dropdown.png" title="${lbl:b_deploy_calendar}" onclick="calendarOpen('lpa_fecha_lote_end')">
 		</td>
 	</tr>
 	<tr>
-		<td>${lbl:b_smn_estatus_documento}</td>
-		<td>
-			<select name="smn_estatus_documento" id="smn_estatus_documento" disabled >
-				<option value="">[Cualquiera]</option>
-				<option value="RE">${lbl:b_re} </option>
-				<option value="AP">${lbl:b_ap} </option>
-				<option value="EM">${lbl:b_em} </option>
-				<option value="CE">${lbl:b_ce}</option>
-
-			</select> 
-		</td>
-	</tr>
-	<tr>
-		<td>${lbl:b_store_date}</td>
+		<td>${lbl:b_store_date}@{${def:date}}</td>
 		<td>
 			<input id="lpa_fecha_registro_init" name="lpa_fecha_registro_init" type="text" class="date" maxlength="10" disabled >
 			<img src="${def:context}/images/dropdown.png" title="${lbl:b_deploy_calendar}" onclick="calendarOpen('lpa_fecha_registro_init')">
 		</td>
 	</tr>
 	<tr>
-		<td>${lbl:b_store_date}</td>
+		<td>${lbl:b_store_date}@{${def:date}}</td>
 		<td>
 			<input id="lpa_fecha_registro_end" name="lpa_fecha_registro_end" type="text" class="date" maxlength="10" disabled >
 			<img src="${def:context}/images/dropdown.png" title="${lbl:b_deploy_calendar}" onclick="calendarOpen('lpa_fecha_registro_end')">
@@ -445,7 +433,7 @@
 							onErrorFn=null);
 		}
 		
-		//asignar configuraciï¿½n
+		//asignar configuración
 		var fields = '';
 		function setConfiguration(config) {
 			var cfg = config.split("|");
@@ -467,7 +455,7 @@
 					}
 					else
 					{						
-						//aï¿½ade elementos radio y checkbox
+						//añade elementos radio y checkbox
 						if (formElements[i].type=="checkbox" || formElements[i].type=="radio")  
 						{
 							if (formElements[i].value != null)
@@ -490,7 +478,7 @@
 		//mostrar el detalle de un registro
 		function getDetail(id)
 		{
-//			//alert('Colocar su cï¿½digo aquï¿½.')
+//			//alert('Colocar su código aquí.')
 			
 			var uri = "${def:context}${def:actionroot}/detail/form?id=" + id ; //+ '&field_id=' + fields;
 			openDialog("dialog", uri, 650, 300);			

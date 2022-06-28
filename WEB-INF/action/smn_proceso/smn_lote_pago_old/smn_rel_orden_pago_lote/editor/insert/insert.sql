@@ -1,0 +1,38 @@
+INSERT INTO smn_pagos.smn_rel_orden_pago_lote
+(
+	smn_rel_orden_pago_lote_id,
+	smn_orden_pago_id,
+	smn_lote_pago_id,
+	smn_documento_id,
+	eol_numero_pago,
+	eol_fecha_pago,
+	eol_referencia_bancaria,
+	eol_monto_pago_ml,
+	smn_moneda_rf,
+	smn_tasa_cambio_rf,
+	eol_monto_pago_ma,
+	eol_estatus,
+	eol_idioma,
+	eol_usuario,
+	eol_fecha_registro,
+	eol_hora
+)
+VALUES
+(
+	${seq:currval@smn_pagos.seq_smn_rel_orden_pago_lote},
+	${fld:smn_orden_pago_id},
+	${fld:smn_lote_pago_id},
+	${fld:smn_documento_id},
+	${fld:eol_numero_pago},
+	${fld:eol_fecha_pago},
+	${fld:eol_referencia_bancaria},
+	${fld:eol_monto_pago_ml},
+	${fld:smn_moneda_rf},
+	${fld:smn_tasa_cambio_rf},
+	${fld:eol_monto_pago_ma},
+	${fld:eol_estatus},
+	'${def:locale}',
+	'${def:user}',
+	{d '${def:date}'},
+	'${def:time}'
+)

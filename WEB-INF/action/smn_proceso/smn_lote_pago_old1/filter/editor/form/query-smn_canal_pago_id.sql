@@ -1,0 +1,1 @@
+select smn_pagos.smn_canal_pago.smn_canal_pago_id as id, smn_pagos.smn_canal_pago.cdp_codigo ||'-'|| smn_pagos.smn_canal_pago.cdp_descripcion as item from smn_pagos.smn_canal_pago

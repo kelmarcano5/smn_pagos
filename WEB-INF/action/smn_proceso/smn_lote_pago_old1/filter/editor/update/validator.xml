@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror='/action/error/validation/ajax'>
+	<parameter id='smn_entidad_financiera_rf' type='integer' required='true' label='${lbl:b_smn_entidad_financiera_rf}' maxlen='10'/>
+	<parameter id='smn_cuenta_bancaria_rf' type='integer' required='true' label='${lbl:b_smn_cuenta_bancaria_rf}' maxlen='10'/>
+	<parameter id='smn_forma_pago_rf' type='integer' required='true' label='${lbl:b_smn_forma_pago_rf}' maxlen='10'/>
+	<parameter id='smn_documento_id' type='integer' required='true' label='${lbl:b_smn_documento_id}' maxlen='10'/>
+	<parameter id='lpa_numero_lote' type='varchar' required='true' label='${lbl:b_lpa_numero_lote}' maxlen='20'/>
+	<parameter id='lpa_descripcion_lote' type='varchar' required='true' label='${lbl:b_lpa_descripcion_lote}' maxlen='120'/>
+	<parameter id='lpa_fecha_lote' type='date' required='true' label='${lbl:b_lpa_fecha_lote}' maxlen='10'/>
+	<parameter id='lpa_monto_lote_ml' type='double' required='false' label='${lbl:b_lpa_monto_lote_ml}' maxlen='10'/>
+	<parameter id='smn_moneda_rf' type='integer' required='false' label='${lbl:b_smn_moneda_rf}' maxlen='10'/>
+	<parameter id='smn_tasa_cambio_rf' type='integer' required='false' label='${lbl:b_smn_tasa_cambio_rf}' maxlen='10'/>
+	<parameter id='lpa_monto_lote_ma' type='double' required='false' label='${lbl:b_lpa_monto_lote_ma}' maxlen='10'/>
+	<parameter id='smn_canal_pago_id' type='integer' required='false' label='${lbl:b_lpa_monto_lote_ma}' maxlen='10'/>
+	<parameter id='lpa_ano_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_ano_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_periodo_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_periodo_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_tipo_comprobante_contable_id' type='integer' required='false' label='${lbl:b_lpa_tipo_comprobante_contable_id}' maxlen='10'/>
+	<parameter id='lpa_numero_comprobante_contable' type='integer' required='false' label='${lbl:b_lpa_numero_comprobante_contable}' maxlen='10'/>
+	<parameter id='lpa_estatus' type='varchar' required='true' label='${lbl:b_lpa_estatus}' maxlen='2'/>
+	<parameter id='id' type='integer' required='true' label='${lbl:b_smn_lote_pago_id}' maxlen='10'/>
+</validator>
+

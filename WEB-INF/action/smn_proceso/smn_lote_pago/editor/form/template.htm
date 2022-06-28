@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="${def:context}/select2.min.css" />
     <link rel="stylesheet" type="text/css" href="${def:context}/sweetalert.css" />
     <!--biblioteca generica JS/Dinamica-->
-    <script type="text/javascript" src="${def:context}/action/script"></script>
     <script type="text/javascript" src="${def:context}/action/jquery"></script>
+    <script type="text/javascript" src="${def:context}/action/script"></script>
     <script type="text/javascript" src="${def:context}/action/select2"></script>
     <script type="text/javascript" src="${def:context}/action/sweetalert"></script>
+    <script type="text/javascript" src="${def:context}/action/lodash"></script>
 
 </head>
 
@@ -25,7 +26,7 @@
 </div>
 
 <!--formulario addnew/edit-->
-<form name="form1" onsubmit="return save()" style="width:500px;">
+<form name="form1" onsubmit="return save()" style="width: 700px;" autocomplete="off">
 
     <!-- titulo -->
     <h1 id="formTitle">${lbl:b_add_record}</h1>
@@ -34,74 +35,68 @@
 
         <!--ancho de la columna de etiquetas-->
         <col width="30%">
-
-        <!--campos-->
-            <tr>
-        <td>${lbl:b_smn_entidad_financiera_rf}*</td>
-        <td>
-            <select name="smn_entidad_financiera_rf" id="smn_entidad_financiera_rf" onchange="chgCombo(smn_entidad_financiera_rf.options[smn_entidad_financiera_rf.selectedIndex].text,'smn_entidad_financiera_rf_name');">
-                <option value="">[Cualquiera]</option>
-                <smn_entidad_financiera_rf_rows>
-                <option value="${fld:id}">${fld:item}</option>
-
-                </smn_entidad_financiera_rf_rows>
-            </select> 
-            <input id="smn_entidad_financiera_rf_name" name="smn_entidad_financiera_rf_name" type="hidden">
-        </td>
-    </tr>
-    <tr>
-        <td>${lbl:b_smn_cuenta_bancaria_rf}*</td>
-        <td>
-            <select name="smn_cuenta_bancaria_rf" id="smn_cuenta_bancaria_rf" onchange="chgCombo(smn_cuenta_bancaria_rf.options[smn_cuenta_bancaria_rf.selectedIndex].text,'smn_cuenta_bancaria_rf_name');">
-                <option value="">[Cualquiera]</option>
-                <smn_cuenta_bancaria_rf_rows>
-                <option value="${fld:id}">${fld:item}</option>
-
-                </smn_cuenta_bancaria_rf_rows>
-            </select> 
-            <input id="smn_cuenta_bancaria_rf_name" name="smn_cuenta_bancaria_rf_name" type="hidden">
-        </td>
-    </tr>
-    <tr>
-        <td>${lbl:b_smn_forma_pago_rf}*</td>
-        <td>
-            <select name="smn_forma_pago_rf" id="smn_forma_pago_rf" onchange="chgCombo(smn_forma_pago_rf.options[smn_forma_pago_rf.selectedIndex].text,'smn_forma_pago_rf_name');">
-                <option value="">[Cualquiera]</option>
-                <smn_forma_pago_rf_rows>
-                <option value="${fld:id}">${fld:item}</option>
-
-                </smn_forma_pago_rf_rows>
-            </select> 
-            <input id="smn_forma_pago_rf_name" name="smn_forma_pago_rf_name" type="hidden">
-        </td>
-    </tr>
-    <tr>
-        <td>${lbl:b_smn_documento_id}*</td>
-        <td>
-            <select name="smn_documento_id" id="smn_documento_id" onchange="chgCombo(smn_documento_id.options[smn_documento_id.selectedIndex].text,'smn_documento_id_name');">
-                <option value="">[Cualquiera]</option>
-                <smn_documento_id_rows>
-                <option value="${fld:id}">${fld:item}</option>
-
-                </smn_documento_id_rows>
-            </select> 
-            <input id="smn_documento_id_name" name="smn_documento_id_name" type="hidden">
-        </td>
-    </tr>
         <tr>
-            <td>${lbl:b_lpa_numero_lote}</td>
+            <td>${lbl:b_smn_entidad_financiera_rf}<span class="info">*</span></td>
+            <td>
+                <select class="select2" name="smn_entidad_financiera_rf" id="smn_entidad_financiera_rf" onchange="chgCombo(smn_entidad_financiera_rf.options[smn_entidad_financiera_rf.selectedIndex].text,'smn_entidad_financiera_rf_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_entidad_financiera_rf_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_entidad_financiera_rf_rows>
+                </select> 
+                <input id="smn_entidad_financiera_rf_name" name="smn_entidad_financiera_rf_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_smn_cuenta_bancaria_rf}<span class="info">*</span></td>
+            <td>
+                <select class="select2" name="smn_cuenta_bancaria_rf" id="smn_cuenta_bancaria_rf" onchange="chgCombo(smn_cuenta_bancaria_rf.options[smn_cuenta_bancaria_rf.selectedIndex].text,'smn_cuenta_bancaria_rf_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_cuenta_bancaria_rf_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_cuenta_bancaria_rf_rows>
+                </select> 
+                <input id="smn_cuenta_bancaria_rf_name" name="smn_cuenta_bancaria_rf_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_smn_forma_pago_rf}<span class="info">*</span></td>
+            <td>
+                <select class="select2" name="smn_forma_pago_rf" id="smn_forma_pago_rf" onchange="chgCombo(smn_forma_pago_rf.options[smn_forma_pago_rf.selectedIndex].text,'smn_forma_pago_rf_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_forma_pago_rf_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_forma_pago_rf_rows>
+                </select> 
+                <input id="smn_forma_pago_rf_name" name="smn_forma_pago_rf_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_smn_documento_id}<span class="info">*</span></td>
+            <td>
+                <select class="select2" name="smn_documento_id" id="smn_documento_id" onchange="chgCombo(smn_documento_id.options[smn_documento_id.selectedIndex].text,'smn_documento_id_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_documento_id_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_documento_id_rows>
+                </select> 
+                <input id="smn_documento_id_name" name="smn_documento_id_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_lpa_numero_lote}<span class="info">*</span></td>
             <td>
                 <input id="lpa_numero_lote" name="lpa_numero_lote" type="text" maxlength="20" >
             </td>
         </tr>
         <tr>
-            <td>${lbl:b_lpa_descripcion_lote}</td>
+            <td>${lbl:b_lpa_descripcion_lote}<span class="info">*</span></td>
             <td>
                 <textarea id="lpa_descripcion_lote" name="lpa_descripcion_lote" cols="30" rows="3"></textarea>
             </td>
         </tr>
         <tr>
-            <td>${lbl:b_lpa_fecha_lote}</td>
+            <td>${lbl:b_lpa_fecha_lote}<span class="info">*</span></td>
             <td>
                 <input id="lpa_fecha_lote" name="lpa_fecha_lote" type="text" class="date" maxlength="10">
                 <img src="${def:context}/images/dropdown.png" title="Desplegar calendario" onclick="calendarOpen('lpa_fecha_lote')">
@@ -114,21 +109,86 @@
             </td>
         </tr>
         <tr>
+            <td>${lbl:b_smn_moneda_rf}</td>
+            <td>
+                <select class="select2" name="smn_moneda_rf" id="smn_moneda_rf" onchange="chgComboTasa();">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_moneda_rf_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_moneda_rf_rows>
+                </select> 
+                <input id="smn_moneda_rf_name" name="smn_moneda_rf_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_smn_tasa_cambio_rf}</td>
+            <td>
+                <select class="select2" name="smn_tasa_cambio_rf" id="smn_tasa_cambio_rf" onchange="chgCombo(smn_tasa_cambio_rf.options[smn_tasa_cambio_rf.selectedIndex].text,'smn_tasa_cambio_rf_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_tasa_cambio_rf_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_tasa_cambio_rf_rows>
+                </select> 
+                <input id="smn_tasa_cambio_rf_name" name="smn_tasa_cambio_rf_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
             <td>${lbl:b_lpa_monto_lote_ma}</td>
             <td>
                 <input id="lpa_monto_lote_ma" name="lpa_monto_lote_ma" type="text" maxlength="10" class="numeric">
             </td>
         </tr>
-        <tr id="tr_smn_estatus_documento">
-            <td>${lbl:b_smn_estatus_documento}*</td>
+        <tr>
+            <td>${lbl:b_smn_canal_pago_id}</td>
             <td>
-                <select name="smn_estatus_documento" id="smn_estatus_documento">
-                <option value="RE" selected>${lbl:b_re}</option>
-                <option value="AP">${lbl:b_ap}</option>
-                <option value="EM">${lbl:b_em}</option>
-                <option value="CE">${lbl:b_ce}</option>
-
+                <select class="select2" name="smn_canal_pago_id" id="smn_canal_pago_id" onchange="chgCombo(smn_canal_pago_id.options[smn_canal_pago_id.selectedIndex].text,'smn_canal_pago_id_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <smn_canal_pago_id_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </smn_canal_pago_id_rows>
                 </select> 
+                <input id="smn_canal_pago_id_name" name="smn_canal_pago_id_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_lpa_ano_comprobante_contable}</td>
+            <td>
+                <input id="lpa_ano_comprobante_contable" name="lpa_ano_comprobante_contable" type="text" maxlength="10" class="numeric">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_lpa_periodo_comprobante_contable}</td>
+            <td>
+                <input id="lpa_periodo_comprobante_contable" name="lpa_periodo_comprobante_contable" type="text" maxlength="10" class="numeric">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_lpa_tipo_comprobante_contable_id}</td>
+            <td>
+                <select class="select2" name="lpa_tipo_comprobante_contable_id" id="lpa_tipo_comprobante_contable_id" onchange="chgCombo(lpa_tipo_comprobante_contable_id.options[lpa_tipo_comprobante_contable_id.selectedIndex].text,'lpa_tipo_comprobante_contable_id_name');">
+                    <option value="0">[Cualquiera]</option>
+                    <lpa_tipo_comprobante_contable_id_rows>
+                        <option value="${fld:id}">${fld:item}</option>
+                    </lpa_tipo_comprobante_contable_id_rows>
+                </select> 
+                <input id="lpa_tipo_comprobante_contable_id_name" name="lpa_tipo_comprobante_contable_id_name" type="hidden">
+            </td>
+        </tr>
+        <tr>
+            <td>${lbl:b_lpa_numero_comprobante_contable}</td>
+            <td>
+                <input id="lpa_numero_comprobante_contable" name="lpa_numero_comprobante_contable" type="text" maxlength="10" class="numeric">
+            </td>
+        </tr>
+        <tr id="tr_lpa_estatus">
+            <td>${lbl:b_lpa_estatus}<span class="info">*</span></td>
+            <td>
+                <select class="select2" name="lpa_estatus" id="lpa_estatus">
+                    <option value="RE" selected>${lbl:b_re}</option>
+                    <option value="AP">${lbl:b_ap}</option>
+                    <option value="EM">${lbl:b_em}</option>
+                    <option value="CE">${lbl:b_ce}</option>
+                </select>
             </td>
         </tr>
 
@@ -149,135 +209,121 @@
 
 <!--codigo de soporte del template-->
 <script type="text/javascript">
+    var id = "${fld:id}";
 
-    onload = function()
-    { 
-        $('#tr_smn_estatus_documento').hide();
+    $(document).ready(function(){
+        setSelect2();
+        $('#tr_lpa_estatus').hide();
+        $('#smn_tasa_cambio_rf').attr('disabled', true);
         addNew();
 
-        if (id!="")
+        if (id != ""){
             edit(id);
-    } 
-    
-    function chgCombo(text,id)
-    {
+        }
+    });
+
+    function chgCombo(text,id){
         document.getElementById(id).value = text;
     }
-    
-    //configurar formulario para ingresar registro nuevo
-    function addNew()
-    {
+
+    function addNew(){
         document.getElementById("formTitle").innerHTML = "${lbl:b_add_record}";
         document.getElementById("grabar").disabled=false;
         clearForm("form1");
+        clearSelect2();
         setFocusOnForm("form1");
+
     }
-    
-    //retorna al estado previo que corresponde
-    //al estado actual de la pagina, cada llamada Ajax
-    //se encarga de definir cual es la funcion de goBack() que aplica
-    function goBack() 
-    {
-        _goBackFn();
+
+    function goBack(){
+        _goBackFn()
     }
-    function showFilter()
-	{
-		document.getElementById("response").style.display='none';
-		setFocusOnForm("form1");
-	}
 
-    function search()
-	{
-
-		var url = "${def:actionroot}/../search";
-		
-		//determina si refresca y se para en la pagina actual o en la pagina 1
-		if (currentPage > 0)
-			url = "${def:actionroot}/../search?currentpage=" + currentPage;
-
-		//definir funcion goBack()
-		_goBackFn = showFilter;
-		
-		clearErrorMessages();
-
-		//llamada Ajax...
-		return ajaxCall(	httpMethod="POST", 
-							uri=url, 
-							divResponse="response", 
-							divProgress="status", 
-							formName="form1", 
-							afterResponseFn=null, 
-							onErrorFn=showFilter);
-
-	}
-    
-    //mostrar la actualizacion de un registro
     function insert(){
         clearErrorMessages();
         document.getElementById("grabar").disabled=true;
 
-        //llamada Ajax...
-        return ajaxCall(httpMethod="POST", 
-                        uri="${def:actionroot}/insert", 
-                        divResponse=null, 
-                        divProgress="status", 
-                        formName="form1", 
-                        afterResponseFn=null, 
-                        onErrorFn=retryAddnewOrEdit);
-        showToast('success','${lbl:b_record_added}: ${fld:id}');
+        if(_.isEmpty($('#lpa_monto_lote_ml').val()) || _.isNull($('#lpa_monto_lote_ml').val())){
+            $('#lpa_monto_lote_ml').val(0);
+        }
+        if(_.isEmpty($('#lpa_monto_lote_ma').val()) || _.isNull($('#lpa_monto_lote_ma').val())){
+            $('#lpa_monto_lote_ma').val(0);
+        }
+
+        return ajaxCall(httpMethod="POST",
+            uri="${def:actionroot}/insert",
+            divResponse=null,
+            divProgress="status",
+            formName="form1",
+            afterResponseFn=null,
+            onErrorFn=retryAddnewOrEdit);
     }
-    
-    //restaurar el formulario en caso de error
+
     function retryAddnewOrEdit() {
         document.getElementById("grabar").disabled=false;
         setFocusOnForm("form1");
     }
-    
-    var id = "${fld:id}"
-    
-    //grabar el formulario
-    function save()
-    {
-        //determina si es un insert o un update
+
+    function save(){
         if (document.form1.id.value=="")
             return insert();
         else
             return update();
     }
-    
-    //editar registro en formulario
-    function edit(id)
-    {
+
+    function edit(id){
         clearErrorMessages();
 
-        //llamada Ajax...
+        if(_.isEmpty($('#lpa_monto_lote_ml').val()) || _.isNull($('#lpa_monto_lote_ml').val())){
+            $('#lpa_monto_lote_ml').val(0);
+        }
+        if(_.isEmpty($('#lpa_monto_lote_ma').val()) || _.isNull($('#lpa_monto_lote_ma').val())){
+            $('#lpa_monto_lote_ma').val(0);
+        }
+
         ajaxCall(httpMethod="GET", 
             uri="${def:actionroot}/edit?id=" + id , 
-            divResponse=null, 
-            divProgress="status", 
-            formName=null, 
-            afterResponseFn=null, 
+            divResponse=null,
+            divProgress="status",
+            formName=null,
+            afterResponseFn=null,
             onErrorFn=null);
     }
-    
-    //actualizar registro en BD
-    function update()
-    {
+
+    function update(){
         clearErrorMessages();
         document.getElementById("grabar").disabled=true;
-            
-        //llamada Ajax...
-        return ajaxCall(httpMethod="POST", 
-            uri="${def:actionroot}/update", 
-            divResponse=null, 
-            divProgress="status", 
-            formName="form1", 
-            afterResponseFn=null, 
+        return ajaxCall(httpMethod="POST",
+            uri="${def:actionroot}/update",
+            divResponse=null,
+            divProgress="status",
+            formName="form1",
+            afterResponseFn=null,
             onErrorFn=retryAddnewOrEdit);
-        showToast('success','${lbl:b_record_updated}: ${fld:id}');
     }
 
-    
-</script>	
+    function chgComboTasa(){
+        if(_.isEmpty($('#smn_moneda_rf').find(':selected').val()))  return;
+        
+        let tasa = $('#smn_tasa_cambio_rf').find(':selected').val();
+        
+        ajaxCall(
+            httpMethod="GET",
+            uri="${def:actionroot}/gettasa?id=" + $('#smn_moneda_rf').find(':selected').val(),
+            divResponse=null,
+            divProgress="status",
+            formName="form1",
+            afterResponseFn=null, //function 'setElementFirstIndex' select first element of combo list
+            onErrorFn=null
+        );
+
+        $('#smn_tasa_cambio_rf').attr('disabled', false);
+
+         if(!_.isEmpty(id)){
+            $('#smn_tasa_cambio_rf').val(tasa).change();
+        }
+        
+    }
+</script>
 </body>
 </html>

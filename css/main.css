@@ -1,5 +1,7 @@
 /******fonts*******/
-
+.text-danger {
+  color: #e3342f !important;
+}
 @font-face {
   font-family: 'CenturyGothic';
   src: url('../fonts/CenturyGothic.eot') format('embedded-opentype'),  url('../fonts/CenturyGothic.woff') format('woff'), url('../fonts/CenturyGothic.ttf')  format('truetype'), url('../fonts/CenturyGothic.svg#CenturyGothic') format('svg');

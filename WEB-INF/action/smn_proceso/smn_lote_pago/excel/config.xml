@@ -30,14 +30,14 @@
 		header-background='true'>
 		<col id='smn_entidad_financiera_rf' label='${lbl:b_smn_entidad_financiera_rf}' />
 		<col id='smn_cuenta_bancaria_rf' label='${lbl:b_smn_cuenta_bancaria_rf}' />
-		<col id='smn_forma_pago_rf' label='${lbl:b_smn_forma_pago_rf}' />
 		<col id='smn_documento_id' label='${lbl:b_smn_documento_id}' />
 		<col id='lpa_numero_lote' label='${lbl:b_lpa_numero_lote}' />
 		<col id='lpa_descripcion_lote' label='${lbl:b_lpa_descripcion_lote}' />
 		<col id='lpa_fecha_lote' label='${lbl:b_lpa_fecha_lote}' />
-		<col id='lpa_monto_lote_ml' label='${lbl:b_lpa_monto_lote_ml}' />
+		<col id='smn_forma_pago_rf' label='${lbl:b_smn_forma_pago_rf}' />
 		<col id='lpa_monto_lote_ma' label='${lbl:b_lpa_monto_lote_ma}' />
-		<col id='smn_estatus_documento' label='${lbl:b_smn_estatus_documento}' />
+		<col id='lpa_monto_lote_ml' label='${lbl:b_lpa_monto_lote_ml}' />
+		<col id='lpa_estatus' label='${lbl:b_lpa_estatus}' />
 		<col id='lpa_fecha_registro' label='${lbl:b_store_date}' />
 
 	</excel>

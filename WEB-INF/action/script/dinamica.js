@@ -1702,3 +1702,31 @@ function showToast(icon,msg) {
         title: msg
     })
 }
+
+function setSelect2() {
+    $('.select2').select2();
+}
+
+function showMessage(tittle, message, icon) {
+    //ICONS: success, error, warning, info, question
+    //Swal.fire(tittle, message, icon);
+    Swal.fire({
+        title: tittle,
+        text: message,
+        icon: icon,
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#0f3c6a',
+    });
+}
+
+function clearSelect2() {
+    $('.select2').val(0).change();
+}
+
+function setDataSelect2(id,value) {
+    if(_.isEmpty(value) || value == 0){
+        $('#'+id).val(0).change();
+        return;
+    }
+    $('#'+id).val(value).change();
+}

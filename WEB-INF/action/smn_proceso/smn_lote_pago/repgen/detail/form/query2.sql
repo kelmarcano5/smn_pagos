@@ -7,8 +7,15 @@ select
 	smn_pagos.smn_lote_pago.lpa_descripcion_lote,
 	smn_pagos.smn_lote_pago.lpa_fecha_lote,
 	smn_pagos.smn_lote_pago.lpa_monto_lote_ml,
+	smn_pagos.smn_lote_pago.smn_moneda_rf,
+	smn_pagos.smn_lote_pago.smn_tasa_cambio_rf,
 	smn_pagos.smn_lote_pago.lpa_monto_lote_ma,
-	smn_pagos.smn_lote_pago.smn_estatus_documento,
+	smn_pagos.smn_lote_pago.smn_canal_pago_id,
+	smn_pagos.smn_lote_pago.lpa_ano_comprobante_contable,
+	smn_pagos.smn_lote_pago.lpa_periodo_comprobante_contable,
+	smn_pagos.smn_lote_pago.lpa_tipo_comprobante_contable_id,
+	smn_pagos.smn_lote_pago.lpa_numero_comprobante_contable,
+	smn_pagos.smn_lote_pago.lpa_estatus,
 	smn_pagos.smn_lote_pago.lpa_fecha_registro
 from
 	smn_pagos.smn_lote_pago 

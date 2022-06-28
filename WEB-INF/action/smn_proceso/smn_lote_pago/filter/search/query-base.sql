@@ -5,11 +5,11 @@ select
     smn_base.smn_formas_pago.fop_descripcion as smn_forma_pago_rf,
     smn_pagos.smn_documento.doc_descripcion as smn_documento_id,
 	case
-	when smn_pagos.smn_lote_pago.smn_estatus_documento='RE' then '${lbl:b_re} '
-	when smn_pagos.smn_lote_pago.smn_estatus_documento='AP' then '${lbl:b_ap} '
-	when smn_pagos.smn_lote_pago.smn_estatus_documento='EM' then '${lbl:b_em} '
-	when smn_pagos.smn_lote_pago.smn_estatus_documento='CE' then '${lbl:b_ce}'
-	end as smn_estatus_documento,
+	when smn_pagos.smn_lote_pago.lpa_estatus='RE' then '${lbl:b_re}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='AP' then '${lbl:b_ap}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='EM' then '${lbl:b_em}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='CE' then '${lbl:b_ce}'
+	end as lpa_estatus,
 	smn_pagos.smn_lote_pago.lpa_numero_lote,
 	smn_pagos.smn_lote_pago.lpa_descripcion_lote,
 	smn_pagos.smn_lote_pago.lpa_fecha_lote,

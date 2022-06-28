@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_entidad_financiera_rf' type='integer' required='false' label='${lbl:b_smn_entidad_financiera_rf}' maxlen='10'/>
+	<parameter id='smn_cuenta_bancaria_rf' type='integer' required='false' label='${lbl:b_smn_cuenta_bancaria_rf}' maxlen='10'/>
+	<parameter id='smn_forma_pago_rf' type='integer' required='false' label='${lbl:b_smn_forma_pago_rf}' maxlen='10'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_smn_documento_id}' maxlen='10'/>
+	<parameter id='lpa_numero_lote' type='varchar' required='false' label='${lbl:b_lpa_numero_lote}' maxlen='20'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='lpa_numero_lote' rule='like' />
+	<parameter id='lpa_fecha_lote' type='date' required='false' label='${lbl:b_lpa_fecha_lote}' maxlen='10'/>
+	<parameter id='smn_estatus_documento' type='varchar' required='false' label='${lbl:b_smn_estatus_documento}' maxlen='2'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='smn_estatus_documento' rule='like' />
+	<parameter id='lpa_fecha_registro_init' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+	<custom-validator classname='dinamica.validators.DateRangeValidator' on-error-label='[${lbl:b_store_date} mayor o igual que] no puede ser mayor que [${lbl:b_store_date} menor o igual que].' date1='lpa_fecha_registro_init' date2='lpa_fecha_registro_end' id='lpa_fecha_registro_init' />
+	<parameter id='lpa_fecha_registro_end' type='date' required='false' label='${lbl:b_store_date}' maxlen='10'/>
+</validator>

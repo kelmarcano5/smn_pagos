@@ -160,11 +160,11 @@ public class PDFReport extends AbstractPDFOutput
 			datatable.addCell(c);
 		}
 
-		d = rs.getString("smn_estatus_documento");
+		d = rs.getString("lpa_fecha_lote_init");
 			if (d != null)
 			{
-			name  = "b_smn_estatus_documento";
-			label = "${lbl:b_smn_estatus_documento}";
+			name  = "b_lpa_fecha_lote";
+			label = "${lbl:b_lpa_fecha_lote}";
 			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
 
 			//filter field
@@ -181,26 +181,8 @@ public class PDFReport extends AbstractPDFOutput
 		d = rs.getString("lpa_fecha_registro_init");
 			if (d != null)
 			{
-			name  = "b_store_date";
-			label = "${lbl:b_store_date}";
-			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
-
-			//filter field
-			c = new PdfPCell(new Phrase(str_filter, tblHeaderFont));
-			c.setGrayFill(0.95f);
-			c.setHorizontalAlignment(Element.ALIGN_LEFT);
-			datatable.addCell(c);
-			d = d.replaceAll("%", "");
-			c = new PdfPCell( new Phrase( d , tblBodyFont ) );
-			c.setHorizontalAlignment(Element.ALIGN_LEFT);
-			datatable.addCell(c);
-		}
-
-		d = rs.getString("lpa_fecha_lote");
-			if (d != null)
-			{
-			name  = "b_lpa_fecha_lote";
-			label = "${lbl:b_lpa_fecha_lote}";
+			name  = "b_store_date}@{\${def:date}";
+			label = "${lbl:b_store_date}@{\${def:date}}";
 			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
 
 			//filter field
@@ -253,8 +235,8 @@ public class PDFReport extends AbstractPDFOutput
 		d = rs.getString("lpa_fecha_registro_end");
 			if (d != null)
 			{
-			name  = "b_store_date";
-			label = "${lbl:b_store_date}";
+			name  = "b_store_date}@{\${def:date}";
+			label = "${lbl:b_store_date}@{\${def:date}}";
 			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
 
 			//filter field
@@ -322,24 +304,6 @@ public class PDFReport extends AbstractPDFOutput
 			datatable.addCell(c);
 		}
 
-		d = rs.getString("lpa_numero_lote");
-			if (d != null)
-			{
-			name  = "b_lpa_numero_lote";
-			label = "${lbl:b_lpa_numero_lote}";
-			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
-
-			//filter field
-			c = new PdfPCell(new Phrase(str_filter, tblHeaderFont));
-			c.setGrayFill(0.95f);
-			c.setHorizontalAlignment(Element.ALIGN_LEFT);
-			datatable.addCell(c);
-			d = d.replaceAll("%", "");
-			c = new PdfPCell( new Phrase( d , tblBodyFont ) );
-			c.setHorizontalAlignment(Element.ALIGN_LEFT);
-			datatable.addCell(c);
-		}
-
 		d = rs.getString("smn_entidad_financiera_rf_name");
 			if (d != null)
 			{
@@ -363,6 +327,24 @@ public class PDFReport extends AbstractPDFOutput
 			{
 			name  = "b_smn_forma_pago_rf";
 			label = "${lbl:b_smn_forma_pago_rf}";
+			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
+
+			//filter field
+			c = new PdfPCell(new Phrase(str_filter, tblHeaderFont));
+			c.setGrayFill(0.95f);
+			c.setHorizontalAlignment(Element.ALIGN_LEFT);
+			datatable.addCell(c);
+			d = d.replaceAll("%", "");
+			c = new PdfPCell( new Phrase( d , tblBodyFont ) );
+			c.setHorizontalAlignment(Element.ALIGN_LEFT);
+			datatable.addCell(c);
+		}
+
+		d = rs.getString("lpa_fecha_lote_end");
+			if (d != null)
+			{
+			name  = "b_lpa_fecha_lote";
+			label = "${lbl:b_lpa_fecha_lote}";
 			str_filter = StringUtil.replace(label, label, _labels.getLabel(name, _language));
 
 			//filter field

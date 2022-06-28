@@ -1,0 +1,70 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+	<col width='7%'/>
+
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="15" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th class='sortable' onclick="sortBy('smn_orden_pago_id_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_orden_pago_id}</th>
+		<th class='sortable' onclick="sortBy('smn_lote_pago_id_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_lote_pago_id}</th>
+		<th class='sortable' onclick="sortBy('smn_documento_id_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_documento_id}</th>
+		<th class='sortable' onclick="sortBy('eol_numero_pago','query-smnrelordenpagolote.sql')" >${lbl:b_eol_numero_pago}</th>
+		<th class='sortable' onclick="sortBy('eol_fecha_pago','query-smnrelordenpagolote.sql')" >${lbl:b_eol_fecha_pago}</th>
+		<th class='sortable' onclick="sortBy('eol_referencia_bancaria','query-smnrelordenpagolote.sql')" >${lbl:b_eol_referencia_bancaria}</th>
+		<th class='sortable' onclick="sortBy('eol_monto_pago_ml','query-smnrelordenpagolote.sql')" >${lbl:b_eol_monto_pago_ml}</th>
+		<th class='sortable' onclick="sortBy('smn_moneda_rf_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_moneda_rf}</th>
+		<th class='sortable' onclick="sortBy('smn_tasa_cambio_rf_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_tasa_cambio_rf}</th>
+		<th class='sortable' onclick="sortBy('eol_monto_pago_ma','query-smnrelordenpagolote.sql')" >${lbl:b_eol_monto_pago_ma}</th>
+		<th class='sortable' onclick="sortBy('eol_estatus_combo','query-smnrelordenpagolote.sql')" >${lbl:eol_estatus}</th>
+		<th class='sortable' onclick="sortBy('eol_fecha_registro','query-smnrelordenpagolote.sql')" >${lbl:b_store_date}</th>
+
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_rel_orden_pago_lote_id}')" title="${lbl:b_view_detail}"></td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_rel_orden_pago_lote_id}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_rel_orden_pago_lote_id}')" title="${lbl:b_edit_button}"></td>
+		<td align="center">${fld:smn_orden_pago_id_combo}</td>
+		<td align="center">${fld:smn_lote_pago_id_combo}</td>
+		<td align="center">${fld:smn_documento_id_combo}</td>
+		<td align="center">${fld:eol_numero_pago}</td>
+		<td align="center">${fld:eol_fecha_pago@dd-MM-yyyy}</td>
+		<td align="left">${fld:eol_referencia_bancaria}</td>
+		<td align="right">${fld:eol_monto_pago_ml@#,###,##0.00}</td>
+		<td align="center">${fld:smn_moneda_rf_combo}</td>
+		<td align="center">${fld:smn_tasa_cambio_rf_combo}</td>
+		<td align="right">${fld:eol_monto_pago_ma@#,###,##0.00}</td>
+		<td align="left">${fld:eol_estatus_combo}</td>
+		<td align="center">${fld:eol_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>

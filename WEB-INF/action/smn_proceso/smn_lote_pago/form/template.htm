@@ -8,19 +8,20 @@
     <link rel="stylesheet" type="text/css" href="${def:context}/select2.min.css" />
     <link rel="stylesheet" type="text/css" href="${def:context}/sweetalert.css" />
     <!--biblioteca generica JS/Dinamica-->
-	<script type="text/javascript" src="${def:context}/action/script"></script>
-	<script type="text/javascript" src="${def:context}/action/jquery"></script>
-	<script type="text/javascript" src="${def:context}/action/select2"></script>
-	<script type="text/javascript" src="${def:context}/action/sweetalert"></script>
+    <script type="text/javascript" src="${def:context}/action/script"></script>
+    <script type="text/javascript" src="${def:context}/action/jquery"></script>
+    <script type="text/javascript" src="${def:context}/action/select2"></script>
+    <script type="text/javascript" src="${def:context}/action/sweetalert"></script>
+    <script type="text/javascript" src="${def:context}/action/lodash"></script>
 
-	<!--codigo especifico de este modulo--> 
+    <!--codigo especifico de este modulo--> 
     <script type="text/javascript">
-        //inicializacion de la pagina cuando carga
+        var timer = 0;
         onload = function() { 
             search();
         } 
-	
-		//ejecutar consulta
+
+        //ejecutar consulta
         function search() {
             ajaxCall(httpMethod="GET", 
                 uri="${def:actionroot}/search", 
@@ -29,67 +30,66 @@
                 formName=null, 
                 afterResponseFn=null, 
                 onErrorFn=null);
-		}
-	
-		//recuperar una pagina X del grid
-		function viewPage() {
-			var url = "${def:actionroot}/view";
-			gotoPage(url);
-		}
-		
-		//exportar a PDF
-		function openPDF() {
-			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
-			var url = "${def:context}${def:actionroot}/pdf?random=" + Math.random();
-			var w = window.open(url, null, features);
-		}
-	
-		//exportar a excel
-		function openExcel() {
-			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
-			var url = "${def:context}${def:actionroot}/excel?random=" + Math.random();
-			var w = window.open(url, null, features);
-		}
-		
-		//exportar a xml
-		function openXml() {
-			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
-			var url = "${def:context}${def:actionroot}/xml/search?random=" + Math.random();
-			var w = window.open(url, null, features);
-		}
-		
-		//exportar a texto
-		function openTxt() {
-			var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
-			var url = "${def:context}${def:actionroot}/txt/search?random=" + Math.random();
-			var w = window.open(url, null, features);
-		}
-		
-		//envio de emails
-		function openEmails() {
-			var uri = "${def:context}${def:actionroot}/email/form";
-			openDialog("editor0", uri, 950, 600);	
-		}
-		
-		//mostrar el detalle de un registro
-		function getDetail(id)
-		{
-			var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
-			openDialog("dialog", uri, 650, 540);			
-		}
-		
-		//muestra un DIV+IFRAME con el formulario de CRUD
+        }
+
+        //recuperar una pagina X del grid
+        function viewPage() {
+            var url = "${def:actionroot}/view";
+            gotoPage(url);
+        }
+
+        //exportar a PDF
+        function openPDF() {
+            var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+            var url = "${def:context}${def:actionroot}/pdf?random=" + Math.random();
+            var w = window.open(url, null, features);
+        }
+
+        //exportar a excel
+        function openExcel() {
+            var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+            var url = "${def:context}${def:actionroot}/excel?random=" + Math.random();
+            var w = window.open(url, null, features);
+        }
+
+        //exportar a xml
+        function openXml() {
+            var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+            var url = "${def:context}${def:actionroot}/xml/search?random=" + Math.random();
+            var w = window.open(url, null, features);
+        }
+
+        //exportar a texto
+        function openTxt() {
+            var features = "height=500,width=800,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+            var url = "${def:context}${def:actionroot}/txt/search?random=" + Math.random();
+            var w = window.open(url, null, features);
+        }
+
+        //envio de emails
+        function openEmails() {
+            var uri = "${def:context}${def:actionroot}/email/form";
+            openDialog("editor0", uri, 950, 600);
+        }
+
+        //mostrar el detalle de un registro
+        function getDetail(id){
+            var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
+            openDialog("dialog", uri, 650, 550);
+        }
+
+        //muestra un DIV+IFRAME con el formulario de CRUD
         function showEditor(id, status){
             var uri = "";
 
             switch (id) {
                 case 'editor':
                     uri = "${def:context}${def:actionroot}/editor/form";
-                    openDialog("editor1", uri, 650, 540);
+                    openDialog("editor1", uri, 750, 720);
                     break;
                 case 'filter':
                     uri = "${def:context}${def:actionroot}/filter/form";
-				    openDialog("editor2", uri, 950, 600);
+				    openDialog("editor2", uri,1250, 720);
                     break;
                 case 'importexcel':
                     uri = "${def:context}${def:actionroot}/importexcel/form";
@@ -103,18 +103,17 @@
                     uri = "${def:context}${def:actionroot}/editor/form";
                     break;
                 default:
-                    console.log("paso");
                     if(status.trim() != 'Registrado'){
                         showToast('warning',`No se puede editar este registro porque su estatus es ${status.trim()}`);
                         break;
                     }
                     uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
-                    openDialog("editor5", uri, 650, 540);
+                    openDialog("editor5", uri,  750, 720);
                     break;
             }
         }
 
-        function deleteRecord(id, status) {
+        function deleteRecord(id,status) {
             if(status.trim() != 'Registrado'){
                 showToast('warning',`No se puede eliminar este registro porque su estatus es ${status.trim()}`);
                 return;
@@ -130,7 +129,6 @@
             }).then(async (result) => {
                 if (result.isConfirmed) {
                     deleteRecordOK(id);
-                    showToast('success','${lbl:b_record_deleted}')
                 }
             });
         }
@@ -138,12 +136,12 @@
         //eliminar un registro
         function deleteRecordOK(id) {
             ajaxCall(httpMethod="GET", 
-                            uri="${def:actionroot}/delete?id=" + id,
-                            divResponse=null, 
-                            divProgress="status", 
-                            formName=null, 
-                            afterResponseFn=null, 
-                            onErrorFn=null);
+                uri="${def:actionroot}/delete?id=" + id,
+                divResponse=null,
+                divProgress="status",
+                formName=null,
+                afterResponseFn=null,
+                onErrorFn=null);
         }
 
         function Generar(id,estatus) {
@@ -156,14 +154,19 @@
             alertBox ('No se pueden procesar el Movimiento de Caja', '${lbl:b_continue_button}', null, null);
         }
 
+        function detalle(id, status) {
+            var uri = "${def:context}${def:actionroot}/smn_rel_orden_pago_lote/form?id=" + id;
+            openDialog("dialog", uri, 1250, 650);
+         }
+        
     </script>
 
 </head>
 
 <body>
 
-	<!--banner-->
-	<div class="welcome" style="padding-right:50px; margin-top: 20px;"><br>
+    <!--banner-->
+    <div class="welcome" style="padding-right:50px; margin-top: 20px;"><br>
         <b>${lbl:b_welcome}</b> ${fld:fname} ${fld:lname} ${req:progress}
         <div class="" style="width: 100%; border-bottom: solid 6px #1d61a0; border-radius: 30px; margin-top: 4px;">
         </div>
@@ -172,15 +175,21 @@
     <div class="titulo-negocios">
         <div style="padding-top: 15px;">${lbl:b_smn_lote_pago_id}</div>
     </div>
-	
-	<!--incluir el menu iconografico de SIMONE-->
-	${inc:${def:actionroot}/panel/view}
-
-	<br>
-	
-	<!--panel de respuesta AJAX #1-->
-	<div id="response" style="display: none; width: 100%"></div>
-
+    
+    <!--incluir el menu iconografico de SIMONE-->
+    ${inc:${def:actionroot}/panel/view}
+    <br>
+    <br>
+    
+    <!--panel de respuesta AJAX #1-->
+    <div id="response" style="display: none; width: 100%"></div>
+    <!-- <script  type="text/javascript">
+        setTimeout(()=>{
+            console.log(timer);
+            $('.data-table').DataTable();
+            console.log("cargo");
+        }, 5000);
+    </script> -->
 </body>
 
 </html>

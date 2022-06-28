@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<config nodb="true">
+
+	<summary>
+		Generar reporte generico PDF
+	</summary>
+
+	<log>false</log>
+
+	<transaction>
+		<classname>dinamica.GenericTransaction</classname>
+		<validator>false</validator>
+		<transaction>false</transaction>
+		<jdbc-log>false</jdbc-log>
+		<recordset id="query-smnlotepago.sql" source="session" scope="transaction" />
+	</transaction>
+
+	<output>
+		<classname>dinamica.PDFGenericReport</classname>
+	</output>
+	
+	<pdf-title>${lbl:b_smn_lote_pago_id}</pdf-title>
+	<pdf-logo url='/images/logo-simone-pdf.png' scale='100' />
+	<pdf-file-name>${lbl:b_smn_lote_pago_id}.pdf</pdf-file-name>
+
+	<pdf-report 
+		pageSize="letter" 
+		rotate="false"
+		footer="false" 
+		header="true">
+		<record recordset='query-smnlotepago.sql' width='100' spacingBefore='40'>
+			<col name='smn_entidad_financiera_rf' title='${lbl:b_smn_entidad_financiera_rf}' width='9' align='left' format='######' />
+			<col name='smn_cuenta_bancaria_rf' title='${lbl:b_smn_cuenta_bancaria_rf}' width='9' align='left' format='######' />
+			<col name='smn_forma_pago_rf' title='${lbl:b_smn_forma_pago_rf}' width='9' align='left' format='######' />
+			<col name='smn_documento_id' title='${lbl:b_smn_documento_id}' width='9' align='left' format='######' />
+			<col name='lpa_numero_lote' title='${lbl:b_lpa_numero_lote}' width='9' align='left' />
+			<col name='lpa_descripcion_lote' title='${lbl:b_lpa_descripcion_lote}' width='9' align='left' />
+			<col name='lpa_fecha_lote' title='${lbl:b_lpa_fecha_lote}' width='9' align='left' format='dd-MM-yyyy' />
+			<col name='lpa_monto_lote_ml' title='${lbl:b_lpa_monto_lote_ml}' width='9' align='left' format='#,###,##0.00' />
+			<col name='lpa_monto_lote_ma' title='${lbl:b_lpa_monto_lote_ma}' width='9' align='left' format='#,###,##0.00' />
+			<col name='smn_estatus_documento' title='${lbl:b_smn_estatus_documento}' width='9' align='left' />
+			<col name='lpa_fecha_registro' title='${lbl:b_store_date}' width='9' align='left' format='dd-MM-yyyy' />
+
+		</record>
+
+	</pdf-report>
+</config>
