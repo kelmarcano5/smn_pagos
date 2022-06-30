@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='filter.params' onerror='/action/error/validation/ajax'>
+	<parameter id='smn_orden_pago_id' type='integer' required='false' label='${lbl:b_smn_orden_pago_id}' maxlen='10'/>
+	<parameter id='smn_lote_pago_id' type='integer' required='false' label='${lbl:b_smn_lote_pago_id}' maxlen='10'/>
+	<parameter id='smn_proveedor_rf' type='integer' required='false' label='${lbl:b_smn_proveedor_rf}' maxlen='10'/>
+	<parameter id='eol_numero_pago' type='integer' required='false' label='${lbl:b_eol_numero_pago}' maxlen='10'/>
+	<parameter id='eol_fecha_pago_init' type='date' required='false' label='${lbl:b_eol_fecha_pago}' maxlen='10'/>
+	<custom-validator classname='dinamica.validators.DateRangeValidator' on-error-label='[${lbl:b_eol_fecha_pago} mayor o igual que] no puede ser mayor que [${lbl:b_eol_fecha_pago} menor o igual que].' date1='eol_fecha_pago_init' date2='eol_fecha_pago_end' id='eol_fecha_pago_init' />
+	<parameter id='eol_fecha_pago_end' type='date' required='false' label='${lbl:b_eol_fecha_pago}' maxlen='10'/>
+	<parameter id='eol_referencia_bancaria' type='varchar' required='false' label='${lbl:b_eol_referencia_bancaria}' maxlen='25'/>
+	<custom-validator classname='dinamica.validators.SQLPatternTransformer' parameter='eol_referencia_bancaria' rule='like' />
+</validator>

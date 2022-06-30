@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator id='repgen.filter' onerror='/action/error/validation/ajax'>
+
+	<parameter id='fdesde' type='date' required='false' label='Fecha desde'/>
+	<parameter id='fhasta' type='date' required='false' label='Fecha hasta'/>
+	
+	<parameter id='smn_orden_pago_id' type='integer' required='false' label='${lbl:b_smn_orden_pago_id}' maxlen='10'/>
+	<parameter id='smn_lote_pago_id' type='integer' required='false' label='${lbl:b_smn_lote_pago_id}' maxlen='10'/>
+	<parameter id='smn_proveedor_rf' type='integer' required='false' label='${lbl:b_smn_proveedor_rf}' maxlen='10'/>
+	<parameter id='smn_documento_id' type='integer' required='false' label='${lbl:b_smn_documento_id}' maxlen='10'/>
+	<parameter id='eol_numero_pago' type='integer' required='false' label='${lbl:b_eol_numero_pago}' maxlen='10'/>
+	<parameter id='eol_fecha_pago' type='date' required='false' label='${lbl:b_eol_fecha_pago}' maxlen='10'/>
+	<parameter id='eol_referencia_bancaria' type='varchar' required='false' label='${lbl:b_eol_referencia_bancaria}' maxlen='25'/>
+	<parameter id='eol_monto_pago_ml' type='double' required='false' label='${lbl:b_eol_monto_pago_ml}' maxlen='10'/>
+	<parameter id='eol_monto_incremento_ml' type='double' required='false' label='${lbl:b_eol_monto_incremento_ml}' maxlen='10'/>
+	<parameter id='eol_monto_anticipo_ml' type='double' required='false' label='${lbl:b_eol_monto_anticipo_ml}' maxlen='10'/>
+	<parameter id='eol_monto_retencion_ml' type='double' required='false' label='${lbl:b_eol_monto_retencion_ml}' maxlen='10'/>
+	<parameter id='eol_monto_neto_ml' type='double' required='false' label='${lbl:b_eol_monto_neto_ml}' maxlen='10'/>
+	<parameter id='eol_diferencial_cambiario_ml' type='double' required='false' label='${lbl:b_eol_diferencial_cambiario_ml}' maxlen='10'/>
+	<parameter id='smn_moneda_rf' type='integer' required='false' label='${lbl:b_smn_moneda_rf}' maxlen='10'/>
+	<parameter id='smn_tasa_cambio_rf' type='integer' required='false' label='${lbl:b_smn_tasa_cambio_rf}' maxlen='10'/>
+	<parameter id='eol_monto_pago_ma' type='double' required='false' label='${lbl:b_eol_monto_pago_ma}' maxlen='10'/>
+	<parameter id='eol_monto_incremento_ma' type='double' required='false' label='${lbl:b_eol_monto_incremento_ma}' maxlen='10'/>
+	<parameter id='eol_monto_anticipo_ma' type='double' required='false' label='${lbl:b_eol_monto_anticipo_ma}' maxlen='10'/>
+	<parameter id='eol_monto_retencion_ma' type='double' required='false' label='${lbl:b_eol_monto_retencion_ma}' maxlen='10'/>
+	<parameter id='eol_monto_neto_ma' type='double' required='false' label='${lbl:b_eol_monto_neto_ma}' maxlen='10'/>
+	<parameter id='eol_estatus' type='varchar' required='false' label='${lbl:b_eol_estatus}' maxlen='2'/>
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='eol_referencia_bancaria'
+		rule='contains' />
+
+	<custom-validator
+		classname='dinamica.validators.SQLPatternTransformer'
+		parameter='eol_estatus'
+		rule='contains' />
+
+
+
+	<custom-validator
+			classname='dinamica.validators.ArrayNotEmptyValidator'
+			on-error-label='Seleccione al menos un campo para la generación del reporte.'
+			parameter-name='field_id' 
+			id='field_id' />
+
+	<custom-validator 
+			classname='dinamica.validators.ArrayToRecordset'
+			paramName='field_id' 
+			recordsetId='fields' 
+			colName='field_id' 
+			colType='integer' />
+				
+</validator>

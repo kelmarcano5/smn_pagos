@@ -16,7 +16,7 @@
 
     <!--codigo especifico de este modulo--> 
     <script type="text/javascript">
-        var timer = 0;
+
         onload = function() { 
             search();
         } 
@@ -89,15 +89,15 @@
                     break;
                 case 'filter':
                     uri = "${def:context}${def:actionroot}/filter/form";
-				    openDialog("editor2", uri,1250, 720);
+                        openDialog("editor2", uri,1250, 720);
                     break;
                 case 'importexcel':
                     uri = "${def:context}${def:actionroot}/importexcel/form";
-				    openDialog("editor3", uri, 950, 600);
+                        openDialog("editor3", uri, 950, 600);
                     break;
                 case 'repgen':
                     uri = "${def:context}${def:actionroot}/repgen/form";
-				    openDialog("editor4", uri, 950, 600);
+                        openDialog("editor4", uri, 950, 600);
                     break;
                 case null:
                     uri = "${def:context}${def:actionroot}/editor/form";

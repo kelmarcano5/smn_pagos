@@ -1,10 +1,10 @@
 select
 	smn_cont_financiera.smn_tipo_comprobante.tic_nombre,
 	case
-	when smn_pagos.smn_lote_pago.lpa_estatus='RE' then '${lbl:b_re} '
-	when smn_pagos.smn_lote_pago.lpa_estatus=' AP' then '${lbl:b_ap} '
-	when smn_pagos.smn_lote_pago.lpa_estatus=' EM' then '${lbl:b_em} '
-	when smn_pagos.smn_lote_pago.lpa_estatus=' CE' then '${lbl:b_ce}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='RE' then '${lbl:b_re}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='AP' then '${lbl:b_ap}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='EM' then '${lbl:b_em}'
+	when smn_pagos.smn_lote_pago.lpa_estatus='CE' then '${lbl:b_ce}'
 	end as lpa_estatus_combo,
 	smn_pagos.smn_lote_pago.*
 from

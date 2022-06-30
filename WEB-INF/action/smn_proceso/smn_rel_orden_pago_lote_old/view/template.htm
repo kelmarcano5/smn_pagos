@@ -1,0 +1,88 @@
+<!--data grid-->
+<table class="datagrid" style="width:90%;">
+
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+	<col width='4%'/>
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="22">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th class='sortable' onclick='sortBy("smn_lote_pago_id_combo","query-smnrelordenpagolote.sql")'>${lbl:b_smn_lote_pago_id}</th>
+		<th class='sortable' onclick='sortBy("smn_proveedor_rf","query-smnrelordenpagolote.sql")'>${lbl:b_smn_proveedor_rf}</th>
+		<th class='sortable' onclick='sortBy("smn_documento_id_combo","query-smnrelordenpagolote.sql")'>${lbl:b_smn_documento_id}</th>
+		<th class='sortable' onclick='sortBy("eol_numero_pago","query-smnrelordenpagolote.sql")'>${lbl:b_eol_numero_pago}</th>
+		<th class='sortable' onclick='sortBy("eol_fecha_pago","query-smnrelordenpagolote.sql")'>${lbl:b_eol_fecha_pago}</th>
+		<th class='sortable' onclick='sortBy("eol_referencia_bancaria","query-smnrelordenpagolote.sql")'>${lbl:b_eol_referencia_bancaria}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_neto_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_neto_ml}</th>
+		<th class='sortable' onclick='sortBy("eol_diferencial_cambiario_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_diferencial_cambiario_ml}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_neto_ma","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_neto_ma}</th>
+		<th class='sortable' onclick='sortBy("eol_estatus_combo","query-smnrelordenpagolote.sql")'>${lbl:b_eol_estatus}</th>
+		<th class='sortable' onclick='sortBy("eol_fecha_registro","query-smnrelordenpagolote.sql")'>${lbl:b_store_date}</th>
+		<th class='sortable' onclick='sortBy("smn_orden_pago_id_combo","query-smnrelordenpagolote.sql")'>${lbl:b_smn_orden_pago_id}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_pago_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_pago_ml}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_incremento_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_incremento_ml}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_anticipo_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_anticipo_ml}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_retencion_ml","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_retencion_ml}</th>
+		<th class='sortable' onclick='sortBy("smn_moneda_rf_combo","query-smnrelordenpagolote.sql")'>${lbl:b_smn_moneda_rf}</th>
+		<th class='sortable' onclick='sortBy("smn_tasa_cambio_rf_combo","query-smnrelordenpagolote.sql")'>${lbl:b_smn_tasa_cambio_rf}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_pago_ma","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_pago_ma}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_incremento_ma","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_incremento_ma}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_anticipo_ma","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_anticipo_ma}</th>
+		<th class='sortable' onclick='sortBy("eol_monto_retencion_ma","query-smnrelordenpagolote.sql")'>${lbl:b_eol_monto_retencion_ma}</th>
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td>${fld:smn_lote_pago_id_combo}</td>
+		<td>${fld:smn_proveedor_rf}</td>
+		<td>${fld:smn_documento_id_combo}</td>
+		<td>${fld:eol_numero_pago}</td>
+		<td>${fld:eol_fecha_pago@dd-MM-yyyy}</td>
+		<td align='left'>${fld:eol_referencia_bancaria}</td>
+		<td align='right'>${fld:eol_monto_neto_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_diferencial_cambiario_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_neto_ma@#,###,##0.00}</td>
+		<td align='left'>${fld:eol_estatus_combo}</td>
+		<td>${fld:eol_fecha_registro@dd-MM-yyyy}</td>
+		<td>${fld:smn_orden_pago_id_combo}</td>
+		<td align='right'>${fld:eol_monto_pago_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_incremento_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_anticipo_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_retencion_ml@#,###,##0.00}</td>
+		<td>${fld:smn_moneda_rf_combo}</td>
+		<td>${fld:smn_tasa_cambio_rf_combo}</td>
+		<td align='right'>${fld:eol_monto_pago_ma@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_incremento_ma@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_anticipo_ma@#,###,##0.00}</td>
+		<td align='right'>${fld:eol_monto_retencion_ma@#,###,##0.00}</td>
+	</tr>
+	</rows>
+
+</table>

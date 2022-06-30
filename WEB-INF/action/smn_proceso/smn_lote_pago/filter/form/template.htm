@@ -40,7 +40,7 @@
 		<td>${lbl:b_smn_entidad_financiera_rf}</td>
 		<td>
 			<select class="select2" name="smn_entidad_financiera_rf" id="smn_entidad_financiera_rf" onchange="chgCombo(smn_entidad_financiera_rf.options[smn_entidad_financiera_rf.selectedIndex].text,'smn_entidad_financiera_rf_name');">
-				<option value="">[Cualquiera]</option>
+				<option value="0">[Cualquiera]</option>
 				<smn_entidad_financiera_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -53,7 +53,7 @@
 		<td>${lbl:b_smn_cuenta_bancaria_rf}</td>
 		<td>
 			<select class="select2" name="smn_cuenta_bancaria_rf" id="smn_cuenta_bancaria_rf" onchange="chgCombo(smn_cuenta_bancaria_rf.options[smn_cuenta_bancaria_rf.selectedIndex].text,'smn_cuenta_bancaria_rf_name');">
-				<option value="">[Cualquiera]</option>
+				<option value="0">[Cualquiera]</option>
 				<smn_cuenta_bancaria_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -66,7 +66,7 @@
 		<td>${lbl:b_smn_forma_pago_rf}</td>
 		<td>
 			<select class="select2" name="smn_forma_pago_rf" id="smn_forma_pago_rf" onchange="chgCombo(smn_forma_pago_rf.options[smn_forma_pago_rf.selectedIndex].text,'smn_forma_pago_rf_name');">
-				<option value="">[Cualquiera]</option>
+				<option value="0">[Cualquiera]</option>
 				<smn_forma_pago_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -79,7 +79,7 @@
 		<td>${lbl:b_smn_documento_id}</td>
 		<td>
 			<select class="select2" name="smn_documento_id" id="smn_documento_id" onchange="chgCombo(smn_documento_id.options[smn_documento_id.selectedIndex].text,'smn_documento_id_name');">
-				<option value="">[Cualquiera]</option>
+				<option value="0">[Cualquiera]</option>
 				<smn_documento_id_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -144,9 +144,6 @@
 	{ 
         setSelect2();
 		showFilter();
-		/* document.form1.lpa_fecha_registro_ini.onkeypress = keypressDate;
-	document.form1.lpa_fecha_registro_fin.onkeypress = keypressDate; */
-
 		search();
 	} 
      function chgCombo(text,id){
@@ -250,39 +247,41 @@
 	}
 	
 	//muestra un DIV+IFRAME con el formulario de CRUD
-	function showEditor(id, status)
-	{
-//		//alert('Colocar su c�digo aqu�.')
-		
-		var uri = "";
-		if (id==null)
-		 	uri = "${def:context}${def:actionroot}/editor/form";
-		else
-			uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
-			
+	function showEditor(id, status){
+        var uri = "";
+		if (id==null){
+            uri = "${def:context}${def:actionroot}/editor/form";
+        }
+		else{
+            if(status.trim() != 'Registrado'){
+                showToast('warning',`No se puede editar este registro porque su estatus es ${status.trim()}`);
+                return;
+            }
+            uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
+        }
 		openDialog("editor", uri, 750, 720);
 		
 	}
 			
 	function deleteRecord(id,status) {
-            if(status.trim() != 'Registrado'){
-                showToast('warning',`No se puede eliminar este registro porque su estatus es ${status.trim()}`);
-                return;
-            }
-
-            Swal.fire({
-                title: '${lbl:b_delete_record_button}',
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonColor: '#C62D2D',
-                confirmButtonText: '${lbl:b_delete_button}',
-                cancelButtonText: '${lbl:b_cancel_button}',
-            }).then(async (result) => {
-                if (result.isConfirmed) {
-                    deleteRecordOK(id);
-                }
-            });
+        if(status.trim() != 'Registrado'){
+            showToast('warning',`No se puede eliminar este registro porque su estatus es ${status.trim()}`);
+            return;
         }
+
+        Swal.fire({
+            title: '${lbl:b_delete_record_button}',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#C62D2D',
+            confirmButtonText: '${lbl:b_delete_button}',
+            cancelButtonText: '${lbl:b_cancel_button}',
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                deleteRecordOK(id);
+            }
+        });
+    }
 		
 	//eliminar un registro
 	function deleteRecordOK(id) {
