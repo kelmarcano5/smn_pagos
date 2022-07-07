@@ -1,26 +1,3 @@
-CREATE TABLE smn_pagos.smn_anticipo(
-  smn_anticipo_id INTEGER NOT NULL,
-  smn_orden_compra_rf INTEGER NOT NULL,
-  smn_entidad_rf INTEGER NOT NULL,
-  smn_sucursal_rf INTEGER,
-  smn_proveedor_rf INTEGER NOT NULL,
-  smn_documento_id INTEGER NOT NULL,
-  ant_numero_documento INTEGER NOT NULL,
-  ant_porcentaje DOUBLE PRECISION NOT NULL,
-  ant_monto_ml DOUBLE PRECISION NOT NULL,
-  smn_moneda_rf INTEGER,
-  smn_tasa_rf INTEGER,
-  ant_monto_ma DOUBLE PRECISION,
-  ant_estatus CHARACTER(2) NOT NULL,
-  ant_idioma CHARACTER(2) NOT NULL,
-  ant_usuario VARCHAR(10) NOT NULL,
-  ant_fecha_registro DATE NOT NULL,
-  ant_hora CHARACTER(8) NOT NULL
-);
-
-CREATE SEQUENCE smn_pagos.seq_smn_anticipo;
-
-
 CREATE TABLE smn_pagos.smn_autorizador(
   smn_autorizador_id INTEGER NOT NULL,
   smn_usuario_rf INTEGER NOT NULL,
@@ -627,6 +604,53 @@ CREATE TABLE smn_pagos.smn_rel_orden_pago_lote(
 CREATE SEQUENCE smn_pagos.seq_smn_rel_orden_pago_lote;
 
 
+CREATE TABLE smn_pagos.smn_anticipo(
+  smn_anticipo_id INTEGER NOT NULL,
+  smn_orden_compra_rf INTEGER NOT NULL,
+  smn_entidad_rf INTEGER NOT NULL,
+  smn_usuario_solicitante_rf INTEGER NOT NULL,
+  smn_usuario_aprobador_rf INTEGER NOT NULL,
+  smn_sucursal_rf INTEGER,
+  smn_proveedor_rf INTEGER NOT NULL,
+  smn_documento_id INTEGER NOT NULL,
+  ant_numero_documento INTEGER NOT NULL,
+  ant_porcentaje DOUBLE PRECISION NOT NULL,
+  ant_monto_ml DOUBLE PRECISION NOT NULL,
+  smn_moneda_rf INTEGER,
+  smn_tasa_rf INTEGER,
+  ant_monto_ma DOUBLE PRECISION,
+  ant_estatus VARCHAR(2) NOT NULL,
+  ant_idioma CHARACTER(2) NOT NULL,
+  ant_usuario VARCHAR(10) NOT NULL,
+  ant_fecha_registro DATE NOT NULL,
+  ant_hora CHARACTER(8) NOT NULL
+);
+
+CREATE SEQUENCE smn_pagos.seq_smn_anticipo;
+
+
+CREATE TABLE smn_pagos.smn_rel_anticipo_lote(
+  smn_rel_orden_pago_lote_id INTEGER NOT NULL,
+  smn_anticipo_id INTEGER NOT NULL,
+  smn_lote_pago_id INTEGER NOT NULL,
+  smn_documento_id INTEGER NOT NULL,
+  eol_numero_pago DATE NOT NULL,
+  eol_fecha_pago INTEGER NOT NULL,
+  eol_referencia_bancaria CHARACTER(25),
+  eol_monto_pago_ml DOUBLE PRECISION,
+  smn_moneda_rf INTEGER,
+  smn_tasa_rf INTEGER,
+  eol_monto_pago_ma DOUBLE PRECISION,
+  eol_estatus CHARACTER(2),
+  eol_idioma CHARACTER(2) NOT NULL,
+  eol_usuario VARCHAR(10) NOT NULL,
+  eol_fecha_registro DATE NOT NULL,
+  eol_hora CHARACTER(8) NOT NULL
+);
+
+CREATE SEQUENCE smn_pagos.seq_smn_rel_anticipo_lote;
+
+
 
 ALTER TABLE smn_pagos.smn_autorizador ADD PRIMARY KEY (smn_autorizador_id);
 
@@ -714,4 +738,8 @@ ALTER TABLE smn_pagos.smn_tipo_documento ADD PRIMARY KEY (smn_tipo_documento_id)
 ALTER TABLE smn_pagos.smn_lote_pago ADD PRIMARY KEY (smn_lote_pago_id);
 
 ALTER TABLE smn_pagos.smn_rel_orden_pago_lote ADD PRIMARY KEY (smn_rel_orden_pago_lote_id);
+
+ALTER TABLE smn_pagos.smn_anticipo ADD PRIMARY KEY (smn_anticipo_id);
+
+ALTER TABLE smn_pagos.smn_rel_anticipo_lote ADD PRIMARY KEY (smn_rel_orden_pago_lote_id);
 

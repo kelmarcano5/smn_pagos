@@ -28,16 +28,16 @@
 		<th></th>
 		<th></th>
 		<th></th>
-		<th class='sortable' onclick="sortBy('smn_lote_pago_id_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_lote_pago_id}</th>
+		<th class='sortable' onclick="sortBy('smn_lote_pago_id','query-smnrelordenpagolote.sql')" >${lbl:b_smn_lote_pago_id}</th>
 		<th class='sortable' onclick="sortBy('smn_proveedor_rf','query-smnrelordenpagolote.sql')" >${lbl:b_smn_proveedor_rf}</th>
-		<th class='sortable' onclick="sortBy('smn_documento_id_combo','query-smnrelordenpagolote.sql')" >${lbl:b_smn_documento_id}</th>
+		<th class='sortable' onclick="sortBy('smn_documento_id','query-smnrelordenpagolote.sql')" >${lbl:b_smn_documento_id}</th>
 		<th class='sortable' onclick="sortBy('eol_numero_pago','query-smnrelordenpagolote.sql')" >${lbl:b_eol_numero_pago}</th>
 		<th class='sortable' onclick="sortBy('eol_fecha_pago','query-smnrelordenpagolote.sql')" >${lbl:b_eol_fecha_pago}</th>
 		<th class='sortable' onclick="sortBy('eol_referencia_bancaria','query-smnrelordenpagolote.sql')" >${lbl:b_eol_referencia_bancaria}</th>
 		<th class='sortable' onclick="sortBy('eol_monto_neto_ml','query-smnrelordenpagolote.sql')" >${lbl:b_eol_monto_neto_ml}</th>
 		<th class='sortable' onclick="sortBy('eol_diferencial_cambiario_ml','query-smnrelordenpagolote.sql')" >${lbl:b_eol_diferencial_cambiario_ml}</th>
 		<th class='sortable' onclick="sortBy('eol_monto_neto_ma','query-smnrelordenpagolote.sql')" >${lbl:b_eol_monto_neto_ma}</th>
-		<th class='sortable' onclick="sortBy('eol_estatus_combo','query-smnrelordenpagolote.sql')" >${lbl:b_eol_estatus}</th>
+		<th class='sortable' onclick="sortBy('eol_estatus','query-smnrelordenpagolote.sql')" >${lbl:b_eol_estatus}</th>
 		<th class='sortable' onclick="sortBy('eol_fecha_registro','query-smnrelordenpagolote.sql')" >${lbl:b_store_date}</th>
 	</tr>
 
@@ -45,18 +45,18 @@
 	<rows>
 	<tr>
 		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_rel_orden_pago_lote_id}')" title="${lbl:b_view_detail}"></td>
-		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_rel_orden_pago_lote_id}','${fld:eol_estatus_combo}')" title="${lbl:b_delete_button}"></td>
-		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_rel_orden_pago_lote_id}','${fld:eol_estatus_combo}')" title="${lbl:b_edit_button}"></td>
-		<td align="center">${fld:smn_lote_pago_id_combo}</td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_rel_orden_pago_lote_id}','${fld:eol_estatus}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_rel_orden_pago_lote_id}','${fld:eol_estatus}')" title="${lbl:b_edit_button}"></td>
+		<td align="center">${fld:smn_lote_pago_id}</td>
 		<td align="center">${fld:smn_proveedor_rf}</td>
-		<td align="center">${fld:smn_documento_id_combo}</td>
+		<td align="center">${fld:smn_documento_id}</td>
 		<td align="center">${fld:eol_numero_pago}</td>
 		<td align="center">${fld:eol_fecha_pago@dd-MM-yyyy}</td>
 		<td align="left">${fld:eol_referencia_bancaria}</td>
 		<td align="right">${fld:eol_monto_neto_ml@#,###,##0.00}</td>
 		<td align="right">${fld:eol_diferencial_cambiario_ml@#,###,##0.00}</td>
 		<td align="right">${fld:eol_monto_neto_ma@#,###,##0.00}</td>
-		<td align="left">${fld:eol_estatus_combo}</td>
+		<td align="left">${fld:eol_estatus}</td>
 		<td align="center">${fld:eol_fecha_registro@dd-MM-yyyy}</td>
 
 	</tr>

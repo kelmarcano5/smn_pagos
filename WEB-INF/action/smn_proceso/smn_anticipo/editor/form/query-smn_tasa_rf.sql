@@ -1,0 +1,1 @@
+select smn_base.smn_tasas_de_cambio.smn_tasas_de_cambio_id as id, smn_base.smn_tasas_de_cambio.tca_tasa_cambio ||'-'|| smn_base.smn_tasas_de_cambio.tca_descripcion as item from smn_base.smn_tasas_de_cambio

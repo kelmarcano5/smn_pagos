@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<smn_anticipo>
+	<detail>
+		<rows>		
+		<record ant_fecha_registro="${fld:ant_fecha_registro}"    ant_estatus="${fld:ant_estatus}"    ant_monto_ma="${fld:ant_monto_ma}"    smn_tasa_rf="${fld:smn_tasa_rf}"    smn_moneda_rf="${fld:smn_moneda_rf}"    ant_monto_ml="${fld:ant_monto_ml}"    ant_porcentaje="${fld:ant_porcentaje}"    ant_numero_documento="${fld:ant_numero_documento}"    smn_documento_id="${fld:smn_documento_id}"    smn_proveedor_rf="${fld:smn_proveedor_rf}"    smn_sucursal_rf="${fld:smn_sucursal_rf}"    smn_entidad_rf="${fld:smn_entidad_rf}"    smn_orden_compra_rf="${fld:smn_orden_compra_rf}"    />
+		</rows>
+	</detail>
+</smn_anticipo>

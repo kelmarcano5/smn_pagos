@@ -7646,6 +7646,62 @@
         <value language="pt">Status</value>
         <value language="it">Status</value>
     </label>
+    <label id="b_smn_anticipo_id">
+        <value language="es">Anticipo</value>
+        <value language="en">Advance</value>
+        <value language="fr">Advance</value>
+        <value language="de">Advance</value>
+        <value language="pt">Advance</value>
+        <value language="it">Advance</value>
+    </label>
+    <label id="b_smn_orden_compra_rf">
+        <value language="es">Orden de Compra</value>
+        <value language="en">Purchase order</value>
+        <value language="fr">Purchase order</value>
+        <value language="de">Purchase order</value>
+        <value language="pt">Purchase order</value>
+        <value language="it">Purchase order</value>
+    </label>
+    <label id="b_smn_entidad_rf">
+        <value language="es">Entidad</value>
+        <value language="en">Entity</value>
+        <value language="fr">Entity</value>
+        <value language="de">Entity</value>
+        <value language="pt">Entity</value>
+        <value language="it">Entity</value>
+    </label>
+    <label id="b_smn_usuario_aprobador_rf">
+        <value language="es">Aprobador</value>
+        <value language="en">Approver</value>
+        <value language="fr">Approver</value>
+        <value language="de">Approver</value>
+        <value language="pt">Approver</value>
+        <value language="it">Approver</value>
+    </label>
+    <label id="b_ant_monto_ml">
+        <value language="es">Monto ML</value>
+        <value language="en">Amount ML</value>
+        <value language="fr">Amount ML</value>
+        <value language="de">Amount ML</value>
+        <value language="pt">Amount ML</value>
+        <value language="it">Amount ML</value>
+    </label>
+    <label id="b_ant_monto_ma">
+        <value language="es">Monto MA</value>
+        <value language="en">Amount MA</value>
+        <value language="fr">Amount MA</value>
+        <value language="de">Amount MA</value>
+        <value language="pt">Amount MA</value>
+        <value language="it">Amount MA</value>
+    </label>
+    <label id="b_descontado">
+        <value language="es">Descontado</value>
+        <value language="en">Discounted</value>
+        <value language="fr">Discounted</value>
+        <value language="de">Discounted</value>
+        <value language="pt">Discounted</value>
+        <value language="it">Discounted</value>
+    </label>
 
 </labels>
 

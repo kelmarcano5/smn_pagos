@@ -1,0 +1,65 @@
+<!--data grid-->
+<table class="datagrid" style="width:95%;">
+
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='3%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+	<col width='6%'/>
+
+	<!--toolbar-->
+	<tr>
+		<th colspan="14" id="encabezado_tabla">
+			${req:controls} 
+		</th>
+	</tr>
+
+	<!--encabezados-->
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th class='sortable' onclick='sortBy("smn_entidad_rf","query-smnanticipo.sql")'>${lbl:b_smn_entidad_rf}</th>
+		<th class='sortable' onclick='sortBy("smn_sucursal_rf","query-smnanticipo.sql")'>${lbl:b_branches}</th>
+		<th class='sortable' onclick='sortBy("smn_proveedor_rf","query-smnanticipo.sql")'>${lbl:b_smn_proveedor_rf}</th>
+		<th class='sortable' onclick='sortBy("smn_documento_id","query-smnanticipo.sql")'>${lbl:b_smn_documento_id}</th>
+		<th class='sortable' onclick='sortBy("ant_numero_documento","query-smnanticipo.sql")'>${lbl:b_smn_documento_id}</th>
+		<th class='sortable' onclick='sortBy("smn_orden_compra_rf","query-smnanticipo.sql")'>${lbl:b_smn_orden_compra_rf}</th>
+		<th class='sortable' onclick='sortBy("ant_porcentaje","query-smnanticipo.sql")'>${lbl:b_percentage}</th>
+		<th class='sortable' onclick='sortBy("ant_monto_ml","query-smnanticipo.sql")'>${lbl:b_ant_monto_ml}</th>
+		<th class='sortable' onclick='sortBy("ant_monto_ma","query-smnanticipo.sql")'>${lbl:b_ant_monto_ma}</th>
+		<th class='sortable' onclick='sortBy("ant_estatus","query-smnanticipo.sql")'>${lbl:b_status}</th>
+		<th class='sortable' onclick='sortBy("ant_fecha_registro","query-smnanticipo.sql")'>${lbl:b_store_date}</th>
+	</tr>
+
+	<!--data-->
+	<rows>
+	<tr>
+		<td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_anticipo_id}')" title="${lbl:b_view_detail}"></td>
+		<td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_anticipo_id}')" title="${lbl:b_delete_button}"></td>
+		<td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_anticipo_id}')" title="${lbl:b_edit_button}"></td>
+		<td>${fld:smn_entidad_rf}</td>
+		<td>${fld:smn_sucursal_rf}</td>
+		<td>${fld:smn_proveedor_rf}</td>
+		<td>${fld:smn_documento_id}</td>
+		<td>${fld:ant_numero_documento}</td>
+		<td>${fld:smn_orden_compra_rf}</td>
+		<td align='right'>${fld:ant_porcentaje@#,###,##0.00}</td>
+		<td align='right'>${fld:ant_monto_ml@#,###,##0.00}</td>
+		<td align='right'>${fld:ant_monto_ma@#,###,##0.00}</td>
+		<td align='left'>${fld:ant_estatus}</td>
+		<td>${fld:ant_fecha_registro@dd-MM-yyyy}</td>
+
+	</tr>
+	</rows>
+
+</table>
