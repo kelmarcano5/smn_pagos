@@ -42,7 +42,7 @@ VALUES
 	${fld:lpa_periodo_comprobante_contable},
 	${fld:lpa_tipo_comprobante_contable_id},
 	${fld:lpa_numero_comprobante_contable},
-	${fld:lpa_estatus},
+	'RE',
 	'${def:locale}',
 	'${def:user}',
 	{d '${def:date}'},

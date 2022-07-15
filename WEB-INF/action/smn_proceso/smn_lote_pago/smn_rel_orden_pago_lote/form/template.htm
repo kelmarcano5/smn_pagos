@@ -18,6 +18,7 @@
     <script type="text/javascript">
         //inicializacion de la pagina cuando carga
         onload = function(){ 
+            alert('${fld:id_lote}');
             search();
         } 
     
@@ -152,7 +153,8 @@
 
     <!--banner-->
     <div class="welcome" style="padding-right:50px; margin-top: 20px;"><br>
-        <b>${lbl:b_welcome}</b> ${fld:fname} ${fld:lname} ${req:progress}
+        <b>${lbl:b_welcome}</b> ${fld:fname} ${fld:lname} ${req:progress} &nbsp;&nbsp;&nbsp;
+        <img src="${def:context}/images/close.png" class="button" onclick="parent.closeDialog(); parent.search();" title="${lbl:b_close_button}" style="float:right; cursor:pointer;">
         <div class="" style="width: 100%; border-bottom: solid 6px #1d61a0; border-radius: 30px; margin-top: 4px;">
         </div>
     </div>

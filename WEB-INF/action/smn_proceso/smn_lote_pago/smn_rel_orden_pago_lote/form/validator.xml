@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<validator onerror="/action/error/validation/alert" id='smn_lote_id'>
+    <parameter id="id_lote" type="integer" required="true" label="ID Lote" maxlen="10" />
+</validator>

@@ -11,10 +11,11 @@
 
 	<transaction>
 		<classname>dinamica.GenericTransaction</classname>
-		<validator>false</validator>
+		<validator>true</validator>
 		<transaction>false</transaction>
 		<jdbc-log>false</jdbc-log>
 		<recordset id="user-info.sql" source="sql" scope="session" />
+        <recordset id="smn_lote_id" source="session" scope="transaction" />
 	</transaction>
 
 	<output>
@@ -23,6 +24,7 @@
 		<set-http-headers>true</set-http-headers>
 		<content-type>text/html</content-type>
 		<print mode="form" recordset="user-info.sql" />
+        <print mode="form" recordset="smn_lote_id"/>
 	</output>
 
 </config>

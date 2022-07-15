@@ -40,7 +40,7 @@
 		<td>${lbl:b_smn_entidad_financiera_rf}</td>
 		<td>
 			<select class="select2" name="smn_entidad_financiera_rf" id="smn_entidad_financiera_rf" onchange="chgCombo(smn_entidad_financiera_rf.options[smn_entidad_financiera_rf.selectedIndex].text,'smn_entidad_financiera_rf_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Cualquiera]</option>
 				<smn_entidad_financiera_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -53,7 +53,7 @@
 		<td>${lbl:b_smn_cuenta_bancaria_rf}</td>
 		<td>
 			<select class="select2" name="smn_cuenta_bancaria_rf" id="smn_cuenta_bancaria_rf" onchange="chgCombo(smn_cuenta_bancaria_rf.options[smn_cuenta_bancaria_rf.selectedIndex].text,'smn_cuenta_bancaria_rf_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Cualquiera]</option>
 				<smn_cuenta_bancaria_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -66,7 +66,7 @@
 		<td>${lbl:b_smn_forma_pago_rf}</td>
 		<td>
 			<select class="select2" name="smn_forma_pago_rf" id="smn_forma_pago_rf" onchange="chgCombo(smn_forma_pago_rf.options[smn_forma_pago_rf.selectedIndex].text,'smn_forma_pago_rf_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Cualquiera]</option>
 				<smn_forma_pago_rf_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -79,7 +79,7 @@
 		<td>${lbl:b_smn_documento_id}</td>
 		<td>
 			<select class="select2" name="smn_documento_id" id="smn_documento_id" onchange="chgCombo(smn_documento_id.options[smn_documento_id.selectedIndex].text,'smn_documento_id_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Cualquiera]</option>
 				<smn_documento_id_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -141,10 +141,11 @@
 
 	//inicializacion de la pagina cuando carga
 	onload = function()
-	{ 
+	{
+        search();
         setSelect2();
 		showFilter();
-		search();
+		
 	} 
      function chgCombo(text,id){
         document.getElementById(id).value = text;

@@ -27,7 +27,7 @@ VALUES
 	${fld:smn_sucursal_rf},
 	${fld:smn_proveedor_rf},
 	${fld:smn_documento_id},
-	${fld:ant_numero_documento},
+	${seq:nextval@smn_pagos.seq_numero_anticipo},
 	${fld:smn_orden_compra_rf},
 	${fld:ant_porcentaje},
 	${fld:ant_monto_ml},
