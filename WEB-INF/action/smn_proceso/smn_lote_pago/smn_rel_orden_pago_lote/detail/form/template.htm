@@ -44,7 +44,7 @@
 		//envio de emails
 		function openEmails() {
 			var uri = "${def:context}${def:actionroot}/email/form";					
-			openDialog("editor0", uri, 980, 600);	
+			openDialog("editor0", uri, wdt, hgt);	
 		}
 	</script>
 
@@ -53,7 +53,7 @@
 <body>
 
 	<!--banner-->
-	<div class="bannerDialog" id="encabezado_tabla">
+	<div class="bannerDialog" id="encabezado_tabla" style="padding-bottom: 20px;">
 		${lbl:b_smn_rel_orden_pago_lote_id}
 		<img src="${def:context}/images/pdf.png" onclick="openPDF()" title="${lbl:b_export_pdf}" style="cursor:pointer; margin-left:3px;"/>
 		<img src="${def:context}/images/excel.png" onclick="openExcel()" title="${lbl:b_export_excel}" style="cursor:pointer; margin-left:3px;"/>

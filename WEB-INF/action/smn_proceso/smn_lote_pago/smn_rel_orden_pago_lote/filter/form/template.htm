@@ -40,7 +40,7 @@
 		<td>${lbl:b_smn_orden_pago_id}</td>
 		<td>
 			<select class="select2" name="smn_orden_pago_id" id="smn_orden_pago_id" onchange="chgCombo(smn_orden_pago_id.options[smn_orden_pago_id.selectedIndex].text,'smn_orden_pago_id_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Seleccione]</option>
 				<smn_orden_pago_id_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -53,7 +53,7 @@
 		<td>${lbl:b_smn_lote_pago_id}</td>
 		<td>
 			<select class="select2" name="smn_lote_pago_id" id="smn_lote_pago_id" onchange="chgCombo(smn_lote_pago_id.options[smn_lote_pago_id.selectedIndex].text,'smn_lote_pago_id_name');">
-				<option value="0">[Cualquiera]</option>
+				<option value="">[Seleccione]</option>
 				<smn_lote_pago_id_rows>
 				<option value="${fld:id}">${fld:item}</option>
 
@@ -120,9 +120,10 @@
 	//inicializacion de la pagina cuando carga
 	onload = function()
 	{ 
-        setSelect2();
-		showFilter();
+        
+		//showFilter();
 		search();
+        setSelect2();
 	} 
 	
 	
@@ -208,7 +209,7 @@
 	//envio de emails
 	function openEmails() {
 		var uri = "${def:context}${def:actionroot}/email/form";					
-		openDialog("editor0", uri, 950, 600);	
+		openDialog("editor0", uri, wdt, hgt);	
 	}
 	
 	//mostrar el detalle de un registro
@@ -217,7 +218,7 @@
 //		//alert('Colocar su c�digo aqu�.')
 		
 		var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
-		openDialog("dialog", uri, 650, 570);
+		openDialog("dialog", uri, wdt, hgt);
 		
 	}
 	
@@ -235,7 +236,7 @@
             }
             uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
         }
-		openDialog("editor", uri, 750, 720);
+		openDialog("editor", uri, wdt, hgt);
 		
 	}
 			

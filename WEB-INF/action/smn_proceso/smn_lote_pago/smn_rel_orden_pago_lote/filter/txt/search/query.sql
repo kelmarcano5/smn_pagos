@@ -5,7 +5,7 @@ select
 	when smn_pagos.smn_rel_orden_pago_lote.eol_estatus=' AP' then '${lbl:b_ap} '
 	when smn_pagos.smn_rel_orden_pago_lote.eol_estatus=' EM' then '${lbl:b_em} '
 	when smn_pagos.smn_rel_orden_pago_lote.eol_estatus=' CE' then '${lbl:b_ce}'
-	end as eol_estatus_combo,
+	end as eol_estatus,
 	smn_pagos.smn_rel_orden_pago_lote.smn_lote_pago_id,
 	smn_pagos.smn_rel_orden_pago_lote.smn_proveedor_rf,
 	smn_pagos.smn_rel_orden_pago_lote.smn_documento_id,

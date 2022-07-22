@@ -17,10 +17,10 @@
 
 	<output>
 		<classname>dinamica.GenericOutput</classname>
-		<template>tasa.js</template>
+		<template>index.js</template>
 		<set-http-headers>true</set-http-headers>
 		<content-type>text/javascript</content-type>
-		<print mode="table" recordset="query.sql" tag="smn_tasa_cambio_rf_rows"/>
+		<print mode="table" recordset="query.sql" tag="smn_orden_pago_rf_rows"/>
 	</output>
 
 </config>

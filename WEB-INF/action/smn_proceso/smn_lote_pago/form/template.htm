@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" type="text/css" href="${def:context}/boostrap.min.css" />
     <link rel="stylesheet" type="text/css" href="${def:context}/dinamica_bkp.css" />
     <link rel="stylesheet" type="text/css" href="${def:context}/main.css" />
     <link rel="stylesheet" type="text/css" href="${def:context}/select2.min.css" />
@@ -13,12 +13,12 @@
     <script type="text/javascript" src="${def:context}/action/select2"></script>
     <script type="text/javascript" src="${def:context}/action/sweetalert"></script>
     <script type="text/javascript" src="${def:context}/action/lodash"></script>
-
+    <script type="text/javascript" src="${def:context}/action/boostrap"></script>
     <!--codigo especifico de este modulo--> 
     <script type="text/javascript">
-
         onload = function() { 
             search();
+            
         } 
 
         //ejecutar consulta
@@ -28,8 +28,12 @@
                 divResponse="response", 
                 divProgress="status", 
                 formName=null, 
-                afterResponseFn=null, 
+                afterResponseFn= null, 
                 onErrorFn=null);
+
+            setTimeout(() =>{
+                changeMoneda();
+            }, 500);
         }
 
         //recuperar una pagina X del grid
@@ -69,13 +73,13 @@
         //envio de emails
         function openEmails() {
             var uri = "${def:context}${def:actionroot}/email/form";
-            openDialog("editor0", uri, 950, 600);
+            openDialog("editor0", uri, wdt, hgt);
         }
 
         //mostrar el detalle de un registro
         function getDetail(id){
             var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
-            openDialog("dialog", uri, 650, 550);
+            openDialog("dialog", uri, wdt, hgt);
         }
 
         //muestra un DIV+IFRAME con el formulario de CRUD
@@ -85,19 +89,19 @@
             switch (id) {
                 case 'editor':
                     uri = "${def:context}${def:actionroot}/editor/form";
-                    openDialog("editor1", uri, 750, 720);
+                    openDialog("editor1", uri, wdt, hgt);
                     break;
                 case 'filter':
                     uri = "${def:context}${def:actionroot}/filter/form";
-                        openDialog("editor2", uri,1250, 720);
+                        openDialog("editor2", uri,wdt, hgt);
                     break;
                 case 'importexcel':
                     uri = "${def:context}${def:actionroot}/importexcel/form";
-                        openDialog("editor3", uri, 950, 600);
+                        openDialog("editor3", uri, wdt, hgt);
                     break;
                 case 'repgen':
                     uri = "${def:context}${def:actionroot}/repgen/form";
-                        openDialog("editor4", uri, 950, 600);
+                        openDialog("editor4", uri, wdt, hgt);
                     break;
                 case null:
                     uri = "${def:context}${def:actionroot}/editor/form";
@@ -108,7 +112,7 @@
                         break;
                     }
                     uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
-                    openDialog("editor5", uri,  750, 720);
+                    openDialog("editor5", uri,  wdt, hgt);
                     break;
             }
         }
@@ -148,7 +152,7 @@
             if(status=='PE' && saldo == 0.0){
                 var uri = "${def:context}${def:actionroot}/procesar?smn_mov_caja_cabecera_id="+id;
                 console.log(uri);
-                openDialog("editor1", uri, 650, 600);
+                openDialog("editor1", uri, wdt, hgt);
                 return;
             }
             alertBox ('No se pueden procesar el Movimiento de Caja', '${lbl:b_continue_button}', null, null);
@@ -156,9 +160,9 @@
 
         function detalle(id, status) {
             var uri = "${def:context}${def:actionroot}/smn_rel_orden_pago_lote/form?id_lote=" + id;
-            openDialog("dialog", uri, 1250, 650);
-         }
-        
+            openDialog("dialog", uri, wdt, hgt);
+        }
+
     </script>
 
 </head>
@@ -172,24 +176,19 @@
         </div>
     </div>
     <br>
-    <div class="titulo-negocios">
+    <div class="titulo-negocios mt-4">
         <div style="padding-top: 15px;">${lbl:b_smn_lote_pago_id}</div>
     </div>
-    
+
     <!--incluir el menu iconografico de SIMONE-->
     ${inc:${def:actionroot}/panel/view}
     <br>
     <br>
+
+    
     
     <!--panel de respuesta AJAX #1-->
     <div id="response" style="display: none; width: 100%"></div>
-    <!-- <script  type="text/javascript">
-        setTimeout(()=>{
-            console.log(timer);
-            $('.data-table').DataTable();
-            console.log("cargo");
-        }, 5000);
-    </script> -->
 </body>
 
 </html>

@@ -30,7 +30,7 @@ VALUES
 	${fld:smn_cuenta_bancaria_rf},
 	${fld:smn_forma_pago_rf},
 	${fld:smn_documento_id},
-	${fld:lpa_numero_lote},
+	${seq:nextval@smn_pagos.seq_smn_numero_lote},
 	${fld:lpa_descripcion_lote},
 	${fld:lpa_fecha_lote},
 	${fld:lpa_monto_lote_ml},

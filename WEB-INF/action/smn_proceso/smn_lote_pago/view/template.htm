@@ -1,11 +1,17 @@
 <!--data grid-->
-<table class="datagrid" style="width:97%;">
+<div style="text-align: center;">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="changeMoneda" id="mtoRadio1" value="ML" onclick="changeMoneda()" checked>
+        <label class="form-check-label" for="mtoRadio1">${lbl:b_coin_local}</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="changeMoneda" id="mtoRadio2" value="MA" onclick="changeMoneda()">
+        <label class="form-check-label" for="mtoRadio2">${lbl:b_alternative_currency}</label>
+    </div>
+</div>
+<table class="datagrid" style="width:97%;" id="datagrid">
 
     <col width='2%'/>
-    <col width='2%'/>
-    <col width='2%'/>
-    <col width='2%'/>
-    <col width='2%'/>
     <col width='9%'/>
     <col width='9%'/>
     <col width='9%'/>
@@ -13,16 +19,16 @@
     <col width='9%'/>
     <col width='9%'/>
     <col width='9%'/>
+    <col class="ML" width='9%'/>
+    <col class="MA" width='9%'/>
     <col width='9%'/>
     <col width='9%'/>
-    <col width='9%'/>
-    <col width='9%'/>
-    <col width='2%'/>
+    
 
 
     <!--toolbar-->
     <tr>
-        <th colspan="17" id="encabezado_tabla">
+        <th colspan="12" id="encabezado_tabla">
             ${req:controls} 
         </th>
     </tr>
@@ -30,46 +36,51 @@
     <!--encabezados-->
     <tr>
         <th></th>
-        <th></th>
-        <th></th>
-        <th>VR</th>
-		<th>GE</th>
-        <th class='sortable' onclick='sortBy("smn_entidad_financiera_rf_combo","query-smnlotepago.sql")'>${lbl:b_smn_entidad_financiera_rf}</th>
-        <th class='sortable' onclick='sortBy("smn_cuenta_bancaria_rf_combo","query-smnlotepago.sql")'>${lbl:b_smn_cuenta_bancaria_rf}</th>
-        <th class='sortable' onclick='sortBy("smn_documento_id_combo","query-smnlotepago.sql")'>${lbl:b_smn_documento_id}</th>
+        <th class='sortable' onclick='sortBy("smn_entidad_financiera_rf","query-smnlotepago.sql")'>${lbl:b_smn_entidad_financiera_rf}</th>
+        <th class='sortable' onclick='sortBy("smn_cuenta_bancaria_rf","query-smnlotepago.sql")'>${lbl:b_smn_cuenta_bancaria_rf}</th>
+        <th class='sortable' onclick='sortBy("smn_documento_id","query-smnlotepago.sql")'>${lbl:b_smn_documento_id}</th>
         <th class='sortable' onclick='sortBy("lpa_numero_lote","query-smnlotepago.sql")'>${lbl:b_lpa_numero_lote}</th>
         <th class='sortable' onclick='sortBy("lpa_descripcion_lote","query-smnlotepago.sql")'>${lbl:b_lpa_descripcion_lote}</th>
         <th class='sortable' onclick='sortBy("lpa_fecha_lote","query-smnlotepago.sql")'>${lbl:b_lpa_fecha_lote}</th>
-        <th class='sortable' onclick='sortBy("smn_forma_pago_rf_combo","query-smnlotepago.sql")'>${lbl:b_smn_forma_pago_rf}</th>
-        <th class='sortable' onclick='sortBy("lpa_monto_lote_ma","query-smnlotepago.sql")'>${lbl:b_lpa_monto_lote_ma}</th>
-        <th class='sortable' onclick='sortBy("lpa_monto_lote_ml","query-smnlotepago.sql")'>${lbl:b_lpa_monto_lote_ml}</th>
-        <th class='sortable' onclick='sortBy("lpa_estatus_combo","query-smnlotepago.sql")'>${lbl:b_lpa_estatus}</th>
+        <th class='sortable' onclick='sortBy("smn_forma_pago_rf","query-smnlotepago.sql")'>${lbl:b_smn_forma_pago_rf}</th>
+        <th class='sortable ML' onclick='sortBy("lpa_monto_lote_ml","query-smnlotepago.sql")'>${lbl:b_lpa_monto_lote_ml}</th>
+        <th class='sortable MA' onclick='sortBy("lpa_monto_lote_ma","query-smnlotepago.sql")'>${lbl:b_lpa_monto_lote_ma}</th>
+        <th class='sortable' onclick='sortBy("lpa_estatus","query-smnlotepago.sql")'>${lbl:b_lpa_estatus}</th>
         <th class='sortable' onclick='sortBy("lpa_fecha_registro","query-smnlotepago.sql")'>${lbl:b_store_date}</th>
-        <th>DT</th>
+        
 
     </tr>
 
     <!--data-->
     <rows>
         <tr>
-            <td><img src="${def:context}/images/search.png"  onclick="getDetail('${fld:smn_lote_pago_id}')" title="${lbl:b_view_detail}"></td>
-            <td><img src="${def:context}/images/delete.png"  onclick="deleteRecord('${fld:smn_lote_pago_id}','${fld:lpa_estatus}')" title="${lbl:b_delete_button}"></td>
-            <td><img src="${def:context}/images/edit.png"  onclick="showEditor('${fld:smn_lote_pago_id}','${fld:lpa_estatus}')" title="${lbl:b_edit_button}"></td>
-            <td><img src="${def:context}/images/icongrid/Detalle-impuesto.png"  onclick="showEditor('${fld:smn_lote_pago_id}')" title="${lbl:b_smn_lote_pago_btn_reporte}"></td>
-            <td><img src="${def:context}/images/icongrid/Generar.png"  onclick="showEditor('${fld:smn_lote_pago_id}')" title="${lbl:b_smn_lote_pago_btn_generar}"></td>
-            <td>${fld:smn_entidad_financiera_rf}</td>
-            <td>${fld:smn_cuenta_bancaria_rf}</td>
-            <td>${fld:smn_documento_id}</td>
-            <td align='left'>${fld:lpa_numero_lote}</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Acciones
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a style="cursor: pointer;" onclick="getDetail('${fld:smn_lote_pago_id}')" title="${lbl:b_view_detail}"><img src="${def:context}/images/search.png"> Ver detalle</a></li>
+                        <li><a style="cursor: pointer;" onclick="deleteRecord('${fld:smn_lote_pago_id}','${fld:lpa_estatus}')" title="${lbl:b_delete_button}"><img src="${def:context}/images/delete.png"> Eliminar</a></li>
+                        <li><a style="cursor: pointer;" onclick="showEditor('${fld:smn_lote_pago_id}','${fld:lpa_estatus}')" title="${lbl:b_edit_button}"><img src="${def:context}/images/edit.png"> Editar</a></li>
+                        <li><a style="cursor: pointer;" onclick="showEditor('${fld:smn_lote_pago_id}')" title="${lbl:b_smn_lote_pago_btn_reporte}"><img src="${def:context}/images/icongrid/Detalle-impuesto.png"> Ver Reporte</a></li>
+                        <li><a style="cursor: pointer;" onclick="showEditor('${fld:smn_lote_pago_id}')" title="${lbl:b_smn_lote_pago_btn_generar}"><img src="${def:context}/images/icongrid/Generar.png"> Generar</a></li>
+                        <li><a style="cursor: pointer;" onclick="detalle('${fld:smn_lote_pago_id}','${fld:smn_estatus_documento}')" title="${lbl:b_smn_lote_pago_btn_detalle}"><img src="${def:context}/images/icongrid/Generar.png"> Det. Lote</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td align='left'>${fld:smn_entidad_financiera_rf}</td>
+            <td align='left'>${fld:smn_cuenta_bancaria_rf}</td>
+            <td align='left'>${fld:smn_documento_id}</td>
+            <td align='center'>${fld:lpa_numero_lote}</td>
             <td align='left'>${fld:lpa_descripcion_lote}</td>
-            <td>${fld:lpa_fecha_lote@dd-MM-yyyy}</td>
-            <td>${fld:smn_forma_pago_rf}</td>
-            <td align='right'>${fld:lpa_monto_lote_ma@#,###,##0.00}</td>
-            <td align='right'>${fld:lpa_monto_lote_ml@#,###,##0.00}</td>
-            <td align='left'>${fld:lpa_estatus}</td>
-            <td>${fld:lpa_fecha_registro@dd-MM-yyyy}</td>
-             <td><img src="${def:context}/images/icongrid/Generar.png" onclick="detalle('${fld:smn_lote_pago_id}','${fld:smn_estatus_documento}')" title="${lbl:b_smn_lote_pago_btn_detalle}"></td>
+            <td align='left'>${fld:lpa_fecha_lote@dd-MM-yyyy}</td>
+            <td align='left'>${fld:smn_forma_pago_rf}</td>
+            <td class="ML" align='right'>${fld:lpa_monto_lote_ml@#,###,##0.00}</td>
+            <td class="MA" align='right'>${fld:lpa_monto_lote_ma@#,###,##0.00}</td>
+            <td align='center'>${fld:lpa_estatus}</td>
+            <td align='left'>${fld:lpa_fecha_registro@dd-MM-yyyy}</td>
+            <!-- <td><img src="${def:context}/images/icongrid/Generar.png" onclick="detalle('${fld:smn_lote_pago_id}','${fld:smn_estatus_documento}')" title="${lbl:b_smn_lote_pago_btn_detalle}"></td> -->
         </tr>
     </rows>
-
 </table>

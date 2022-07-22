@@ -286,7 +286,7 @@
 		//envio de emails
 		function openEmails() {
 			var uri = "${def:context}${def:actionroot}/email/form";					
-			openDialog("editor0", uri, 750, 620);	
+			openDialog("editor0", uri, wdt, hgt);	
 		}
 	
 		//mostrar detalle de un registro
@@ -433,7 +433,7 @@
 							onErrorFn=null);
 		}
 		
-		//asignar configuración
+		//asignar configuraciï¿½n
 		var fields = '';
 		function setConfiguration(config) {
 			var cfg = config.split("|");
@@ -455,7 +455,7 @@
 					}
 					else
 					{						
-						//añade elementos radio y checkbox
+						//aï¿½ade elementos radio y checkbox
 						if (formElements[i].type=="checkbox" || formElements[i].type=="radio")  
 						{
 							if (formElements[i].value != null)
@@ -478,10 +478,10 @@
 		//mostrar el detalle de un registro
 		function getDetail(id)
 		{
-//			//alert('Colocar su código aquí.')
+//			//alert('Colocar su cï¿½digo aquï¿½.')
 			
 			var uri = "${def:context}${def:actionroot}/detail/form?id=" + id ; //+ '&field_id=' + fields;
-			openDialog("dialog", uri, 650, 300);			
+			openDialog("dialog", uri, wdt, hgt);			
 		}
 
 </script>

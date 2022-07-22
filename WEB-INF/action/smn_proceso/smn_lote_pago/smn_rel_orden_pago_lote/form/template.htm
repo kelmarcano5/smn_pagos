@@ -16,9 +16,9 @@
 
     <!--codigo especifico de este modulo--> 
     <script type="text/javascript">
-        //inicializacion de la pagina cuando carga
+        var idLote = '${fld:id_lote}';
         onload = function(){ 
-            alert('${fld:id_lote}');
+            //alert(idLote);
             search();
         } 
     
@@ -70,13 +70,13 @@
         //envio de emails
         function openEmails(){
             var uri = "${def:context}${def:actionroot}/email/form";
-            openDialog("editor0", uri, 950, 600);
+            openDialog("editor0", uri, wdt, hgt);
         }
         
         //mostrar el detalle de un registro
         function getDetail(id){
             var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
-            openDialog("dialog", uri, 650, 570);
+            openDialog("dialog", uri, wdt, hgt);
         }
 
         //muestra un DIV+IFRAME con el formulario de CRUD
@@ -85,20 +85,20 @@
 
             switch (id) {
                 case 'editor':
-                    uri = "${def:context}${def:actionroot}/editor/form";
-                    openDialog("editor1", uri, 750, 720);
+                    uri = "${def:context}${def:actionroot}/editor/form?idLote="+idLote;
+                    openDialog("editor1", uri, wdt, hgt);
                     break;
                 case 'filter':
                     uri = "${def:context}${def:actionroot}/filter/form";
-                        openDialog("editor2", uri,1250, 720);
+                        openDialog("editor2", uri,wdt, hgt);
                     break;
                 case 'importexcel':
                     uri = "${def:context}${def:actionroot}/importexcel/form";
-                        openDialog("editor3", uri, 950, 600);
+                        openDialog("editor3", uri, wdt, hgt);
                     break;
                 case 'repgen':
                     uri = "${def:context}${def:actionroot}/repgen/form";
-                        openDialog("editor4", uri, 950, 600);
+                        openDialog("editor4", uri, wdt, hgt);
                     break;
                 case null:
                     uri = "${def:context}${def:actionroot}/editor/form";
@@ -108,8 +108,8 @@
                         showToast('warning',`No se puede editar este registro porque su estatus es ${status.trim()}`);
                         break;
                     }
-                    uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
-                    openDialog("editor5", uri,  750, 720);
+                    uri = "${def:context}${def:actionroot}/editor/form?id=" + id+"&idLote="+idLote;
+                    openDialog("editor5", uri,  wdt, hgt);
                     break;
             }
         }

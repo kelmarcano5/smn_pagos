@@ -135,16 +135,16 @@
 	//mostrar el detalle de un registro
 	function getDetail(id)
 	{
-		//alert('Colocar su código aquí.')
+		//alert('Colocar su cï¿½digo aquï¿½.')
 		
 		var uri = "${def:context}${def:actionroot}/detail/form?id=" + id;
-		openDialog("dialog", uri, 850, 550);
+		openDialog("dialog", uri, wdt, hgt);
 	}
 	
 	//muestra un DIV+IFRAME con el formulario de CRUD
 	function showEditor(id)
 	{
-		//alert('Colocar su código aquí.')
+		//alert('Colocar su cï¿½digo aquï¿½.')
 		
 		var uri = "";
 		if (id==null)
@@ -152,7 +152,7 @@
 		else
 			uri = "${def:context}${def:actionroot}/editor/form?id=" + id;
 			
-		openDialog("editor", uri, 850, 330);
+		openDialog("editor", uri, wdt, hgt);
 	}
 	
 	

@@ -13,7 +13,7 @@
 		<recordset></recordset>
 		<!--que campos extrae para el registro descriptivo-->
 		<cols>
-			<colname>smn_orden_pago_id</colname>
+			<!-- <colname>smn_orden_pago_id</colname> -->
 			<colname>smn_lote_pago_id</colname>
 			<colname>smn_proveedor_rf</colname>
 			<colname>smn_documento_id</colname>
@@ -37,7 +37,7 @@
 		
 		</cols>
 		<table>smn_pagos.smn_rel_orden_pago_lote</table>
-		<oper>AÑADIR</oper>
+		<oper>Aï¿½ADIR</oper>
 		<area>Carga de datos</area>
 		<!--
 			query para obtener el ID generado o nombre de 
@@ -47,15 +47,23 @@
 		<pkey>select ${seq:currval@smn_pagos.seq_smn_rel_orden_pago_lote} as id</pkey>
 	</audit>
 
+    
+
 	<transaction>
-		<classname>dinamica.audit.AuditableTransaction</classname>
+		<classname>domain.admin.InsertMaster</classname>
 		<validator>true</validator>
-		<transaction>true</transaction>
-		<jdbc-log>false</jdbc-log>
+		<transaction>false</transaction>
+		<jdbc-log>true</jdbc-log>
 		<recordset id="nextval.sql" source="sql" scope="transaction" />
+        <recordset id="query-smn_ordenes_pago.sql" source="request" scope="transaction" />
 	</transaction>
 
-	<query>insert.sql</query>
+    <colname>smn_orden_pago_id</colname>
+    <colname>opa_saldo_factura_ma</colname>
+    <sql-template params="query-smn_ordenes_pago.sql">insert.sql</sql-template>
+
+	<!-- <query params="query-smn_ordenes_pago.sql">insert.sql</query> -->
+    <!-- <query params="query-smn_ordenes_pago.sql">insert-smn_ordenes_pago.sql</query> -->
 
 	<output>
 		<classname>dinamica.GenericOutput</classname>

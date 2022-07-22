@@ -6,7 +6,7 @@ select
 	when smn_pagos.smn_lote_pago.lpa_estatus='AP' then '${lbl:b_ap}'
 	when smn_pagos.smn_lote_pago.lpa_estatus='EM' then '${lbl:b_em}'
 	when smn_pagos.smn_lote_pago.lpa_estatus='CE' then '${lbl:b_ce}'
-	end as lpa_estatus_combo,
+	end as lpa_estatus,
 	smn_pagos.smn_lote_pago.smn_entidad_financiera_rf,
 	smn_pagos.smn_lote_pago.smn_cuenta_bancaria_rf,
 	smn_pagos.smn_lote_pago.smn_documento_id,

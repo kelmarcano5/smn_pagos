@@ -44,7 +44,7 @@
 		//envio de emails
 		function openEmails() {
 			var uri = "${def:context}${def:actionroot}/email/form";					
-			openDialog("editor0", uri, 980, 600);	
+			openDialog("editor0", uri, wdt, hgt);	
 		}
 	</script>
 
@@ -63,19 +63,19 @@
 	<table class="record" style="width:500px;">
 		<tr>
 			<td width="40%">${lbl:b_smn_entidad_financiera_rf}</td>
-			<td style="background-color: white">${fld:smn_entidad_financiera_rf_combo}</td>
+			<td style="background-color: white">${fld:smn_entidad_financiera_rf}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_smn_cuenta_bancaria_rf}</td>
-			<td style="background-color: white">${fld:smn_cuenta_bancaria_rf_combo}</td>
+			<td style="background-color: white">${fld:smn_cuenta_bancaria_rf}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_smn_forma_pago_rf}</td>
-			<td style="background-color: white">${fld:smn_forma_pago_rf_combo}</td>
+			<td style="background-color: white">${fld:smn_forma_pago_rf}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_smn_documento_id}</td>
-			<td style="background-color: white">${fld:smn_documento_id_combo}</td>
+			<td style="background-color: white">${fld:smn_documento_id}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_numero_lote}</td>
@@ -95,11 +95,11 @@
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_smn_moneda_rf}</td>
-			<td style="background-color: white">${fld:smn_moneda_rf_combo}</td>
+			<td style="background-color: white">${fld:smn_moneda_rf}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_smn_tasa_cambio_rf}</td>
-			<td style="background-color: white">${fld:smn_tasa_cambio_rf_combo}</td>
+			<td style="background-color: white">${fld:smn_tasa_cambio_rf}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_monto_lote_ma}</td>
@@ -107,7 +107,7 @@
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_monto_lote_ma}</td>
-			<td style="background-color: white">${fld:smn_canal_pago_id_combo}</td>
+			<td style="background-color: white">${fld:smn_canal_pago_id}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_ano_comprobante_contable}</td>
@@ -119,7 +119,7 @@
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_tic_nombre}</td>
-			<td style="background-color: white">${fld:tic_nombre_combo}</td>
+			<td style="background-color: white">${fld:tic_nombre}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_numero_comprobante_contable}</td>
@@ -127,7 +127,7 @@
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_lpa_estatus}</td>
-			<td style="background-color: white">${fld:lpa_estatus_combo}</td>
+			<td style="background-color: white">${fld:lpa_estatus}</td>
 		</tr>
 		<tr>
 			<td width="40%">${lbl:b_store_date}</td>

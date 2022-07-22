@@ -83,7 +83,7 @@
                 <input id="smn_documento_id_name" name="smn_documento_id_name" type="hidden">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_numero_lote}<span class="info">*</span></td>
             <td>
                 <input id="lpa_numero_lote" name="lpa_numero_lote" type="text" maxlength="20" >
@@ -102,7 +102,7 @@
                 <img src="${def:context}/images/dropdown.png" title="Desplegar calendario" onclick="calendarOpen('lpa_fecha_lote')">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_monto_lote_ml}</td>
             <td>
                 <input id="lpa_monto_lote_ml" name="lpa_monto_lote_ml" type="text" maxlength="10" class="numeric">
@@ -132,7 +132,7 @@
                 <input id="smn_tasa_cambio_rf_name" name="smn_tasa_cambio_rf_name" type="hidden">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_monto_lote_ma}</td>
             <td>
                 <input id="lpa_monto_lote_ma" name="lpa_monto_lote_ma" type="text" maxlength="10" class="numeric">
@@ -150,19 +150,19 @@
                 <input id="smn_canal_pago_id_name" name="smn_canal_pago_id_name" type="hidden">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_ano_comprobante_contable}</td>
             <td>
                 <input id="lpa_ano_comprobante_contable" name="lpa_ano_comprobante_contable" type="text" maxlength="10" class="numeric">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_periodo_comprobante_contable}</td>
             <td>
                 <input id="lpa_periodo_comprobante_contable" name="lpa_periodo_comprobante_contable" type="text" maxlength="10" class="numeric">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_tipo_comprobante_contable_id}</td>
             <td>
                 <select class="select2" name="lpa_tipo_comprobante_contable_id" id="lpa_tipo_comprobante_contable_id" onchange="chgCombo(lpa_tipo_comprobante_contable_id.options[lpa_tipo_comprobante_contable_id.selectedIndex].text,'lpa_tipo_comprobante_contable_id_name');">
@@ -174,13 +174,13 @@
                 <input id="lpa_tipo_comprobante_contable_id_name" name="lpa_tipo_comprobante_contable_id_name" type="hidden">
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td>${lbl:b_lpa_numero_comprobante_contable}</td>
             <td>
                 <input id="lpa_numero_comprobante_contable" name="lpa_numero_comprobante_contable" type="text" maxlength="10" class="numeric">
             </td>
         </tr>
-        <tr id="tr_lpa_estatus">
+        <tr style="display: none;">
             <td>${lbl:b_lpa_estatus}<span class="info">*</span></td>
             <td>
                 <select class="select2" name="lpa_estatus" id="lpa_estatus">
@@ -213,7 +213,6 @@
 
     $(document).ready(function(){
         setSelect2();
-        $('#tr_lpa_estatus').hide();
         $('#smn_tasa_cambio_rf').attr('disabled', true);
         addNew();
 
